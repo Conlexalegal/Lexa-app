@@ -221,6 +221,14 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
 .prop.fav{border-color:#9A4A2A;box-shadow:0 0 0 2px rgba(154,74,42,.35)}
 .favbar{background:#EAD7BF;color:#3A0A12}.favbar b{color:#6C3221}.favbar .chip{border-color:#9A4A2A;color:#3A0A12}.favbar .chip button{color:#6C3221}
 .howwe b,.howwe li span{color:#6C3221}.howwe li{color:#3A0A12}
+
+.gratis-tag{display:inline-block;margin:0 0 16px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--acc);background:rgba(217,144,79,.14);color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.03em}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 20px}
+.steps3>div{background:var(--card);border:1.5px solid var(--bord);border-radius:16px;padding:12px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2px}
+.steps3 i{font-style:normal;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#D9904F,#B5694A);color:#2A0A0A;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+.steps3 b{margin-top:2px;font-family:'Playfair Display',Georgia,serif;font-size:18px;color:var(--crema);line-height:1.1}
+.steps3 span{font-size:13.5px;line-height:1.25;color:var(--gris)}
+.elige{margin:0 0 10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gold)}
 </style>
 </head>
 <body>
@@ -231,8 +239,15 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
 <!-- INICIO -->
 <section class="screen" id="home">
   <div class="fotowrap" id="fotowrap"><img src="foto-alejandra.jpg" alt="Alejandra Restrepo, abogada de marcas" onerror="document.getElementById('fotowrap').style.display='none'"><div class="fade"></div><div class="cap">Alejandra Restrepo · Abogada de marcas</div></div>
-  <h1>¿Qué necesitas <em>hoy</em>?</h1>
-  <p class="lead">Elige una opción. Te acompañamos paso a paso.</p>
+  <h1>¿Tu marca ya tiene <em>dueño</em>?</h1>
+  <p class="lead">Descubre en 2 minutos si el nombre de tu marca se puede registrar, o crea uno nuevo antes de gastar en logo y empaques.</p>
+  <div class="gratis-tag">Gratis por lanzamiento · cupos limitados cada semana</div>
+  <div class="steps3">
+    <div><b>Escribe</b><span>el nombre de tu marca</span></div>
+    <div><b>Mira</b><span>su probabilidad de registro</span></div>
+    <div><b>Pide</b><span>tu informe</span></div>
+  </div>
+  <p class="elige">Elige por dónde empezar</p>
   <button class="hc" data-go="scrA" type="button"><span class="n">1</span><span><b>Ya tengo el nombre</b><span class="d">Mira si el nombre de tu marca se puede registrar.</span></span><span class="arr">›</span></button>
   <button class="hc" data-go="scrB" type="button"><span class="n">2</span><span><b>Quiero crear mi nombre</b><span class="d">Te ayudamos a encontrar uno que suene bien.</span></span><span class="arr">›</span></button>
   <button class="hc" data-go="scrC" type="button"><span class="n">3</span><span><b>Quiero vigilar mi marca</b><span class="d">Te avisamos si alguien pide un nombre parecido.</span></span><span class="arr">›</span></button>
@@ -408,7 +423,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
 <div class="cta" id="informe" style="display:none">
   <div class="eyebrow">Tu informe</div>
   <h2 style="margin-top:10px">Falta saber si alguien ya <em>tiene</em> ese nombre.</h2>
-  <p style="margin:12px 0 0">Escoges tu informe y tu nombre finalista, hago la búsqueda y te lo entrego en PDF.</p>
+  <p style="margin:12px 0 0">Escoges tu informe y tu nombre finalista, hago la búsqueda y te lo entrego en PDF. Y si tu nombre tiene buena probabilidad, te ayudo a registrarlo.</p>
   <div class="offer" id="offer"></div>
   <div class="pick" id="pick"></div>
   <ol class="pasos">
@@ -1616,8 +1631,8 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   const ENTREGA = "en las primeras 24 horas";   // tiempo de entrega del Nombre Libre
   const peso = n => "$" + n.toLocaleString("es-CO").replace(/,/g,".");
   const PLANES = {
-    gratis:{nombre:"Informe Preliminar (prueba gratis)", t:"Prueba gratis", sub:"2 cupos por semana", d:"Tu probabilidad de registro, la clase en la que va tu producto o servicio y las marcas similares ya registradas.", ent:"en las primeras 24 horas", btn:"Pedir mi cupo gratis por WhatsApp", msg:"Quiero uno de los cupos de prueba gratis."},
-    express:{nombre:"Informe Express", t:"Informe Express", sub:"$49.900", d:"Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido. Te digo qué probabilidad de registro tiene y qué hacer. Pídelo antes de las 2 p. m. para recibirlo hoy.", ent:"en 2 a 4 horas hábiles", btn:"Pedir mi Informe Express", msg:"Entiendo que el Informe Express vale $49.900."},
+    gratis:{nombre:"Informe Express (gratis por lanzamiento)", t:"Gratis por lanzamiento", sub:"Cupos limitados cada semana", d:"Es el Informe Express, con valor de $49.900. Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido, y te digo qué probabilidad de registro tiene. Si esta semana ya se llenaron los cupos, te guardamos el tuyo para la próxima.", ent:"en las primeras 24 horas", btn:"Pedir mi cupo gratis por WhatsApp", msg:"Quiero uno de los cupos gratis de lanzamiento."},
+    express:{nombre:"Informe Express", t:"Informe Express", sub:"$49.900", d:"Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido. Te digo qué probabilidad de registro tiene y qué hacer. Sin esperar cupo. Pídelo antes de las 2 p. m. para recibirlo hoy.", ent:"en 2 a 4 horas hábiles", btn:"Pedir mi Informe Express", msg:"Entiendo que el Informe Express vale $49.900."},
     completo:{nombre:"Informe Completo", t:"Informe Completo", sub:"$89.900", d:"El informe para decidir con tranquilidad antes de invertir en tu marca. Todo lo del Express, más la búsqueda oficial de marcas registradas parecidas a tu nombre y a tu logo. Reviso la clase de tu producto y otras clases relacionadas, donde también podría aparecer una marca parecida. Si sale con riesgo, te propongo alternativas.", ent:"en 24 a 48 horas", btn:"Pedir mi Informe Completo", msg:"Entiendo que el Informe Completo vale $89.900."}
   };
   state.plan = state.plan || "gratis";
