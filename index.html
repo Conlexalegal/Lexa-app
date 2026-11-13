@@ -857,7 +857,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     {k:["tierra","land","earth","mundo","world"], m:"tierra", e:["Raíz","Surco","Arcilla"], w:[["Gea","griego"],["Tellus","latín"]]},
     {k:["cafe","coffee","tinto"], m:"café", e:["Alero","Cántaro","Zaguán","Madrugada"], w:[]},
     {k:["flor","flower","bloom","rosa","rose","petalo"], m:"flor", e:["Pétalo","Brote","Polen","Corola"], w:[["Hana","japonés"],["Fiore","italiano"]]},
-    {k:["alma","soul","esencia","essence"], m:"alma", e:["Aliento","Latido","Pulso"], w:[["Animo","italiano"]]},
+    {k:["alma","soul","esencia","essence"], m:"alma", e:["Aliento","Latido","Pulso"], w:[["Psique","griego"],["Anima","latín"]]},
     {k:["vida","life","vita"], m:"vida", e:["Latido","Brote","Pulso"], w:[["Zoe","griego"]]},
     {k:["amor","love","querer"], m:"amor", e:["Latido","Abrazo","Lazo"], w:[["Agape","griego"]]},
     {k:["seda","silk","satin"], m:"seda", e:["Velo","Hilo","Trama"], w:[["Kinu","japonés"],["Serica","latín"]]},
@@ -1268,6 +1268,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     if(p.ruta==="Suena a tu nombre") return `Guarda el sonido de tu nombre, con un final nuevo que lo hace solo tuyo.`;
     if(p.ruta==="Suena a tu favorito") return "Una palabra real con un sonido parecido al de tu favorito.";
     if(p.ruta==="Inventada") return "Nace de tu favorito, con un final nuevo que la hace más fácil de proteger.";
+    if(p.ruta==="Nace de tu palabra") return "Guarda el sonido de tu palabra, con un final nuevo que la hace más fácil de proteger.";
     if(p.ruta==="Nace de tu nombre") return "Guarda a quien inspiró tu marca, con un giro que la hace más fácil de proteger.";
     if(p.ruta==="Arbitraria") return "No describe lo que vendes: sorprende, y por eso se queda en la memoria.";
     if(p.ruta==="Fusión de tus palabras" || p.ruta==="Fusión de tus favoritos") return "Dos ideas tuyas en una sola palabra que nadie más tiene.";
@@ -1278,6 +1279,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     "Suena a tu nombre":"Partimos del sonido que ya te gusta, para que lo sientas tuyo.",
     "Suena a tu favorito":"Seguimos el sonido de tus favoritos.",
     "Nace de tu nombre":"Guardamos el corazón de tu idea y le dimos un giro propio.",
+    "Nace de tu palabra":"Partimos de la palabra que escribiste y le dimos un final propio, para que suene a ti y sea tuya.",
     "Evocadora":"Palabras que despiertan una sensación sin decir qué vendes.",
     "Tu idea, otra lengua":"Tu misma idea dicha en otro idioma: suena nueva y conserva su sentido.",
     "Arbitraria":"Una palabra bonita fuera de tu sector: sorprende y se recuerda.",
@@ -1444,14 +1446,57 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     });
     return out;
   }
+  // Palabra(s) semilla: lo que la persona escribió en "Algo tuyo", sin las palabras de relleno
+  function crSemillas(){
+    const FILL = new Set(["si","quiero","nombre","marca","llame","llama","llamar","que","tenga","tuyo","algo","mis","sus","como","mio","mia","este","esta","ese","nombrar","poner","ponerle","lleve","llevar","tambien","podria","sea","puede","gustaria","pero","para","con","tengo","tiene","tener","nada","aun","todavia","ninguno","ninguna","idea","tampoco","nose","sabria","hay","estoy","soy","quiere","quieres","sienta","sienta","siento","cliente","clientes","negocio","vender","vendo"]);
+    const toks = norm(state.desc||"").split(" ").filter(t=>t && t.length>2 && !STOPW.has(t) && !FILL.has(t));
+    const propias = toks.filter(t=>!INTENT.includes(t));
+    const lista = (propias.length ? propias : toks).sort((x,y)=>(CONCEPT[y]?1:0)-(CONCEPT[x]?1:0));
+    return lista.slice(0,2);
+  }
+  // Nombres que nacen de la palabra de la persona: suenan a ella, dicen lo mismo en otra lengua, o evocan la misma idea
+  function crSemillaProps(sat, usados){
+    const sem = crSemillas(); if(!sem.length) return [];
+    const okSeed = w => { const n = norm(w); return n.length>=4 && n.length<=8 && !/(.)\1/.test(n) && !/[^aeiou]{3}/.test(n) && !/[wkxq]/.test(n) && !REAL.includes(n) && !REAL_ADD.includes(n) && !DARK_EXACTAS.includes(n) && !DARK_ADD.some(d=>n.includes(d)); };
+    const vistos = new Set();
+    const mk = (nombre, ruta, porque, extra) => {
+      const k = keyOf(nombre);
+      if(vistos.has(k) || usados.has(k) || isShown(nombre) || !okName(nombre, sat, sem)) return null;
+      vistos.add(k); return Object.assign({nombre, ruta, porque}, extra||{});
+    };
+    const sonido = [], idea = [], evo = [];
+    sem.forEach(t=>{
+      const base = t.replace(/[aeiouy]+$/,"");
+      const corta = t.length>=6 ? twoSyl(t).replace(/[aeiouy]+$/,"") : "";
+      const raices = [...new Set([base, t, corta])].filter(r=>r.length>=2);
+      const maxLen = Math.max(6, t.length);
+      const finales = shufEnds().concat(["ara","ia","eya","ina","io","ela","aya","ena","ira","ura"]);
+      shuf(finales).forEach(e=>{
+        if(sonido.length>=3) return;
+        const w = joinRoot(pick(raices), e);
+        if(norm(w)===t || norm(w).length>maxLen || !okSeed(w)) return;
+        const p = mk(w, "Nace de tu palabra", `Parte de "${capW(t)}" y le da un final propio. Suena a lo que quieres, pero es una palabra nueva y más fácil de proteger.`);
+        if(p) sonido.push(p);
+      });
+      const g = CONCEPT[t];
+      if(g){
+        shuf([...g.w]).forEach(([w,lang])=>{ if(idea.length>=2) return; const p = mk(w, "Tu idea, otra lengua", "Tu misma idea dicha en otro idioma: suena nueva y conserva su sentido.", {m:g.m, lang}); if(p) idea.push(p); });
+        shuf([...(g.e||[])]).forEach(w=>{ if(evo.length>=1) return; const p = mk(w, "Evocadora", `Evoca "${g.m}", la idea de tu palabra.`); if(p) evo.push(p); });
+      }
+    });
+    const out = [];
+    for(let i=0;i<3;i++){ [sonido[i], idea[i], i===0 ? evo[0] : null].forEach(p=>{ if(p) out.push(p); }); }
+    return out.slice(0,5);
+  }
   function crGenerar(){
     const cr = state.crear; if(!cr) return;
     const tema = crTema();
     const sat = NORM_SET(SECTORS[state.sector].saturated.concat(COMMON));
     const usados = new Set();
     const idiomas = [cr.lang].concat(["latin","italiano","frances","portugues","griego","ingles","espanol"].filter(l=>l!==cr.lang));
-    const total = cr.text ? 6 : 8;
-    const lista = [];
+    const total = 8;
+    const lista = cr.text ? crSemillaProps(sat, usados) : [];
+    lista.forEach(p=>usados.add(keyOf(p.nombre)));
     for(const lang of idiomas){
       if(lista.length >= total) break;
       const pools = cr.feelings.map(f=>crPool(f, lang, tema, sat, usados).map(p=>Object.assign(p,{fl:f, lang})));
@@ -1464,12 +1509,6 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
         p.porque = `Para que tu cliente sienta ${sl.toLowerCase()}. ${p.porque||""}` + (lang!==cr.lang ? ` Viene de ${LANG_NAME[lang]}, porque ya mostramos todo lo de ${LANG_NAME[cr.lang]}.` : "");
         lista.push(p);
       }
-    }
-    // Si contó qué significa su nombre, sumamos hasta 2 nombres que nacen de esa idea
-    if(cr.text){
-      try{
-        inspiredProposals(state.sector).filter(p=>["Nace de tu nombre","Tu idea, otra lengua"].includes(p.ruta) && !isShown(p.nombre) && !usados.has(keyOf(p.nombre))).slice(0,2).forEach(p=>{ usados.add(keyOf(p.nombre)); lista.push(p); });
-      }catch(e){}
     }
     return lista.slice(0,8);
   }
@@ -1528,7 +1567,8 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     const lista = crGenerar();
     if(!lista || !lista.length){ crErr("No encontré más nombres con esas respuestas. Cambia el sentimiento o el sonido y lo intentamos de nuevo."); return; }
     state.round++; state.proposals = lista;
-    $("props-intro").textContent = `Tu universo: ${state.crear.labels.join(" y ").toLowerCase()} · sonido ${state.crear.soundLabel.toLowerCase()}. Te propongo nombres cortos y fáciles de decir: los que se pronuncian sin esfuerzo gustan más y dan más confianza.`;
+    const sems = state.crear.text ? crSemillas() : [];
+    $("props-intro").textContent = `Tu universo: ${state.crear.labels.join(" y ").toLowerCase()} · sonido ${state.crear.soundLabel.toLowerCase()}. ${sems.length ? `Los primeros nacen de tu palabra "${sems.join(" y ")}". ` : ""}Te propongo nombres cortos y fáciles de decir: los que se pronuncian sin esfuerzo gustan más y dan más confianza.`;
     renderProps(lista, "Son ideas. No quedan reservadas para ti hasta que las registres, y aún no están verificadas. Marca tus favoritos y escoge tu finalista para el informe.");
     const pr = document.querySelector("#props .props"); if(pr) pr.classList.add("reveal");
     updateWA();
