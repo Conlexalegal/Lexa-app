@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lexa Legal · Protege el nombre de tu marca</title>
+<meta name="description" content="Lexa Legal: revisa si tu nombre se puede registrar, crea uno nuevo o vigila tu marca.">
+<meta name="theme-color" content="#4A0816">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-32.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lexa Legal">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--terracota:#CEA88F;--vino:#F1E2D0;--vino2:#3A0A12;--crema:#F1E2D0;--piedra:rgba(241,226,208,.2);--tinta:#F1E2D0;--ocre:#C79A6B;--ocre2:#E0B07A;--gris:#D9BFA6;--verde:#3F7D4E;--verde-bg:#E5F0E7;--ambar:#C47A47;--ambar-bg:#FBF0DC;--rojo:#A33A2C;--rojo-bg:#F7E2DD;--ink:#3A0A12;--card:rgba(241,226,208,.07)}
+:root{--card:rgba(25,6,6,.3);--acc:#D9904F;--gold:#E0B07A;--bord:#B5694A;--bg1:#4A0D14;--bg2:#380B10;--bg3:#2A0C0A}
+.tema{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;color:var(--gris)}
+.tema button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--acc);background:transparent;color:var(--crema);font:700 15px 'DM Sans',Arial,sans-serif;cursor:pointer}
+.tema button.on{background:var(--acc);color:#3A0A12}
+*{box-sizing:border-box}
+html{background:var(--bg3)}
+html,body{margin:0;padding:0}
+body{font-family:'DM Sans',Arial,sans-serif;font-size:17px;color:var(--crema);background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 55%,var(--bg3) 100%);min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;margin:0;color:var(--crema)}
+h1{font-size:clamp(30px,8vw,40px);line-height:1.12;font-weight:700}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--acc)}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0 8px}
+.top img{height:34px;display:block}
+#backbtn{display:none;align-items:center;gap:6px;background:none;border:1.5px solid rgba(241,226,208,.4);color:var(--crema);border-radius:999px;padding:8px 16px;font:600 15px 'DM Sans',Arial,sans-serif;cursor:pointer}
+.screen{display:none;padding:8px 0 30px}
+#home{display:block}
+.lead{color:var(--gris);font-size:18px;margin:10px 0 18px}
+.fotowrap{position:relative;border-radius:26px;overflow:hidden;height:310px;margin:6px 0 4px}
+.fotowrap img{width:100%;height:100%;object-fit:cover;object-position:72% 18%;display:block}
+.fotowrap .fade{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(180deg,rgba(74,13,20,0) 0%,rgba(74,13,20,.78) 62%,var(--bg1) 100%)}
+.fotowrap .cap{position:absolute;left:18px;bottom:12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.avatar{display:flex;align-items:center;gap:12px;margin:0 0 4px}.avatar .ph{flex:none;width:52px;height:52px;border-radius:50%;overflow:hidden;border:2px solid var(--acc)}.avatar .ph img{width:100%;height:100%;object-fit:cover;object-position:72% 18%}.avatar span{font-size:14px;color:var(--gris);line-height:1.35}
+.hc{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--bord);border-radius:20px;padding:16px 18px;margin-bottom:12px;color:var(--crema);font:inherit;cursor:pointer}
+.hc:hover{border-color:var(--acc);background:rgba(241,226,208,.12)}
+.hc .n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--acc);color:var(--ink);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:18px}
+.hc b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:23px;line-height:1.15;color:var(--crema)}
+.hc span.d{display:block;font-size:16px;color:var(--gris);margin-top:3px}
+.hc .arr{margin-left:auto;font-size:24px;color:var(--acc)}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--acc);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.eyebrow:before{content:"";width:24px;height:2px;background:var(--acc)}
+.card{background:var(--card);border:1px solid rgba(241,226,208,.2);border-radius:20px;padding:18px 20px;margin:14px 0}
+.card p{margin:8px 0 0}
+.sec-title{font-size:24px;color:var(--crema);margin-bottom:6px}
+.rule{width:44px;height:3px;background:var(--bord);border-radius:2px;margin:8px 0 14px}
+.muted{color:var(--gris);font-size:16px}
+label{display:block;font-weight:600;font-size:16px;margin:16px 0 6px;color:var(--crema)}
+select,input,textarea{width:100%;font:inherit;font-size:18px;color:var(--ink);padding:14px 16px;border:1.5px solid transparent;border-radius:14px;background:#F1E2D0;outline:none}
+select:focus,input:focus,textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(206,168,143,.35)}
+textarea{min-height:84px;resize:vertical}
+.names{display:grid;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:18px;padding:17px 18px;border:0;border-radius:16px;background:var(--acc);color:#2A0A0A;font:inherit;font-weight:700;font-size:18px;cursor:pointer;text-decoration:none;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{box-shadow:none;background:transparent;color:var(--crema);border:1.5px solid var(--acc);font-size:16px;padding:13px}
+.btn.ghost:hover{background:rgba(241,226,208,.1);color:var(--crema)}
+.btn.wa{background:#1F7A4D;color:#fff}.btn.wa:hover{background:#17603C}
+.err{color:#F2A99A;font-size:15px;margin-top:10px;display:none}
+.prog{display:flex;gap:6px;margin:6px 0 14px}.prog i{flex:1;height:5px;border-radius:99px;background:rgba(241,226,208,.2)}.prog i.on{background:var(--acc)}
+.k{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.tp{background:var(--card);border:1px solid var(--bord);border-radius:16px;padding:12px 16px;margin-bottom:10px}
+.tp.top1{background:#EBD7C0;border-color:#EBD7C0;color:var(--ink)}
+.tp .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tp b{font-family:'Playfair Display',Georgia,serif;font-size:21px;color:var(--crema)}.tp.top1 b{color:#6C3221}
+.tp .ex{font-size:15px;color:var(--gris)}.tp.top1 .ex{color:#6C3221}
+.tp p{margin:4px 0 0;font-size:16px}
+#clase-pre,.clase{background:#EBD7C0;color:var(--ink);border-radius:18px;padding:14px 18px;margin:14px 0;display:flex;flex-direction:column;gap:2px}
+.clase .k,#clase-pre .k{color:#6C3221}
+.big{font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;line-height:1.15;color:var(--ink)}.big small{font-family:'DM Sans',Arial,sans-serif;font-size:15px;font-weight:600;color:#6C3221}
+.clase p,.clase li{color:var(--ink);font-size:15px;margin:4px 0 0}.clase .fine{font-size:14px;color:#6C3221}
+.halves-intro{background:var(--card);border:1px solid rgba(241,226,208,.2);border-radius:16px;padding:14px 18px;margin:0 0 14px;font-size:16px}
+.halves-intro p{margin:0}.halves-intro ol{margin:8px 0;padding-left:20px}.halves-intro li{margin:4px 0}
+.legal-top{font-size:14px!important;color:var(--gris)}
+.result{border-radius:18px;border:1px solid rgba(241,226,208,.2);background:var(--card);padding:18px 18px 16px 22px;margin-bottom:14px;position:relative;overflow:hidden}
+.result:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c)}
+.result .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.result h3{font-size:26px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:700;background:var(--bg);color:var(--c)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.lvl{font-size:14px;color:var(--gris);margin:6px 0 10px}
+.meter{display:flex;gap:4px;margin:8px 0 12px}.meter span{flex:1;height:6px;border-radius:3px;background:rgba(241,226,208,.2)}.meter span.on{background:var(--c)}
+.result ul{margin:0;padding-left:18px}.result li{margin:5px 0;font-size:16px}
+.tip{margin-top:12px;background:rgba(241,226,208,.1);border-radius:12px;padding:10px 14px;font-size:15px}
+.tip b{color:var(--acc)}
+.half{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:12px 0 6px}
+.half2{margin-top:14px;border-top:1px dashed rgba(241,226,208,.3);padding-top:12px}
+.pend{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:700;background:rgba(241,226,208,.15);color:var(--crema)}
+.pend .dot{background:var(--acc)}
+.half2 p{margin:8px 0 0;font-size:15.5px}
+.btn.half2btn{margin-top:12px;padding:13px 14px;font-size:16px}
+.v{--c:var(--verde);--bg:var(--verde-bg)}.a{--c:var(--ambar);--bg:var(--ambar-bg)}.r{--c:var(--rojo);--bg:var(--rojo-bg)}
+.mk{border-radius:18px;border:1px solid rgba(241,226,208,.2);background:var(--card);padding:16px 18px;margin-bottom:14px}
+.mk h4{margin:0;font-size:18px;color:var(--crema)}
+.mk .al{display:inline-block;margin-top:8px;padding:5px 11px;border-radius:999px;font-size:14px;font-weight:700}
+.mk .al.r{background:#F6DCD6;color:#8A2E1F}.mk .al.a{background:#F7E7CF;color:#8A5A1A}.mk .al.v{background:#E3EEDC;color:#3E6B2E}
+.mk ul{list-style:none;padding:0;margin:10px 0 0}.mk li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid rgba(241,226,208,.2);font-size:15px}
+.mk li a{color:var(--gold);font-weight:600;text-decoration:none;word-break:break-all}.mk li span{color:var(--gris);white-space:nowrap}.mk p{margin:10px 0 0;font-size:15px}
+.fine{font-size:13px;color:var(--gris)}
+.props{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.prop{position:relative;border:1px solid rgba(241,226,208,.25);border-radius:16px;padding:14px;background:var(--card)}
+.prop .nm{font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:var(--crema);padding-right:34px}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);margin:4px 0 6px}
+.prop p{margin:0;font-size:15px;color:var(--gris)}
+.prop .story{font-family:'Playfair Display',Georgia,serif;font-style:italic;color:var(--crema);font-size:16px;line-height:1.4;margin:0 0 8px}
+.prop.fav{border-color:var(--acc);box-shadow:0 0 0 2px rgba(206,168,143,.3)}
+.howwe{background:var(--card);border:1px solid rgba(241,226,208,.2);border-radius:14px;padding:12px 14px;margin:0 0 12px;font-size:15px}
+.howwe b{color:var(--acc)}.howwe ul{margin:6px 0 0;padding-left:18px}.howwe li{margin:3px 0}.howwe li span{font-weight:700;color:var(--acc)}
+.heart{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--acc);background:transparent;color:var(--acc);font-size:19px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.heart.on{background:#F1E2D0;border-color:#F1E2D0;color:#6C3221}
+.favbar{background:rgba(241,226,208,.12);border-radius:14px;padding:12px 14px;margin:0 0 12px;font-size:15px}
+.favbar b{color:var(--acc)}
+.chip{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--acc);color:var(--crema);border-radius:999px;padding:4px 6px 4px 12px;margin:6px 6px 0 0;font-weight:600}
+.chip button{border:0;background:none;color:var(--gris);font-size:18px;cursor:pointer;padding:0 4px;line-height:1}
+.favmsg{font-size:14px;color:#F2A99A;margin:8px 0 0}
+.rounds{display:flex;flex-direction:column}
+.loading{display:flex;align-items:center;gap:10px;color:var(--gris);font-size:16px;padding:14px 0}
+.spin{width:18px;height:18px;border:2.5px solid rgba(241,226,208,.25);border-top-color:var(--acc);border-radius:50%;animation:s 1s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+.cta{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(0,0,0,.28));border:1px solid var(--bord);color:var(--crema);border-radius:22px;padding:24px 20px;margin:18px 0}
+.cta h2{font-size:26px;line-height:1.2}.cta ul{padding-left:18px;margin:14px 0 0}.cta li{margin:6px 0}
+.phone{font-size:14px;color:var(--gold);margin-top:10px;text-align:center}
+.legal{font-size:13px;color:var(--gris);margin-top:22px;line-height:1.55}
+.offer{background:rgba(241,226,208,.1);border:1px solid rgba(241,226,208,.25);border-radius:14px;padding:14px 16px;margin-top:16px}
+.offer .pz{font-family:'Playfair Display',Georgia,serif;font-size:24px;color:#fff;font-weight:700}
+.offer .pz small{font-family:'DM Sans',Arial,sans-serif;font-size:14px;color:var(--gold);font-weight:600;margin-left:6px}
+.offer p{margin:6px 0 0;font-size:15px;color:var(--crema)}
+.pasos{counter-reset:p;list-style:none;padding:0!important;margin:14px 0 0}
+.pasos li{counter-increment:p;position:relative;padding-left:34px;margin:9px 0;font-size:16px}
+.pasos li:before{content:counter(p);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--acc);color:var(--ink);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.pick{margin-top:16px}.pick .k{color:var(--gold)}
+.pick label{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid rgba(241,226,208,.22);border-radius:12px;padding:10px 12px;margin-top:8px;font-size:16px;font-weight:500;color:#fff;cursor:pointer}
+.pick input{width:20px;height:20px;padding:0;accent-color:var(--gold)}
+.pick small{color:var(--gold);font-size:13px;margin-left:auto}
+.consent{font-size:13px;color:rgba(241,226,208,.85);margin-top:10px;text-align:center}
+.lnk{background:none;border:0;padding:0;font:inherit;color:var(--gold);text-decoration:underline;cursor:pointer}
+.acuerdo{margin-top:12px;background:var(--card);border:1px solid rgba(241,226,208,.22);border-radius:12px;padding:10px 14px}
+.acuerdo summary{cursor:pointer;font-weight:700;font-size:15px;color:#fff}
+.acuerdo .ac p{font-size:14px;color:var(--crema);margin:10px 0 0;line-height:1.5}.acuerdo .ac b{color:var(--gold)}
+.acuerdo .resp{font-size:12.5px!important;color:rgba(241,226,208,.75)!important}
+.copied{font-size:14px;color:#9BD3A8;text-align:center;margin-top:6px;min-height:18px}
+footer{padding:20px 0 40px;text-align:center}footer img{height:26px;opacity:.9}footer p{font-size:14px;color:var(--gris);margin:8px 0 0}
+.install{max-width:560px;margin:10px auto 0;padding:0 20px;display:none}
+.install .box{background:var(--card);border:1px solid rgba(241,226,208,.25);border-radius:18px;padding:16px;display:flex;gap:14px;align-items:flex-start;position:relative}
+.install img{width:52px;height:52px;border-radius:12px;flex:0 0 52px}
+.install h3{font-size:20px;margin:2px 0 4px}.install p{margin:0 0 8px;font-size:15px;color:var(--gris)}
+.install ol{margin:0;padding-left:20px;font-size:15px}.install li{margin:3px 0}
+.install .ico{display:inline-block;vertical-align:-3px;width:16px;height:16px;stroke:var(--gold)}.install .ico[fill]{fill:var(--gold)}
+.install .go{margin-top:10px;background:#F1E2D0;color:var(--ink);border:0;border-radius:10px;padding:10px 16px;font:700 15px 'DM Sans',Arial,sans-serif;cursor:pointer;display:none}
+.install .x{position:absolute;top:6px;right:10px;background:none;border:0;font-size:22px;color:var(--gris);cursor:pointer;line-height:1}
+#results{display:none}
+.creator{background:var(--card)}
+.cr-dots{display:flex;gap:6px;margin:4px 0 14px}.cr-dots span{flex:1;height:5px;border-radius:99px;background:rgba(241,226,208,.2);transition:background .3s}.cr-dots span.on{background:var(--acc)}
+.cr-step h3{font-size:21px;color:var(--acc)}
+.cr-step .q{font-weight:700;margin:6px 0 2px;font-size:20px;color:var(--crema)}
+.cr-step .sub{font-size:15px;color:var(--gris);margin:0 0 10px}
+.cr-step .why,p.why{font-size:15px;color:var(--gris);font-style:italic;margin:12px 0 0;border-left:3px solid var(--bord);padding-left:10px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{border:1.5px solid var(--acc);background:transparent;border-radius:999px;padding:11px 18px;font:inherit;font-size:17px;color:var(--crema);cursor:pointer;transition:transform .12s,background .2s}
+.opt:active{transform:scale(.96)}.opt.on{background:#F1E2D0;border-color:#F1E2D0;color:var(--ink);font-weight:700}
+.cr-nav{display:flex;gap:10px;margin-top:6px}.cr-nav .btn{margin-top:14px}.cr-nav .btn.ghost{width:auto;flex:0 0 auto;padding:13px 18px}
+.cr-sum{background:rgba(241,226,208,.1);border:1px solid rgba(241,226,208,.22);border-radius:14px;padding:12px 14px;margin-top:12px;font-size:15px}
+.cr-sum b{color:var(--acc)}.cr-sum button{background:none;border:0;color:var(--gold);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:0;margin-left:6px}
+details.origen{margin-top:14px;font-size:15px;color:var(--gris)}details.origen summary{cursor:pointer;color:var(--acc);font-weight:700}details.origen p{margin:8px 0 0}
+#cr-start{display:none!important}
+@keyframes crUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.props.reveal .prop{animation:crUp .5s both}.props.reveal .prop:nth-child(2){animation-delay:.08s}.props.reveal .prop:nth-child(3){animation-delay:.16s}.props.reveal .prop:nth-child(4){animation-delay:.24s}.props.reveal .prop:nth-child(5){animation-delay:.32s}.props.reveal .prop:nth-child(6){animation-delay:.4s}.props.reveal .prop:nth-child(7){animation-delay:.48s}.props.reveal .prop:nth-child(8){animation-delay:.56s}
+.why{margin:10px 0 0;border-top:1px dashed rgba(241,226,208,.3);padding-top:8px}
+.why summary{cursor:pointer;font-weight:700;font-size:15px;color:var(--acc);list-style:none}.why summary::-webkit-details-marker{display:none}.why summary:before{content:"\2696\FE0E  "}
+.why .wb{font-size:15px;margin:8px 0 0;color:var(--gris)}.why .wb p{margin:0 0 6px}
+.why .src{font-size:13.5px;background:var(--card);border:1px solid rgba(241,226,208,.2);border-radius:10px;padding:8px 10px;color:var(--crema)}
+.stp{display:flex;gap:12px;align-items:flex-start;margin:10px 0;font-size:18px}
+.stp i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--acc);color:var(--ink);font-style:normal;font-weight:700;display:flex;align-items:center;justify-content:center}
+button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-weight:600;background:none;border:0;font:inherit;font-size:16px;padding:0}
+
+.ovl{position:fixed;inset:0;z-index:50;background:rgba(42,12,10,.98);display:none;align-items:center;justify-content:center;padding:28px;text-align:center}
+.ovl.on{display:flex}
+.ovl .in{max-width:340px}
+.ovl .ring{width:54px;height:54px;margin:0 auto 22px;border:3px solid rgba(241,226,208,.2);border-top-color:var(--acc);border-radius:50%;animation:s 1s linear infinite}
+.ovl h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--crema);margin:0 0 14px;font-weight:600}
+.ovl ul{list-style:none;margin:0;padding:0;text-align:left}
+.ovl li{font-size:15px;color:rgba(241,226,208,.45);padding:6px 0;transition:color .4s}
+.ovl li.on{color:var(--crema)}
+.ovl li.ok{color:var(--gold)}
+.plans{display:grid;gap:10px}
+.plan{display:block;position:relative;background:rgba(25,6,6,.35);border:1.5px solid rgba(181,105,74,.6);border-radius:16px;padding:14px 16px 14px 46px;cursor:pointer}
+.plan.on{border-color:var(--acc);background:rgba(217,144,79,.14)}
+.plan input{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.plan:before{content:'';position:absolute;left:15px;top:19px;width:16px;height:16px;border-radius:50%;border:2px solid var(--acc)}
+.plan.on:before{background:radial-gradient(circle,var(--acc) 0 45%,transparent 50%)}
+.offer:has(.plans){background:none;border:0;padding:0}
+.plan .pt{display:block;font-family:'Playfair Display',serif;font-size:19px;color:#F1E2D0;font-weight:600}
+.plan .pt small{display:block;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--gold);margin:2px 0 0;font-weight:700}
+.plan .pd{display:block;font-size:14px;font-weight:400;margin-top:6px;color:rgba(241,226,208,.85)}
+.plan .pe{display:block;font-size:13px;margin-top:6px;color:var(--gold);font-weight:600}
+.ovl li.ok:before{content:"\2713  "}
+
+.hc{background:#EAD7BF;border-color:#EAD7BF;color:#3A0A12;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.hc:hover{background:#F1E2D0;border-color:#F1E2D0}
+.hc b{color:#3A0A12}.hc span.d{color:#5A2A1F}.hc .arr{color:#3A0A12}
+.hc .n{background:#C47A47;color:#2A0A0A}
+.hc{background:linear-gradient(135deg,#F4E7D6 0%,#EAD7BF 50%,#D9B995 100%)}
+.hc:hover{background:linear-gradient(135deg,#F8EDDF 0%,#EFDDC6 50%,#E0C3A0 100%)}
+.hc .n{background:linear-gradient(135deg,#D9904F,#B5694A);color:#2A0A0A}
+
+/* contraste crema sobre vino, en dosis */
+.card.info,.halves-intro,.prop,.howwe{background:#EAD7BF;border-color:#EAD7BF;color:#3A0A12}
+.card.info p,.halves-intro p,.halves-intro li{color:#3A0A12}
+.card.info b,.halves-intro b{color:#3A0A12}
+.card.info .eyebrow{color:#6C3221}.card.info .eyebrow:before{background:#6C3221}
+.halves-intro .legal-top{color:#6C3221}
+.prop .nm{color:#3A0A12}.prop p{color:#6C3221}.prop .story{color:#3A0A12}.prop .tag{color:#9A4A2A}
+.prop .heart{border-color:#9A4A2A;color:#9A4A2A}.prop .heart.on{background:#6C3221;border-color:#6C3221;color:#F1E2D0}
+.prop.fav{border-color:#9A4A2A;box-shadow:0 0 0 2px rgba(154,74,42,.35)}
+.favbar{background:#EAD7BF;color:#3A0A12}.favbar b{color:#6C3221}.favbar .chip{border-color:#9A4A2A;color:#3A0A12}.favbar .chip button{color:#6C3221}
+.howwe b,.howwe li span{color:#6C3221}.howwe li{color:#3A0A12}
+</style>
+</head>
+<body>
+<div class="ovl" id="ovl"><div class="in"><div class="ring"></div><h3>Buscando tu nombre</h3><ul id="ovl-l"><li>Revisando la base oficial de marcas</li><li>Probando cómo suena y cómo se escribe</li><li>Mirando productos parecidos al tuyo</li><li>Armando tu resultado</li></ul></div></div>
+<div class="wrap">
+<div class="top"><img src="logo_crema.png" alt="Lexa Legal"><button id="backbtn" type="button">← Atrás</button></div>
+
+<!-- INICIO -->
+<section class="screen" id="home">
+  <div class="fotowrap" id="fotowrap"><img src="foto-alejandra.jpg" alt="Alejandra Restrepo, abogada de marcas" onerror="document.getElementById('fotowrap').style.display='none'"><div class="fade"></div><div class="cap">Alejandra Restrepo · Abogada de marcas</div></div>
+  <h1>¿Qué necesitas <em>hoy</em>?</h1>
+  <p class="lead">Elige una opción. Te acompañamos paso a paso.</p>
+  <button class="hc" data-go="scrA" type="button"><span class="n">1</span><span><b>Ya tengo el nombre</b><span class="d">Mira si tu nombre se puede registrar.</span></span><span class="arr">›</span></button>
+  <button class="hc" data-go="scrB" type="button"><span class="n">2</span><span><b>Quiero crear mi nombre</b><span class="d">Te ayudamos a encontrar uno que suene bien.</span></span><span class="arr">›</span></button>
+  <button class="hc" data-go="scrC" type="button"><span class="n">3</span><span><b>Quiero vigilar mi marca</b><span class="d">Te avisamos si alguien pide un nombre parecido.</span></span><span class="arr">›</span></button>
+  <section class="install" id="install" aria-label="Guardar Lexa Legal en tu pantalla" style="padding:0;margin-top:18px">
+    <div class="box">
+      <button class="x" id="install-x" aria-label="Cerrar">&times;</button>
+      <img src="icon-180.png" alt="Ícono de Lexa Legal">
+      <div>
+        <h3>Ten Lexa Legal a un toque</h3>
+        <p>Guárdala en tu pantalla de inicio y úsala como una app. No ocupa espacio.</p>
+        <ol id="steps-ios" style="display:none">
+          <li>Toca el botón Compartir <svg class="ico" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg></li>
+          <li>Baja y elige "Agregar a pantalla de inicio".</li>
+          <li>Toca "Agregar". Listo.</li>
+        </ol>
+        <ol id="steps-android" style="display:none">
+          <li>Toca los tres puntitos <svg class="ico" viewBox="0 0 24 24" fill="var(--gold)"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg> arriba a la derecha.</li>
+          <li>Elige "Agregar a pantalla principal" o "Instalar app".</li>
+          <li>Confirma. Listo.</li>
+        </ol>
+        <p id="steps-pc" style="display:none;margin:0">Abre este enlace desde tu celular y guárdala en tu pantalla de inicio.</p>
+        <button class="go" id="install-go">Guardar Lexa Legal en mi celular</button>
+      </div>
+    </div>
+  </section>
+  <p class="legal">Orientación de Lexa Legal. No es garantía de registro.</p>
+</section>
+
+<!-- A · INFORME DE REGISTRABILIDAD -->
+<section class="screen" id="scrA">
+  <div id="form-sec">
+    <div id="a1">
+      <div class="prog"><i class="on"></i><i></i><i></i></div>
+      <div class="k">Paso 1 de 3</div>
+      <h1 style="margin-top:6px">¿Cómo se llama tu <em>marca</em>?</h1>
+      <div class="card info"><div class="eyebrow">Lo básico, en 3 líneas</div>
+        <p>Una marca es el nombre que te identifica. Nadie más puede usarlo para lo mismo.</p>
+        <p>Se puede registrar si no se parece a otra marca y no usa la palabra de lo que vendes.</p>
+        <p>Por eso se revisa antes de gastar en logo y empaques.</p></div>
+      <label for="n1">Tu nombre</label><input id="n1" maxlength="40" placeholder="Escríbelo aquí">
+      <label for="n2" style="font-weight:500;color:var(--gris)">Otro nombre (opcional)</label><input id="n2" maxlength="40" placeholder="Si dudas entre varios, hasta 3">
+      <input id="n3" maxlength="40" placeholder="Un tercer nombre (opcional)" style="margin-top:10px">
+      <p class="fine" style="margin-top:10px">Lo que escribas es solo tuyo. No lo compartimos con nadie.</p>
+      <div class="err" id="a-err">Escribe al menos un nombre para continuar.</div>
+      <button class="btn" id="a-next" type="button">Continuar</button>
+    </div>
+    <div id="a2" style="display:none">
+      <div class="prog"><i class="on"></i><i class="on"></i><i></i></div>
+      <div class="k">Paso 2 de 3</div>
+      <h1 style="margin-top:6px">¿Qué <em>vendes</em>?</h1>
+      <div class="card info"><div class="eyebrow">Por qué te lo preguntamos</div>
+        <p>Un nombre se protege por tipo de producto o servicio. A cada tipo le llamamos clase.</p>
+        <p>Por eso <b>Delta</b> es una aerolínea y también una marca de grifería, sin problema.</p></div>
+      <label for="sector">Elige lo más parecido</label><select id="sector"></select>
+      <label for="desc" style="font-weight:500;color:var(--gris)">Cuéntalo con tus palabras (opcional)</label>
+      <textarea id="desc" placeholder="Ej: vestidos de baño para mamá e hija. El nombre es el de mi hija."></textarea>
+      <div id="clase-pre"></div>
+      <div class="err" id="err">Cuéntame qué vendes para poder revisar tus nombres.</div>
+      <button class="btn" id="go" type="button">Ver mi resultado</button>
+      <button class="btn ghost" id="a-back" type="button">Atrás</button>
+    </div>
+  </div>
+  <div id="results">
+    <div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+    <div class="k">Paso 3 de 3</div>
+    <div class="avatar" id="avatar"><div class="ph"><img src="foto-alejandra.jpg" alt="" onerror="document.getElementById('avatar').style.display='none'"></div><span>Orientación de Alejandra Restrepo, abogada de marcas</span></div>
+    <h1 style="margin-top:6px">Tu <em>resultado</em></h1>
+    <div class="halves-intro">
+      <p>Miramos <b>dos cosas</b>:</p>
+      <ol><li><b>Cómo está armado tu nombre.</b> La app lo revisa ahora.</li><li><b>Si alguien ya tiene uno parecido.</b> Lo reviso yo en tu informe.</li></ol>
+      <p class="legal-top">Es una guía de Lexa Legal, no una garantía de registro.</p>
+    </div>
+    <button class="lk" data-go="scrT" type="button">Conoce los tipos de nombres ›</button>
+    <div id="clase"></div>
+    <div id="cards"></div>
+    <div id="market"></div>
+    <div id="slotA-props"></div>
+    <div id="slotA-inf"></div>
+    <button class="btn ghost" id="again" type="button">Revisar otros nombres</button>
+    <p class="legal">Lexa Legal es una herramienta orientativa. Te da una probabilidad, no garantiza que un nombre se pueda registrar como marca. La decisión final es de la autoridad de marcas.</p>
+  </div>
+</section>
+
+<!-- B · CREAR NOMBRE -->
+<section class="screen" id="scrB">
+  <div id="bstep1">
+    <h1>Vamos a crear tu <em>nombre</em></h1>
+    <p class="lead">Primero cuéntanos qué vendes. Así los nombres van con tu negocio.</p>
+    <div class="card info"><div class="eyebrow">Por qué te lo preguntamos</div><p>Un nombre se protege por tipo de producto o servicio. A cada tipo le llamamos clase.</p></div>
+    <label for="sector-b">Elige lo más parecido</label><select id="sector-b"></select>
+    <button class="btn" id="b-go" type="button">Empezar</button>
+    <button class="lk" data-go="scrT" type="button" style="margin-top:14px">Conoce los tipos de nombres ›</button>
+  </div>
+  <div class="card creator" id="crear" style="display:none">
+    <div class="eyebrow">Tu nombre, paso a paso</div>
+    <div id="cr-start"><button class="btn" id="cr-go" type="button">Empezar</button><button class="btn ghost" id="cr-skip" type="button">Ir directo a mi informe</button></div>
+    <div id="cr-flow" style="display:none">
+      <div class="cr-dots" id="cr-dots"><span></span><span></span><span></span></div>
+      <div class="cr-step" id="cr-s1">
+        <h3>1 · La sensación</h3>
+        <p class="q">¿Qué quieres que sienta tu cliente?</p>
+        <p class="sub">Escoge hasta 2.</p>
+        <div class="opts" id="cr-feel"></div>
+        <p class="why">Un nombre dice algo antes de que expliques qué vendes. <b>Nike</b> suena firme y rápido. Un nombre suave suena tierno.</p>
+        <div class="cr-nav"><button class="btn" id="cr-n1" type="button">Siguiente</button></div>
+      </div>
+      <div class="cr-step" id="cr-s2" style="display:none">
+        <h3>2 · El sonido</h3>
+        <p class="q">¿Cómo te gustaría que sonara?</p>
+        <p class="sub">Escoge 1.</p>
+        <div class="opts" id="cr-sound"></div>
+        <p class="why">Cada idioma despierta algo distinto. El francés se asocia a belleza; el italiano, a moda y comida.</p>
+        <div class="cr-nav"><button class="btn ghost" id="cr-b2" type="button">Atrás</button><button class="btn" id="cr-n2" type="button">Siguiente</button></div>
+      </div>
+      <div class="cr-step" id="cr-s3" style="display:none">
+        <h3>3 · Algo tuyo</h3>
+        <p class="q">¿Quieres que tenga algo tuyo? (opcional)</p>
+        <p class="sub">Tu nombre, un lugar, un recuerdo, el nombre de tu hija.</p>
+        <textarea id="cr-text" maxlength="200" placeholder="Cuéntame en una frase"></textarea>
+        <p class="why">Así nació <b>Adidas</b>, de Adi Dassler, y <b>Haribo</b>, de Hans Riegel Bonn.</p>
+        <div class="cr-nav"><button class="btn ghost" id="cr-b3" type="button">Atrás</button><button class="btn" id="cr-make" type="button">Ver mis nombres</button></div>
+        <button class="btn ghost" id="cr-none" type="button" style="margin-top:10px">Todavía no tengo nada</button>
+      </div>
+    </div>
+    <div class="cr-sum" id="cr-sum" style="display:none"></div>
+    <p class="err" id="cr-err" style="display:none"></p>
+    <details class="origen"><summary>¿De dónde sacamos las palabras?</summary><p>De un banco que armamos a mano. Cruza 9 sentimientos con 6 idiomas: latín, griego, italiano, francés, portugués e inglés. Cada palabra trae su significado. Nada sale al azar.</p></details>
+  </div>
+  <div id="slotB-props"></div>
+  <div id="slotB-inf"></div>
+</section>
+
+<!-- C · VIGILANCIA -->
+<section class="screen" id="scrC">
+  <h1>Vigila tu <em>marca</em></h1>
+  <p class="lead">Es como la alarma de tu casa. No evita que alguien intente entrar, pero te avisa a tiempo.</p>
+  <div class="card" style="padding:12px 18px">
+    <div class="stp"><i>1</i><span>Nos dices tu marca.</span></div>
+    <div class="stp"><i>2</i><span>Revisamos las solicitudes nuevas.</span></div>
+    <div class="stp"><i>3</i><span>Si aparece un nombre parecido, te avisamos por WhatsApp y te decimos qué hacer.</span></div>
+  </div>
+  <label for="v-name">Tu marca</label><input id="v-name" maxlength="60" placeholder="Escríbela aquí">
+  <a class="btn wa" id="v-wa" href="#" target="_blank" rel="noopener">Unirme a la lista de espera</a>
+  <p class="fine" style="text-align:center;margin-top:10px">Te respondo por WhatsApp. Tus datos son solo tuyos.</p>
+  <button class="lk" data-go="scrT" type="button" style="margin-top:12px">Conoce los tipos de nombres ›</button>
+</section>
+
+<!-- TIPOS DE NOMBRES -->
+<section class="screen" id="scrT">
+  <h1>Qué tipo de <em>nombre</em> es el tuyo</h1>
+  <p class="lead">Mientras menos tenga que ver con lo que vendes, más tuyo es.</p>
+  <div class="tp top1"><div class="row"><b>Inventado</b><span class="ex">Kodak, Xerox</span></div><p>No existía antes. Nadie más la necesita.</p></div>
+  <div class="tp"><div class="row"><b>Sin relación</b><span class="ex">Apple para computadores</span></div><p>Es una palabra real, pero no habla de lo que vendes.</p></div>
+  <div class="tp"><div class="row"><b>Que insinúa</b><span class="ex">Netflix</span></div><p>Sugiere algo de lo que haces, sin decirlo.</p></div>
+  <div class="tp"><div class="row"><b>Que describe</b><span class="ex">Zapatos Cómodos</span></div><p>Muy difícil de registrar. Con una palabra tuya al inicio, cambia.</p></div>
+  <div class="tp"><div class="row"><b>Lo que es</b><span class="ex">Zapatos, para una zapatería</span></div><p>No se registra: es el nombre del producto.</p></div>
+  <p class="fine">Criterios del Tribunal de Justicia de la Comunidad Andina.</p>
+  <button class="btn" data-go="scrB" type="button">Crear un nombre inventado</button>
+  <button class="btn ghost" data-go="scrA" type="button">Revisar mi nombre</button>
+</section>
+
+<!-- piezas compartidas, se mueven según la pantalla -->
+<div class="card" id="propsCard" style="display:none">
+  <h2 class="sec-title" style="font-size:24px">Nombres con más camino</h2>
+  <div class="rule"></div>
+  <p class="muted" style="margin-top:0" id="props-intro">Pensados para tu tipo de producto, lejos de las palabras que todo el mundo usa.</p>
+  <div id="props"></div>
+  <div class="rounds">
+    <button class="btn" id="more-fav" type="button" style="display:none">Quiero más nombres como mis favoritos</button>
+    <button class="btn ghost" id="more" type="button" style="display:none">Quiero otra ronda de nombres</button>
+  </div>
+</div>
+<div class="cta" id="informe" style="display:none">
+  <div class="eyebrow">Tu informe</div>
+  <h2 style="margin-top:10px">Falta saber si alguien ya <em>tiene</em> ese nombre.</h2>
+  <p style="margin:12px 0 0">Escoges tu informe y tu nombre finalista, hago la búsqueda y te lo entrego en PDF.</p>
+  <div class="offer" id="offer"></div>
+  <div class="pick" id="pick"></div>
+  <ol class="pasos">
+    <li>Me escribes por WhatsApp con el botón de abajo. El mensaje ya va listo.</li>
+    <li>Te confirmo tu pedido.</li>
+    <li>Recibes tu informe en PDF por WhatsApp, <span id="entrega-paso"></span>.</li>
+  </ol>
+  <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+  <p class="consent">Al enviar el mensaje aceptas el <button type="button" class="lnk" id="ver-acuerdo">acuerdo de confidencialidad y datos</button>.</p>
+  <details class="acuerdo" id="acuerdo">
+    <summary>Acuerdo de confidencialidad y tratamiento de datos</summary>
+    <div class="ac">
+      <p><b>1. Tus ideas son tuyas.</b> Los nombres, la descripción de tu negocio y todo lo que me cuentes son confidenciales. No los comparto, no los publico y nunca los registro ni los uso para mí ni para otra persona.</p>
+      <p><b>2. La app no guarda tus datos.</b> Lo que escribes en la app se queda en tu celular. Solo me llega lo que tú decides enviarme por WhatsApp.</p>
+      <p><b>3. Para qué uso tus datos.</b> Con tu nombre, tu WhatsApp y la información de tu marca preparo tu informe y te respondo. Nada más. Lo hago conforme a la Ley 1581 de 2012 de protección de datos personales.</p>
+      <p><b>4. Tus derechos.</b> Puedes pedirme en cualquier momento conocer, corregir o borrar tus datos escribiendo a abogada.alejandrarestrepo@gmail.com o al WhatsApp 301 625 3440.</p>
+      <p><b>5. Sobre el resultado.</b> La app y el informe te orientan con una probabilidad de registro. La decisión final es de la autoridad de marcas, por eso ningún resultado se puede garantizar.</p>
+      <p class="resp">Responsable: Alejandra Margarita Restrepo Urrego, abogada, T.P. 252.740 · Lexa Legal · Medellín.</p>
+    </div>
+  </details>
+  <div class="phone">WhatsApp 301 625 3440 · @conlexalegal</div>
+  <button class="btn ghost" id="copy" type="button" style="margin-top:10px">Copiar mi resultado</button>
+  <div class="copied" id="copied"></div>
+</div>
+<footer><img src="logo_crema.png" alt="Lexa Legal"><p>Lo que construyes con esfuerzo merece estar protegido.</p></footer>
+</div>
+<script>
+(function(){
+  // ---------- ÍNDICE LEXA (versión inicial, para ampliar con los informes de Alejandra) ----------
+  const COMMON = [...new Set("alma vida amor luz sol luna mar cielo tierra agua fuego flor rosa jardin bosque raiz semilla esencia natural pura puro real bella bello linda lindo bonita dulce feliz magia magica sueño sueños angel divina divino reina rey princesa diosa estrella oro dorado dorada plata perla diamante cristal color colores arte artesanal origen nativa nativo viva vivo nueva nuevo verde blanca blanco negra negro azul nido casa hogar familia mama mami bebe niña niño kids eco bio salud bienestar zen aura energia karma mente cuerpo piel belleza glamour moda estilo tendencia urbano rapido facil smart digital online social global latino latina tropical caribe andino criollo paisa colombiano bogota medellin cali su love life soul light sun moon sea sky earth star stars gold golden silver pearl diamond crystal pure true real fresh green organic wild free happy sweet beauty glow bloom rose lily honey sugar cherry baby little mini mom family studio lab labs hub box bar spot point center zone nation club group team works design style fashion wear market smart max prime elite luxury royal prince princess magic dream dreams spirit one first new classic vintage modern simple basic essential essentials care wellness health fit fitness body skin face hair nails".split(" ").concat(["mia","mio","mias","mios","nuestra","nuestro","the","la","el","los","las","de","del","y","and","by","co","company","colombia","col","store","shop","tienda","brand","marca","house","casa","studio","estudio","premium","top","best","plus","pro","express","original","oficial","official","mi","my","tu","your","sas","s.a.s","group","grupo","home","world","mundo","life","love","amor","bella","bello","divina","queen","king","reina","luna","sol","sun","flor","rosa","vida","alma","nova","bliss","mood","vibe","vibes","luxe","lux","glam","chic"]))];
+  const SECTORS = {
+    ropa:{label:"ropa y moda", product:["ropa","moda","prendas","camisetas","camiseta","jeans","vestidos","clothes","clothing","apparel","fashion","outfit","outfits","boutique"], saturated:["urban","urbano","urbana","street","streetwear","wear","style","estilo","club","closet","look","looks","trend","trendy","basic","basics","essential","essentials","line","collection","coleccion","colección","atelier","dress","girl","girls","lady","woman","women","mujer","men","hombre","man","boy","denim","cotton","algodon","algodón","urbanwear","outfit","clothing","moda"]},
+    bano:{label:"vestidos de baño", product:["bikini","bikinis","swim","swimwear","beachwear","traje","trajes","vestido de baño","banador","bañador","playa"], saturated:["mar","mare","sea","ocean","oceano","océano","ola","olas","wave","waves","playa","beach","arena","sand","isla","island","bay","bahia","bahía","coral","caribe","caribbean","tropical","tropic","sun","sol","summer","verano","salt","sal","brisa","breeze","palma","palm","agua","aqua","marina","azul","blue","sirena","mermaid","costa","coast","shore","resort","bikini","swim","swimwear","beachwear","paradise","paraiso","paraíso"]},
+    lenceria:{label:"lencería", product:["lenceria","lencería","lingerie","brasier","brassier","panty","pantys","intima","íntima","intimo","íntimo","underwear","pijama","pijamas"], saturated:["lingerie","lenceria","lencería","piel","skin","seda","silk","encaje","lace","secret","secreto","secreta","desire","deseo","sensual","sexy","intima","íntima","intimate","dolce","velvet","satin","satín","nude","curves","curvas","femme","mujer","woman","lady","girl","rosa","rose","dulce","sweet","pink","kiss","beso","feel","bare"]},
+    cafe:{label:"café", product:["cafe","café","coffee","tinto","espresso","cafeteria","cafetería"], saturated:["cafe","café","coffee","tostado","tostadores","roast","roasters","origen","origin","finca","farm","montaña","montana","mountain","tierra","land","aroma","grano","granos","bean","beans","colombia","colombiano","colombian","andes","andino","sierra","valle","cosecha","harvest","barista","taza","cup","cafetal","arabica","arábica","especial","specialty","premium","altura","nativo","verde"]},
+    belleza:{label:"belleza y estética", product:["belleza","estetica","estética","beauty","spa","nails","uñas","pestañas","cejas","maquillaje","makeup","skincare","peluqueria","peluquería","salon","salón"], saturated:["beauty","bella","bello","glow","skin","piel","spa","nails","nail","lash","lashes","brow","brows","estetica","estética","glam","divina","bloom","natural","pure","pura","derma","face","rostro","body","cuerpo","esencia","essence","radiance","radiante","care","cuidado","studio","bar","clinic","clinica","clínica","line","look"]},
+    comida:{label:"comida y bebidas", product:["restaurante","comida","food","burger","hamburguesa","pizza","bar","cocina","kitchen","postres","panaderia","panadería","bakery","bebidas","drinks"], saturated:["food","sabor","sabores","cocina","kitchen","grill","parrilla","burger","house","casa","gourmet","fresh","fresco","bistro","delicias","delicia","rico","rica","tasty","gusto","antojo","antojos","fit","healthy","saludable","natural","artesanal","home","mama","abuela","street","express","bowl","box","bites","snack","dulce","sweet","chef","sazon","sazón","fogon","fogón"]},
+    educacion:{label:"educación y cursos", product:["academia","academy","escuela","school","curso","cursos","clases","colegio","instituto","educacion","educación","training"], saturated:["academy","academia","school","escuela","learn","aprende","aprender","pro","master","masters","coach","coaching","mentor","edu","digital","online","skills","talento","talent","growth","crece","lab","hub","campus","success","exito","éxito","mind","mente","smart","genius","lider","líder","leader","club","method","metodo","método","university","universidad"]},
+    otro:{label:"tu sector", product:[], saturated:[]}
+  };
+
+  // ---------- Clasificación de Niza: opciones en palabras sencillas ----------
+  // c = clase principal, x = clases que podrían sumarse, s = sector del Índice, m = tono por defecto, p = palabras que describen el producto
+  const CLASES = {1:"productos químicos y abonos",2:"pinturas y tintes",3:"cosméticos, perfumes y productos de aseo",4:"velas, aceites y combustibles",5:"productos farmacéuticos y suplementos",6:"productos metálicos y ferretería",7:"máquinas y motores",8:"herramientas de mano y cubiertos",9:"tecnología, software y gafas",10:"aparatos médicos",11:"iluminación, cocinas y electrodomésticos de calor o frío",12:"vehículos y sus partes",13:"fuegos artificiales",14:"joyería y relojes",15:"instrumentos musicales",16:"papelería, libros e impresos",17:"caucho, plásticos y aislantes",18:"bolsos, artículos de cuero y accesorios para mascotas",19:"materiales de construcción no metálicos",20:"muebles y decoración",21:"utensilios de cocina y del hogar",22:"cuerdas, carpas y hamacas",23:"hilos para coser y tejer",24:"telas y textiles para el hogar",25:"ropa, calzado y sombrerería",26:"accesorios de costura y para el cabello",27:"tapetes, alfombras y papel de colgar",28:"juguetes y artículos deportivos",29:"carnes, lácteos y alimentos procesados",30:"café, panadería, dulces y condimentos",31:"productos agrícolas frescos, plantas y comida para animales",32:"cervezas, jugos y bebidas sin alcohol",33:"bebidas alcohólicas (excepto cerveza)",34:"tabaco y artículos para fumadores",35:"publicidad, gestión de negocios y venta de productos de terceros",36:"seguros, finanzas e inmobiliaria",37:"construcción, reparación e instalación",38:"telecomunicaciones y plataformas de difusión",39:"transporte, envíos y viajes",40:"fabricación y tratamiento por encargo",41:"educación, entretenimiento y deporte",42:"servicios de tecnología, diseño y ciencia",43:"restaurantes, cafeterías y hospedaje",44:"servicios médicos, de belleza y veterinarios",45:"servicios jurídicos y de seguridad"};
+  const CAT_GROUPS = [
+    ["Moda y accesorios", [
+      ["ropa","Ropa, calzado o gorras",25,"ropa",null,[[35,"si además vendes en tu tienda productos de otras marcas"]]],
+      ["bano","Vestidos de baño y ropa de playa",25,"bano"],
+      ["lenceria","Lencería, ropa interior o pijamas",25,"lenceria"],
+      ["bolsos","Bolsos, morrales, billeteras o artículos de cuero",18,null,"elegante",[],["bolsos","bolso","morrales","carteras","billeteras","cuero","leather","bags","bag"]],
+      ["joyas","Joyas, bisutería o relojes",14,null,"elegante",[],["joyas","joyeria","bisuteria","jewelry","aretes","collares","pulseras","relojes","accesorios"]],
+      ["cabello","Moñas, ganchos o accesorios para el cabello",26,null,"tierno",[],["monas","ganchos","hair","accesorios"]],
+      ["gafas","Gafas o accesorios para celular",9,null,"sobrio",[],["gafas","lentes","glasses","eyewear","fundas","case","cases"]]]],
+    ["Belleza y bienestar", [
+      ["cosmeticos","Cosméticos, maquillaje, cremas o perfumes",3,"belleza",null,[[44,"si también prestas servicios de belleza"]]],
+      ["spa","Salón de belleza, spa, uñas, pestañas o barbería",44,"belleza",null,[[3,"si también vendes productos con tu marca"]]],
+      ["suplementos","Suplementos, productos naturistas o medicamentos",5,null,"natural",[],["suplementos","vitaminas","natural","naturista","farma","pharma","colageno"]],
+      ["salud","Consultorio médico, odontología, psicología o nutrición",44,null,"natural",[],["clinica","consultorio","odontologia","dental","salud","health","medical","psicologia","nutricion"]],
+      ["medicos","Equipos o dispositivos médicos",10,null,"sobrio",[],["medical","medico","medicos","equipos"]],
+      ["gimnasio","Gimnasio, entrenamiento, yoga o deporte",41,null,"fuerte",[[25,"si vendes ropa deportiva con tu marca"]],["gym","gimnasio","fitness","fit","training","crossfit","yoga","pilates"]]]],
+    ["Comida y bebidas", [
+      ["cafe","Café, té o chocolate",30,"cafe",null,[[43,"si tienes cafetería"]]],
+      ["panaderia","Panadería, postres, dulces, salsas o snacks",30,"comida",null,[[43,"si tienes local donde la gente come"]]],
+      ["procesados","Carnes, lácteos, mermeladas o comida empacada",29,"comida"],
+      ["frutas","Frutas, verduras, flores o plantas",31,null,"natural",[],["frutas","verduras","flores","plantas","vivero","organico","fresh"]],
+      ["bebidas","Jugos, aguas, bebidas o cerveza",32,"comida"],
+      ["licores","Licores, vino, ron o destilados",33,null,"elegante",[],["licores","vino","wine","ron","rum","gin","tequila","aguardiente","destileria"]],
+      ["restaurante","Restaurante, café-bar, catering o domicilios",43,"comida",null,[[30,"si vendes salsas, postres o café empacado con tu marca"],[29,"si vendes comida empacada con tu marca"]]]]],
+    ["Hogar y mascotas", [
+      ["muebles","Muebles o decoración",20,null,"natural",[],["muebles","mueble","deco","decoracion","home","hogar","interiores"]],
+      ["cocina","Vajilla, utensilios de cocina o artículos para el hogar",21,null,"natural",[],["vajilla","cocina","kitchen","utensilios","hogar","home"]],
+      ["velas","Velas y aromas para el hogar",4,null,"romantico",[[3,"si vendes difusores o aceites esenciales para el cuerpo"]],["velas","vela","candle","candles","aromas"]],
+      ["aseo","Productos de aseo y limpieza",3,null,"natural",[],["aseo","limpieza","clean","detergente","jabon","jabones"]],
+      ["electro","Electrodomésticos o iluminación",11,null,"sobrio",[],["lamparas","iluminacion","luz","light","electro"]],
+      ["textil","Sábanas, toallas, cortinas o telas",24,null,"tierno",[],["sabanas","toallas","telas","textiles","cortinas"]],
+      ["tapetes","Tapetes, alfombras o papel de colgar",27,null,"natural",[],["tapetes","alfombras","rugs"]],
+      ["pet_food","Comida para mascotas",31,null,"tierno",[],["pet","pets","mascotas","dog","cat","perro","gato"]],
+      ["pet_acc","Accesorios o ropa para mascotas",18,null,"tierno",[],["pet","pets","mascotas","dog","cat","perro","gato"]],
+      ["veterinaria","Veterinaria, peluquería o guardería de mascotas",44,null,"tierno",[[43,"si das hospedaje o guardería"]],["vet","veterinaria","pet","pets","mascotas","perro","gato"]]]],
+    ["Niños, ocio y cultura", [
+      ["juguetes","Juguetes, juegos o artículos deportivos",28,null,"alegre",[],["juguetes","toys","toy","juegos","games","sport","sports"]],
+      ["papeleria","Papelería, agendas, libros o impresos",16,null,"tierno",[],["papeleria","agendas","libros","books","stickers","print"]],
+      ["musica","Instrumentos musicales",15,null,"alegre",[],["music","musica","instrumentos","guitarras"]],
+      ["eventos","Eventos, fiestas, música en vivo o entretenimiento",41,null,"alegre",[],["eventos","events","fiestas","party","producciones"]],
+      ["educacion","Academia, cursos, talleres o mentorías",41,"educacion",null,[[16,"si vendes libros o guías impresas"],[9,"si vendes cursos grabados descargables"]]]]],
+    ["Servicios y negocios", [
+      ["agencia","Marketing, publicidad, consultoría o agencia",35,null,"sobrio",[],["marketing","agencia","agency","media","publicidad","consulting","consultoria","digital"]],
+      ["tienda","Tienda o catálogo con productos de varias marcas",35,null,"alegre",[],["tienda","store","shop","market","bazar"]],
+      ["finanzas","Seguros, finanzas, inmobiliaria o inversiones",36,null,"sobrio",[],["inmobiliaria","finanzas","finance","capital","inversiones","seguros","realty"]],
+      ["construccion","Construcción, remodelación, reparaciones o mantenimiento",37,null,"fuerte",[],["construcciones","constructora","obras","remodelaciones","mantenimiento"]],
+      ["tecnologia","Diseño, arquitectura o desarrollo de software (servicio)",42,null,"sobrio",[[9,"si vendes una app o un software descargable"]],["tech","software","design","diseno","arquitectura","studio","lab"]],
+      ["app","App, software descargable o videojuego",9,null,"sobrio",[[42,"si también ofreces la plataforma en línea"]],["app","apps","software","games","tech"]],
+      ["plataforma","Podcast, streaming, plataforma online o comunicaciones",38,null,"sobrio",[[41,"si el contenido es educativo o de entretenimiento"]],["podcast","stream","streaming","radio","tv","media"]],
+      ["transporte","Transporte, envíos, mensajería o agencia de viajes",39,null,"fuerte",[],["envios","express","logistica","logistics","viajes","travel","tours"]],
+      ["hotel","Hotel, hostal o alquiler vacacional",43,null,"natural",[],["hotel","hostal","hostel","suites","glamping","lodge"]],
+      ["fabricacion","Confección, estampado o fabricación por encargo para otros",40,null,"fuerte",[],["confecciones","maquila","estampados","fabrica"]],
+      ["legal","Servicios legales o de seguridad",45,null,"sobrio",[],["legal","abogados","law","seguridad","security"]]]],
+    ["Industria y materiales", [
+      ["quimicos","Productos químicos o abonos",1,null,"natural",[],["quimicos","abonos","fertilizantes"]],
+      ["pinturas","Pinturas, lacas o tintes",2,null,"alegre",[],["pinturas","paints","colors"]],
+      ["ferreteria","Productos metálicos o ferretería",6,null,"fuerte",[],["ferreteria","metal","metales"]],
+      ["maquinas","Máquinas o motores",7,null,"fuerte",[],["maquinas","maquinaria","motores"]],
+      ["herramientas","Herramientas de mano o cubiertos",8,null,"fuerte",[],["herramientas","tools"]],
+      ["vehiculos","Vehículos, bicicletas o repuestos",12,null,"fuerte",[],["motos","bikes","bicicletas","autos","cars","repuestos"]],
+      ["pirotecnia","Fuegos artificiales",13,null,"alegre",[],["pirotecnia"]],
+      ["plasticos","Empaques de plástico, caucho o aislantes",17,null,"sobrio",[],["plasticos","empaques","caucho"]],
+      ["materiales","Materiales de construcción (no metálicos)",19,null,"fuerte",[],["materiales","ceramica","pisos","madera"]],
+      ["hamacas","Hamacas, carpas, cuerdas o costales",22,null,"natural",[],["hamacas","carpas","cuerdas"]],
+      ["hilos","Hilos para coser o tejer",23,null,"tierno",[],["hilos","lanas","yarn"]],
+      ["tabaco","Tabaco, vapeadores o accesorios para fumadores",34,null,"sobrio",[],["tabaco","vape","smoke","cigar"]]]],
+    ["Otro", [["otro","Otra cosa (cuéntamela en la frase de abajo)",0,null,"natural",[],[]]]]
+  ];
+  const CATS = {};
+  CAT_GROUPS.forEach(([g,items])=>items.forEach(([key,label,c,sec,mood,extra,prods])=>{ CATS[key] = {key,label,c,s:sec||"otro",m:mood,x:extra||[],p:prods||[]}; }));
+  (function fillSelect(){
+    const sel = document.getElementById("sector");
+    sel.innerHTML = CAT_GROUPS.map(([g,items])=>`<optgroup label="${g}">${items.map(([k,l])=>`<option value="${k}">${l}</option>`).join("")}</optgroup>`).join("");
+    sel.value = "ropa";
+  })();
+  function useCat(key){
+    const cat = CATS[key] || CATS.otro;
+    if(cat.s === "otro"){
+      SECTORS.otro = {label: "tu sector", product: cat.p, saturated: []};
+    }
+    return cat;
+  }
+  function renderClase(){
+    const cat = state.cat, box = document.getElementById("clase");
+    if(!cat || !cat.c){
+      box.innerHTML = `<div class="clase"><div class="k">Tu clase preliminar</div><p>Con lo que me cuentas todavía no puedo ubicarla. En el informe te digo en qué clase iría tu marca.</p></div>`;
+      return;
+    }
+    const extra = cat.x.map(([n,cond])=>`<li>Clase ${n} (${CLASES[n]}), ${cond}.</li>`).join("");
+    box.innerHTML = `<div class="clase"><div class="k">Tu tipo de producto (clase)</div><div class="big">${esc(CLASES[cat.c].charAt(0).toUpperCase()+CLASES[cat.c].slice(1))}<small> · clase ${cat.c}</small></div>${extra?`<p>También podría sumarse:</p><ul style="margin:6px 0 0;padding-left:18px;font-size:15px">${extra}</ul>`:""}<p class="fine">Es una guía. En el informe la confirmamos contigo.</p></div>`;
+  }
+  const FAMOUS = ["nike","adidas","zara","gucci","chanel","dior","prada","apple","google","amazon","starbucks","bershka","stradivarius","shein","totto","leonisa","studio f","arturo calle","frisby","juan valdez","colcafe","colcafé","crepes","coca cola","pepsi","victorias secret","puma","reebok","levis","levi's","tommy hilfiger","calvin klein","lacoste","h&m","forever 21","falabella","exito","éxito","rappi","netflix","disney","mcdonalds","kfc","natura","avon","esika","ésika","yanbal","vogue","pandora","swarovski","bimbo","alpina","postobon","postobón","nestle","nestlé","chevignon","americanino","pat primo","gef","punto blanco","offcorss","koaj","tennis","velez","vélez","bosi","ralph lauren"];
+
+  const $ = id => document.getElementById(id);
+  const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9&' ]/g," ").replace(/\s+/g," ").trim();
+  const NORM_SET = arr => new Set(arr.map(norm));
+
+  function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let p=Array.from({length:n+1},(_,j)=>j);for(let i=1;i<=m;i++){let c=[i];for(let j=1;j<=n;j++){c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));}p=c;}return p[n];}
+
+  // Palabras comunes pegadas: "Almar" = alma + mar
+  function compoundParts(t, sat){
+    const words = [...sat].filter(w=>w.length>=3 && !w.includes(" "));
+    const memo = {};
+    function go(i, left){
+      if(i >= t.length) return [];
+      const key = i+"|"+left; if(key in memo) return memo[key];
+      let res = null;
+      for(const w of words){ if(t.startsWith(w, i)){ const r = go(i+w.length, left); if(r){ res = [w].concat(r); break; } } }
+      if(!res) for(const w of words){
+        for(const cut of [1,2]){
+          const tw = w.slice(0,-cut);
+          if(w.length>=4 && tw.length>=2 && t.startsWith(tw, i) && i+tw.length < t.length){ const r = go(i+tw.length, 0); if(r && r.length && r[0].length>=3){ res = [w].concat(r); break; } }
+        }
+        if(res) break;
+      }
+      if(!res && left > 0){ const r = go(i+1, left-1); if(r) res = r; }
+      return memo[key] = res;
+    }
+    const parts = go(0, 1);
+    return (parts && parts.length && !(parts.length===1 && parts[0]===t)) ? parts : null;
+  }
+  function satEdge(t, sat){
+    return [...sat].filter(w=>w.length>=4 && !w.includes(" ") && w!==t && (t.startsWith(w) || t.endsWith(w))).sort((a,b)=>b.length-a.length)[0] || null;
+  }
+  // Marcas conocidas por sector que Alejandra identifica en su práctica
+  const KNOWN = {};  // reservado; la detección general la hacen las reglas y la búsqueda en internet
+  function diagnose(raw, sectorKey){
+    const s = SECTORS[sectorKey];
+    const name = norm(raw);
+    const STOP = new Set(["de","del","la","el","los","las","y","and","the","by","&","e","en"]);
+    const tokens = name.split(" ").filter(t=>t && !STOP.has(t));
+    const cap = t => t.charAt(0).toUpperCase()+t.slice(1);
+    const sat = NORM_SET(s.saturated.concat(COMMON));
+    const prod = NORM_SET(s.product);
+    const reasons = [];
+    let tip = "";
+
+    // Parecido con marca famosa
+    const compact = name.replace(/\s/g,"");
+    let famous = null;
+    for(const f of FAMOUS){
+      const fc = norm(f).replace(/\s/g,"");
+      if(fc.length < 3) continue;
+      if(compact === fc || (fc.length>=4 && tokens.includes(norm(f))) || (fc.length>=5 && compact.includes(fc)) || (fc.length>=5 && compact.length>=5 && lev(compact,fc)<=1)){ famous = f; break; }
+    }
+    const kn = (KNOWN[sectorKey]||[]).find(k=>{const kc=norm(k).replace(/\s/g,""); return compact===kc || (kc.length>=5 && lev(compact,kc)<=(kc.length>=7?2:1));});
+    if(kn){
+      return {name:raw, color:"r", level:1, label:"Probabilidad menor",
+        reasons:[`Ya existe una marca conocida en tu sector con un nombre igual o casi igual ("${kn}").`, "Cuando dos marcas se llaman igual en el mismo sector, la segunda se niega."],
+        tip:"Mi consejo: antes de invertir en este nombre, estúdialo bien. Usa su idea como inspiración en las propuestas de abajo."};
+    }
+    if(famous){
+      return {name:raw, color:"r", level:1, label:"Probabilidad menor",
+        reasons:[`Se parece mucho a "${famous.replace(/\b\w/g,c=>c.toUpperCase())}", una marca muy conocida.`, "Las marcas famosas tienen una protección más fuerte y suelen oponerse a nombres parecidos, aunque vendas otra cosa."],
+        tip:"Mi consejo: este nombre hay que estudiarlo con mucho cuidado antes de invertir en él. Mira las propuestas de abajo."};
+    }
+
+    const mu = muyUsada(tokens, compact);
+    if(mu){
+      const W = mu.w.replace(/\b\w/g,c=>c.toUpperCase());
+      return {name:raw, color: mu.fuerte?"r":"a", level: mu.fuerte?2:3, label: mu.fuerte?"Probabilidad menor":"Probabilidad media alta",
+        reasons:[ mu.cercano ? `Suena casi igual a "${W}", una palabra muy usada como marca (nombres de dioses, astros y palabras de moda).` : `"${W}" es una palabra muy usada como marca (nombres de dioses, astros y palabras de moda).`,
+                  "Cuando una palabra ya la usan muchas marcas, las más antiguas suelen oponerse a las que se parecen, aunque vendas otra cosa."],
+        tip:"Mi consejo: estudia este nombre con cuidado antes de invertir en él. Usa su idea como inspiración y mira las propuestas de abajo."};
+    }
+    const prodHits = tokens.filter(t => prod.has(t));
+    const satHits = tokens.filter(t => sat.has(t) && !prod.has(t));
+    const free = tokens.filter(t => !sat.has(t) && !prod.has(t) && t.length > 2);
+
+    if(tokens.length === 0) return null;
+
+    // Palabras comunes escondidas dentro de una palabra
+    const fused = [], partial = [];
+    free.slice().forEach(t=>{
+      const parts = compoundParts(t, sat);
+      if(parts){ const edges = [...sat].filter(w=>w.length>=3 && !w.includes(" ") && w!==t && (t.startsWith(w)||t.endsWith(w))); fused.push([t, [...new Set(parts.concat(edges))].sort((a,b)=>t.indexOf(a)-t.indexOf(b))]); free.splice(free.indexOf(t),1); return; }
+      const edge = satEdge(t, sat);
+      if(edge){ partial.push([t, edge]); free.splice(free.indexOf(t),1); }
+    });
+    if(fused.length && !free.length){
+      const [t, parts] = fused[0];
+      const r = [`"${cap(t)}" une ${parts.map(x=>`"${cap(x)}"`).join(" y ")}, palabras muy usadas en ${s.label}.`,
+        "Al pegarlas no dejan de ser comunes. Se comparan con todas las marcas que ya llevan esas palabras.",
+        "Puede que te lo den con logo, pero las palabras no quedan siendo tuyas. Cualquiera puede usarlas."];
+      if(partial.length || satHits.length) r.push("El resto del nombre también usa palabras frecuentes en tu sector.");
+      return {name:raw, color:"r", level:2, label:"Probabilidad menor", reasons:r,
+        tip:"Mi consejo: si este nombre tiene un significado especial para ti, consérvalo como inspiración y busquemos una versión con una parte que sea solo tuya. Mira las propuestas de abajo."};
+    }
+    if(fused.length || partial.length){
+      fused.forEach(([t,parts])=>reasons.push(`"${cap(t)}" une ${parts.map(x=>`"${cap(x)}"`).join(" y ")}, palabras muy usadas en ${s.label}.`));
+      partial.forEach(([t,e])=>reasons.push(`"${cap(t)}" lleva dentro "${cap(e)}", una palabra muy usada en ${s.label}.`));
+      reasons.push("Al revisar una marca se mira el conjunto, y la parte que más pesa es la que distingue. Si esa parte se parece a otra marca, hay riesgo.");
+      return {name:raw, color:"a", level:3, label:"Probabilidad media alta", reasons,
+        tip: free.length ? `Mi consejo: deja "${free.map(cap).join(" ")}" como protagonista, al inicio. Es la parte con más fuerza.` : "Mi consejo: busca que la parte nueva pese más que la palabra común. Las propuestas de abajo van por ese camino."};
+    }
+
+    if(free.length === 0 && prodHits.length && satHits.length === 0){
+      return {name:raw, color:"r", level:1, label:"Probabilidad menor",
+        reasons:[`"${raw}" nombra el producto que vendes. Eso es un nombre genérico.`, "Nadie puede quedarse con el nombre común de un producto. Por eso hay que estudiarlo con mucho cuidado."],
+        tip:"Mi consejo: necesitas una palabra que sea solo tuya. Revisa las propuestas de abajo."};
+    }
+    if(free.length === 0){
+      reasons.push(`Todas sus palabras (${tokens.map(t=>`"${cap(t)}"`).join(", ")}) son de las más usadas en ${s.label}.`);
+      if(prodHits.length) reasons.push(`Además, "${cap(prodHits[0])}" describe lo que vendes.`);
+      reasons.push("Cuando un nombre se arma solo con palabras comunes, choca con muchas marcas registradas o le cuesta registrarse porque no se distingue.");
+      reasons.push("Puede que te lo den con logo, pero las palabras no quedan siendo tuyas. Cualquiera puede usarlas.");
+      return {name:raw, color:"r", level:2, label:"Probabilidad menor", reasons,
+        tip:"Mi consejo: cambia la base del nombre por una palabra inventada o arbitraria. Las propuestas de abajo van por ese camino."};
+    }
+    if(satHits.length || prodHits.length){
+      const common = satHits.concat(prodHits);
+      reasons.push(`Tiene una parte con fuerza ("${free.map(cap).join(" ")}"), pero ${common.map(t=>`"${cap(t)}"`).join(" y ")} ${common.length>1?"son palabras muy usadas":"es una palabra muy usada"} en ${s.label}.`);
+      reasons.push("Al revisar una marca se mira el conjunto, y la parte que más pesa es la que distingue. Si esa parte se parece a otra marca, hay riesgo.");
+      const startsFree = !sat.has(tokens[0]) && !prod.has(tokens[0]);
+      tip = startsFree
+        ? `Mi consejo: vas bien con "${cap(free[0])}" al inicio, porque la parte distintiva es la que más pesa. Verifica que "${free.map(cap).join(" ")}" no exista ya en tu clase antes de invertir más.`
+        : `Mi consejo: pon la palabra distintiva al inicio ("${free.map(cap).join(" ")} ${common.map(cap).join(" ")}") o usa solo "${free.map(cap).join(" ")}". Es una estrategia que me ha funcionado mucho.`;
+      return {name:raw, color:"a", level:3, label:"Probabilidad media alta", reasons, tip};
+    }
+    // Solo palabras libres
+    const letters = compact.length;
+    if(tokens.length === 1 && letters <= 9){
+      reasons.push("Es una sola palabra, corta y sin términos saturados de tu sector. Así se construyen las marcas que ganan hoy.");
+      reasons.push("Ojo: que no sea común no significa que esté libre. Solo tu informe te da una probabilidad más segura.");
+      return {name:raw, color:"v", level:5, label:"Buen camino, falta verificar", reasons,
+        tip:"Mi consejo: este es un buen candidato para tu informe antes de diseñar el logo."};
+    }
+    reasons.push("No usa las palabras más saturadas de tu sector, eso es una buena señal.");
+    if(letters > 14 || tokens.length > 2) reasons.push("Es un poco largo. Los nombres cortos se recuerdan mejor y se protegen más fácil.");
+    reasons.push("Ojo: que no sea común no significa que esté libre. Solo tu informe te da una probabilidad más segura.");
+    return {name:raw, color:"v", level:4, label:"Buen camino, falta verificar", reasons,
+      tip: (letters > 14 || tokens.length > 2) ? "Mi consejo: prueba una versión más corta y revisa el nombre final en tu informe." : "Mi consejo: este es un buen candidato para tu informe antes de diseñar el logo."};
+  }
+
+  // ---------- Generador de respaldo (sin IA) ----------
+  const SYL_A = ["ka","lo","mi","za","ve","ru","no","ta","se","li","ma","do","ri","va","ne","so","be","ti","la","mo","ze","fi","co","pa"];
+  const SYL_B = ["ra","ni","lo","ta","ve","mi","ko","sa","ne","ru","li","do","ba","zu","ma","ri","te","no"];
+  const END = ["","","n","l","r"];
+  const BAD = ["culo","puta","pene","caca","nazi","mier","coca","colon","seno","nalga","mama","papa","teta","pito","loca","rata","mata","mala","tonta","color","lima","limon","mina","ruta","sala","toro","vaca","ropa","moda"];
+  const ARBITRARY = ["Olmo","Lince","Tilo","Almendra","Mimbre","Cometa","Brote","Cedro","Índigo","Nogal","Laurel","Zafiro","Ciprés","Boreal","Gardenia","Magnolia","Turquesa","Girasol","Alondra","Canela","Vainilla","Azahar","Arrayán","Orquídea","Jazmín","Lavanda"];
+  function pick(a){return a[Math.floor(Math.random()*a.length)];}
+  function coined(sat){
+    for(let i=0;i<40;i++){
+      let w = pick(SYL_A)+pick(SYL_B)+pick(END);
+      if(w.length<4||w.length>7) continue;
+      if(/(.)\1/.test(w)) continue;
+      if(w.slice(0,2)===w.slice(2,4) || w.slice(1,3)===w.slice(3,5)) continue;
+      if(BAD.some(b=>w.includes(b))) continue;
+      if(sat.has(w)) continue;
+      if(FAMOUS.some(f=>lev(norm(f).replace(/\s/g,""),w)<=1)) continue;
+      return w.charAt(0).toUpperCase()+w.slice(1);
+    }
+    return "Velora";
+  }
+  const EVOCA = {
+    ropa:["Trazo","Pliegue","Hilván","Andén","Bastilla","Ojal","Tramo","Acorde","Galope","Dechado"],
+    bano:["Nácar","Caracola","Atolón","Bitácora","Arrecife","Estela","Alisio","Rada","Ensenada","Cala"],
+    lenceria:["Susurro","Velo","Pétalo","Rocío","Nube","Lazo","Rubor","Arrebol","Ensueño","Guiño"],
+    cafe:["Brasa","Fogón","Cántaro","Rescoldo","Madrugada","Zaguán","Balcón","Alero","Ramada","Corredor"],
+    belleza:["Rocío","Nácar","Pulso","Raíz","Destello","Arrebol","Tocador","Remanso","Pétalo","Ópalo"],
+    comida:["Fogón","Brasa","Cántaro","Leña","Ollita","Festín","Hornilla","Alacena","Mantel","Convite"],
+    educacion:["Peldaño","Puente","Chispa","Tintero","Trampolín","Andamio","Sendero","Cometa","Cumbre","Mapa"],
+    otro:["Prisma","Raíz","Pulso","Vértice","Destello","Arraigo","Albor","Trazo","Ápice","Cauce"]
+  };
+  // ---------- Palabras nuevas con significado ----------
+  // Cada raíz trae su significado y su origen. La palabra nueva se arma con un final suave.
+  const ROOTS = {
+    general:[["vit","vida","vita, en latín"],["clar","claridad","clarus, en latín"],["aur","oro","aurum, en latín"],["grat","gracia","gratia, en latín"],["gaud","alegría","gaudium, en latín"],["seren","calma","serenus, en latín"],["val","valor","valere, en latín"],["cand","luz cálida","candela, en latín"],["cor","corazón","cor, en latín"]],
+    legal:[["fid","confianza","fides, en latín"],["ver","verdad","veritas, en latín"],["clar","claridad","clarus, en latín"],["cert","seguridad","certus, en latín"],["pact","acuerdo","pactum, en latín"],["salv","protección","salvus, en latín"],["cord","concordia","concordia, de cor y cordis, en latín"],["solv","solución","solvere, en latín"],["val","valor","valere, en latín"],["cust","guardia","custos, en latín"]],
+    tech:[["nex","conexión","nexus, en latín"],["ingen","ingenio","ingenium, en latín"],["nub","nube","nubes, en latín"],["nov","algo nuevo","novus, en latín"],["mir","asombro","mirari, en latín"],["solv","solución","solvere, en latín"],["puls","pulso","pulsus, en latín"]],
+    belleza:[["bel","belleza","bellus, en latín"],["lil","lirio","lilium, en latín"],["ros","rosa","rosa, en latín"],["aur","oro","aurum, en latín"],["grat","gracia","gratia, en latín"],["seren","calma","serenus, en latín"],["len","suavidad","lenis, en latín"],["orn","adorno","ornare, en latín"],["div","lo divino","divinus, en latín"]],
+    comida:[["sab","sabor","sapor, en latín"],["gust","gusto","gustus, en latín"],["mel","miel","mel, en latín"],["dulc","dulzura","dulcis, en latín"],["fest","celebración","festum, en latín"],["pom","fruto","pomum, en latín"],["grat","agrado","gratus, en latín"],["lar","hogar","lar, en latín"],["aur","oro","aurum, en latín"]],
+    cafe:[["aur","amanecer","aurora, en latín"],["alt","altura","altus, en latín"],["mel","miel","mel, en latín"],["dulc","dulzura","dulcis, en latín"],["ros","rocío","ros, en latín"],["lar","hogar","lar, en latín"],["seren","calma","serenus, en latín"],["sab","sabor","sapor, en latín"]],
+    moda:[["vest","vestir","vestis, en latín"],["lin","lino","linum, en latín"],["orn","adorno","ornare, en latín"],["sart","oficio del sastre","sartor, en latín"],["art","arte","ars, en latín"],["grat","gracia","gratia, en latín"],["aur","oro","aurum, en latín"],["port","porte","portare, en latín"],["form","forma","forma, en latín"]],
+    mar:[["ond","ola","unda, en latín"],["nav","navegar","navis, en latín"],["lit","orilla","litus, en latín"],["riv","arroyo","rivus, en latín"],["vel","vela","velum, en latín"],["cor","coral","corallium, en latín"],["aur","brisa","aura, en latín"],["delf","delfín","delphinus, en latín"],["seren","calma","serenus, en latín"]],
+    intimo:[["am","amor","amare, en latín"],["cor","corazón","cor, en latín"],["dulc","dulzura","dulcis, en latín"],["ros","rosa","rosa, en latín"],["seren","calma","serenus, en latín"],["len","suavidad","lenis, en latín"],["vel","velo","velum, en latín"],["sens","sentidos","sensus, en latín"],["grat","gracia","gratia, en latín"],["aur","brisa","aura, en latín"]],
+    educacion:[["sof","sabiduría","sophia, en griego"],["aten","sabiduría","Atenea, diosa griega de la sabiduría"],["lect","lectura","lectio, en latín"],["lib","libertad","liber, en latín"],["clar","claridad","clarus, en latín"],["alt","altura","altus, en latín"],["art","arte","ars, en latín"],["prim","lo primero","primus, en latín"]],
+    salud:[["vit","vida","vita, en latín"],["san","bienestar","sanus, en latín"],["cur","cuidado","cura, en latín"],["val","fuerza","valere, en latín"],["salv","protección","salvus, en latín"],["seren","calma","serenus, en latín"],["fort","fuerza","fortis, en latín"],["len","suavidad","lenis, en latín"]],
+    hogar:[["nid","nido","nidus, en latín"],["dom","casa","domus, en latín"],["lar","hogar","lar, en latín"],["lil","lirio","lilium, en latín"],["silv","bosque","silva, en latín"],["lin","lino","linum, en latín"],["art","arte","ars, en latín"],["seren","calma","serenus, en latín"],["arb","árbol","arbor, en latín"],["cand","luz cálida","candela, en latín"]],
+    ninos:[["lud","juego","ludus, en latín"],["gaud","alegría","gaudium, en latín"],["ris","risa","risus, en latín"],["tern","ternura","tener, en latín"],["lun","luna","luna, en latín"],["plum","pluma","pluma, en latín"],["nub","nube","nubes, en latín"],["dulc","dulzura","dulcis, en latín"],["fest","celebración","festum, en latín"],["prim","lo primero","primus, en latín"]],
+    negocios:[["fid","confianza","fides, en latín"],["val","valor","valere, en latín"],["nex","conexión","nexus, en latín"],["prim","lo primero","primus, en latín"],["opt","lo mejor","optimus, en latín"],["prosp","prosperidad","prosperus, en latín"],["aur","oro","aurum, en latín"],["cert","seguridad","certus, en latín"],["pact","acuerdo","pactum, en latín"],["solv","solución","solvere, en latín"]],
+    viaje:[["nav","navegar","navis, en latín"],["iter","camino","iter, en latín"],["vol","vuelo","volare, en latín"],["port","puerto","portus, en latín"],["riv","arroyo","rivus, en latín"],["mund","mundo","mundus, en latín"],["aur","amanecer","aurora, en latín"],["lib","libertad","liber, en latín"],["lit","orilla","litus, en latín"],["alt","altura","altus, en latín"]],
+    natural:[["lil","lirio","lilium, en latín"],["silv","bosque","silva, en latín"],["frond","follaje","frons, en latín"],["arb","árbol","arbor, en latín"],["vern","primavera","vernus, en latín"],["ros","rocío","ros, en latín"],["riv","arroyo","rivus, en latín"],["hort","huerto","hortus, en latín"],["vit","vida","vita, en latín"],["aur","amanecer","aurora, en latín"]],
+    industria:[["fort","fuerza","fortis, en latín"],["fabr","oficio","faber, en latín"],["ingen","ingenio","ingenium, en latín"],["form","forma","forma, en latín"],["magn","grandeza","magnus, en latín"],["art","arte","ars, en latín"],["val","valor","valere, en latín"],["oper","obra","opera, en latín"]]
+  };
+  const THEME_BY_KEY = {ropa:"moda",bano:"mar",lenceria:"intimo",bolsos:"moda",joyas:"belleza",cabello:"belleza",gafas:"tech",cosmeticos:"belleza",spa:"belleza",suplementos:"salud",salud:"salud",medicos:"salud",gimnasio:"salud",cafe:"cafe",panaderia:"comida",procesados:"comida",frutas:"natural",bebidas:"comida",licores:"comida",restaurante:"comida",muebles:"hogar",cocina:"hogar",velas:"hogar",aseo:"hogar",electro:"hogar",textil:"hogar",tapetes:"hogar",pet_food:"natural",pet_acc:"ninos",veterinaria:"salud",juguetes:"ninos",papeleria:"educacion",musica:"ninos",eventos:"ninos",educacion:"educacion",agencia:"negocios",tienda:"negocios",finanzas:"negocios",construccion:"industria",tecnologia:"tech",app:"tech",plataforma:"tech",transporte:"viaje",hotel:"viaje",fabricacion:"industria",legal:"legal",quimicos:"industria",pinturas:"industria",ferreteria:"industria",maquinas:"industria",herramientas:"industria",vehiculos:"viaje",pirotecnia:"ninos",plasticos:"industria",materiales:"industria",hamacas:"natural",hilos:"moda",tabaco:"negocios",otro:"general"};
+  const REAL = ["claris","paceo","corea","navara","navarra","paris","roma","lima","cuba","peru","chile","china","india","fidela","fiesta","fidelia","firmina","fidra","calera","melena","sabana","sabueso","pacana","verde","ardilla","area","arena","clara","firma","firme","alia","alma","arco","vena","pena","lena","mina","tina","cara","sera","era","ira","clase","clave","nora","lora","tela","vela","sala","rosa","rosana","rosina","sabina","gloria","verano","fidel","firmeza","lumen","vita","nova","aurora","alba"];
+  const SOFT_ENDS = ["ara","ina","ela","ia","ana","ea","is","ari","ila","io"];   // v3: sin "ora" ni "ena" (los más ocupados en la SIC)
+  const RARE_ENDS = ["ari","ila","ela","ara","io"];                                   // v3: pesan más los finales poco comunes
+  const shufEnds = () => SOFT_ENDS.map(e=>[e, Math.random()*(RARE_ENDS.includes(e)?0.55:1)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  // ---- Reglas de sonido (v3) ----
+  const comoSuena = x => x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/h/g,"").replace(/qu/g,"k").replace(/c(?=[ei])/g,"s").replace(/z/g,"s").replace(/c/g,"k").replace(/gu(?=[ei])/g,"g").replace(/g(?=[ei])/g,"j").replace(/v/g,"b").replace(/ll/g,"y");
+  const unaLetra = (a,b) => { if(a===b) return true; if(Math.abs(a.length-b.length)>1) return false; let i=0; while(i<a.length&&i<b.length&&a[i]===b[i]) i++; if(a.length===b.length) return a.slice(i+1)===b.slice(i+1); return a.length>b.length ? a.slice(i+1)===b.slice(i) : b.slice(i+1)===a.slice(i); };
+  const SIN_FINAL = {cris:["is"], mit:["is"], seren:["ia"]};
+  const VERBALES = ["form","pact","cur","san","am","gust","dom","port","opt","salv","orn","vol","lib","prim","puls","vel","mir"];
+  const FEAS_DENTRO = ["caca","kulo","pedo","moko","rata","sapo","piojo","bomito","baba"];
+  const FEAS_FINAL = ["mea","pis","pus","feo","fea"];
+  const FEAS_INICIO = ["mal","asko","pipi","popo"];
+  const CASI_FEAS = ["orina","bestia","lejia","hernia","fobia","bibora","trauma","anemia","dengue","mugre","plaga","karies","letrina","peresa","belorio","kalana","benerea"];
+  const DARK_ADD = ["melan","satan","funer","lugubr","cadaver","ataud","cripta","calavera","fantasma","espectro","hechiz","maldi","malign","cruel","terror","horror","panico","lagrim","lament","tragedi","agonia","soledad","tiniebla","penumbra","tenebr","sombri","naufrag","derrumb","trueno","veneno","venen","toxic","peste","plaga","guerra","furia","culpa","grito","enferm","fiebre","virus","tumor","cancer","hernia","carcel","sucio","mugre","basura","podrid","moho","letal","fatal","necro","torv","notte","nuit","noite","dead","death","grief","doom","gloom","blood","poison","feio","sujo","raiva"];
+  const DARK_EXACTAS = ["ira","odio","odia","pena","bala","arma","daga","rabia","fosa","sida","nero","ombra","ombre","dor","medo","sad","die","war","hell","pain","hate","fear","evil","sick","kill","grim"];
+  const REAL_ADD = ["novia","novio","novela","novena","serena","sereno","seria","serio","amena","amara","amora","sabia","sabio","sabila","sabora","salvia","curia","curara","domina","domino","felina","latina","mentira","mentia","tenia","tenis","vestia","bestia","movia","vivia","ardia","libia","liberia","siria","corea","navio","volea","pasea","ondea","ondina","clarea","linea","idea","radio","folio","litio","litis","helio","gratis","fortis","lumina","magia","lejia","legia","gemela","nutria","campana","cantina","cantora","lectora","gestora","mentora","sonora","montana","ventana","ventila","mundana","mundari","modena","candela","fontana","terrena","caloria","amorio","tutela","tuteo","mareo","saneo","paseo","rodeo","valia","valio","valora","ingenio","ingenia","opera","prospera","atenea","terna","prima","primor","forma","formula","aurea","rosea","rosario","aria","arana","orina","aurina","aurine","ornina","calina","calima","calena","calana","nubia","altar","altea","dulce","dulcinea","portal","portada","vital","solvente","salvaje","artesa","antena","divina","amia","amis","amina","coria","libio","navia","veria","portela","portia","candia","artis","sania","silvina","silvela","gustara","formara","salvara","volara","amelia","aurelia","fidela","fidelia","sofia","silvia","silvana","silvio","lucia","nidia","sonia","delfina","carmela","carmina","helena","elena","florina","celia","celina","melina","corina","marina","alena","verena","lilia","liliana","rosalia","leticia","irene","melora","serenia","lumora","aurena","risela","marisela","lumari","solvia"];
+  const FAMOSAS_ADD = ["vitara","navara","solara","certina","festina","campari","purina","linio","visio","nexium","nexia","lumia","lumea","auris","volaris","orbea","orbis","orbia","melia","nidina","satena","lexus","lexan","clarins"];
+  // v3 (revisión SIC 11/11/2026): que no se formen nombres comunes de mujer (Marisela, Melisa, Aurora)
+  const FEMENINOS = ["maria","marisela","mariela","marisol","melisa","melissa","aurora","aurelia","camila","carolina","valentina","isabela","isabel","sara","laura","luisa","julia","julieta","paula","paola","pilar","rosana","mariana","sofia","daniela","diana","juliana","natalia","andrea","lorena","viviana","claudia","patricia","alejandra","gabriela","manuela","catalina","estefania","angela","monica","veronica","vanessa","marina","elena","elisa","olivia","emilia","amelia","adriana","cecilia","celeste","clara","clarisa","dayana","erika","fernanda","jimena","karina","lucia","luciana","mabel","miranda","nicole","noelia","regina","renata","silvia","tatiana","ximena","yesenia","maya","nora","ofelia","petra","raquel","selena","teresa","tania","ursula","violeta","yolanda","marcela","maribel","marlene","liliana","lisbeth","lizeth","luz","nelly","nancy","sandra","shirley","sonia","susana","tamara","vera","zoraida","rosario","rocio","ruth","salome","sabrina","stefany","stephanie","johana","jessica","jenny","karen","kelly","katherine","leidy","leonor","lina","lola","lorena","magdalena","margarita","martha","mayra","milena","mirella","mirela","paulina","priscila","rebeca","rosalba","rosalia","rosmery","samanta"];
+  const MITOS_Y_MUY_USADAS = ["eros","venus","afrodita","atenea","apolo","zeus","hera","hermes","atlas","titan","orion","vega","nova","oasis","onix","delta","alfa","omega","sigma","zenit","cenit","nexo","apex","vertex","prisma","fenix","phoenix","kronos","cronos","helios","selene","artemisa","psique","psyche","iris","aura","aria","gaia","terra","vita","lumen","lumina","solis","astra","stella","alba","aurora","ares","hades","poseidon","hestia","demeter","dionisio","morfeo","icaro","pegaso","anubis","isis","osiris","ra"];
+  function muyUsada(tokens, compact){
+    const mu = MITOS_Y_MUY_USADAS;
+    for(const t of tokens){ if(t.length>=3 && mu.includes(t)) return {w:t, fuerte: tokens.length===1}; }
+    if(tokens.length===1 && compact.length>=4){ const f = mu.find(m=>m.length>=4 && unaLetra(compact,m)); if(f) return {w:f, fuerte:true, cercano:true}; }
+    return null;
+  }
+  function esFemenino(w){
+    const n = norm(w).replace(/\s/g,"");
+    return FEMENINOS.some(f => n===f || (n.length>=5 && (f.endsWith(n) || f.startsWith(n))) || (f.length>=5 && n.length>=5 && lev(n,f)<=1));
+  }
+  function pasaSonido(root, fin, name){
+    if(fin.includes(root.slice(-1)) || root.slice(-1)===fin[0]) return false;
+    if(/(c|g|qu)$/.test(root) && !(root==="dulc" && /^[ei]/.test(fin))) return false;
+    if((SIN_FINAL[root]||[]).includes(fin) || /enia$/.test(norm(name))) return false;
+    if(fin==="ara" && VERBALES.includes(root)) return false;
+    const sn = comoSuena(name);
+    if(FEAS_DENTRO.some(f=>sn.includes(f))) return false;
+    if(FEAS_FINAL.some(f=>sn.endsWith(f))) return false;
+    if(FEAS_INICIO.some(f=>sn.startsWith(f))) return false;
+    if(CASI_FEAS.some(f=>unaLetra(sn, comoSuena(f)))) return false;
+    if(FAMOUS.some(f=>{const fc=norm(f).replace(/\s/g,""); return fc.length>=4 && unaLetra(sn, comoSuena(fc));})) return false;
+    if(FAMOSAS_ADD.some(f=>unaLetra(sn, comoSuena(f)))) return false;
+    return true;
+  }
+  function themeRoots(){
+    const key = state.cat ? state.cat.key : "otro";
+    const t = ROOTS[THEME_BY_KEY[key] || "general"] || ROOTS.general;
+    return t.map(x=>x.concat([1])).concat(ROOTS.general.filter(g=>!t.some(x=>x[0]===g[0])).slice(0,2).map(x=>x.concat([0])));
+  }
+  function joinRoot(root, end){
+    let r = root, e = end;
+    if(isV(r.slice(-1)) && isV(e[0])) r = r.slice(0,-1);
+    return capW(r + e);
+  }
+  function sounds(w, own){
+    const n = norm(w);
+    if(n.length < 4 || n.length > 7) return false;
+    if(/([^aeiou])[aeiou]\1/.test(n)) return false;
+    if(REAL.includes(n) || REAL_ADD.includes(n)) return false;
+    if(DARK_ADD.some(d=>n.includes(d)) || DARK_EXACTAS.includes(n)) return false;
+    if(!own && (n.startsWith("lum") || esFemenino(w))) return false;
+    if(/(f[mntdpbgc]|[tpbdgc][mnfgdbp]|m[ntdfg]|l[mnf])/.test(n)) return false;   // uniones que suenan duras
+    if(own) return !/(.)\1/.test(n) && !/[^aeiou]{3}/.test(n);
+    if(/(.)\1/.test(n)) return false;
+    if(/[^aeiou]{3}/.test(n)) return false;           // nada de tres consonantes seguidas
+    if(/[wkxq]/.test(n.replace(/^nex|^tex/,""))) return false;
+    if(/(ii|uu|iu|ui|ea[aeiou])/.test(n)) return false;
+    return true;
+  }
+  // Devuelve palabras nuevas con significado. ref = nombre de la persona, para preferir raíces que suenen parecido
+  function meaningful(sat, n, ref, avoidFn){
+    const roots = themeRoots().map(r=>({r, m: r[3]*3 + (ref ? Math.min(shapeMatch(r[0], ref).score, 1.5) : 0), x:Math.random()})).sort((a,b)=>(b.m-a.m)||(a.x-b.x)).map(o=>o.r);
+    const out = [], usedRoot = new Set();
+    for(const [root, meaning, origin] of roots){
+      if(out.length >= n) break;
+      if(usedRoot.has(root)) continue;
+      const ends = shufEnds();
+      for(const e of ends){
+        const w = joinRoot(root, e);
+        if(!sounds(w) || BAD.some(b=>norm(w).includes(b)) || sat.has(norm(w))) continue;
+        if(!pasaSonido(root, e, w) || norm(w).startsWith("lum") || esFemenino(w)) continue;
+        if(avoidFn && !avoidFn(w)) continue;
+        out.push({w, meaning, origin, root}); usedRoot.add(root); break;
+      }
+    }
+    return out;
+  }
+  function coined(sat){
+    const m = meaningful(sat, 1, "", w=>!isShown(w));
+    return m.length ? m[0].w : "Lumara";
+  }
+
+  // ---------- Nombres inspirados en la idea de la persona ----------
+  // La misma idea dicha en otra lengua (palabra -> [equivalente, lengua, significado])
+  const CONCEPT_GROUPS = [
+    {k:["mar","sea","ocean","oceano","ola","olas","wave","waves","marina","mare"], m:"mar", e:["Nácar","Oleaje","Estela","Rompiente","Bitácora"], w:[["Umi","japonés"],["Talasa","griego"],["Onda","italiano"]]},
+    {k:["sol","sun","solar","summer","verano"], m:"sol", e:["Meridiano","Solsticio","Destello","Albor"], w:[["Helios","griego"],["Sole","italiano"],["Solis","latín"]]},
+    {k:["luna","moon","lunar"], m:"luna", e:["Marea","Plenilunio","Lucero","Creciente"], w:[["Selene","griego"],["Lua","portugués"],["Lune","francés"]]},
+    {k:["isla","island","isle"], m:"isla", e:["Atolón","Arrecife","Islote"], w:[["Nesos","griego"],["Isola","italiano"]]},
+    {k:["playa","beach"], m:"playa", e:["Orilla","Caracola","Duna"], w:[["Praia","portugués"],["Lido","italiano"]]},
+    {k:["tierra","land","earth","mundo","world"], m:"tierra", e:["Raíz","Surco","Arcilla"], w:[["Gea","griego"],["Tellus","latín"]]},
+    {k:["cafe","coffee","tinto"], m:"café", e:["Alero","Cántaro","Zaguán","Madrugada"], w:[]},
+    {k:["flor","flower","bloom","rosa","rose","petalo"], m:"flor", e:["Pétalo","Brote","Polen","Corola"], w:[["Hana","japonés"],["Fiore","italiano"]]},
+    {k:["alma","soul","esencia","essence"], m:"alma", e:["Aliento","Latido","Pulso"], w:[["Animo","italiano"]]},
+    {k:["vida","life","vita"], m:"vida", e:["Latido","Brote","Pulso"], w:[["Zoe","griego"]]},
+    {k:["amor","love","querer"], m:"amor", e:["Latido","Abrazo","Lazo"], w:[["Agape","griego"]]},
+    {k:["seda","silk","satin"], m:"seda", e:["Velo","Hilo","Trama"], w:[["Kinu","japonés"],["Serica","latín"]]},
+    {k:["agua","water","aqua"], m:"agua", e:["Manantial","Rocío","Cauce"], w:[["Mizu","japonés"],["Fonte","italiano"]]},
+    {k:["viento","brisa","breeze","wind","aire","air"], m:"viento", e:["Céfiro","Aliento","Alisio"], w:[["Zefiro","italiano"],["Vento","italiano"]]},
+    {k:["montana","mountain","sierra","andes","andino","altura"], m:"montaña", e:["Cumbre","Risco","Ladera","Cima"], w:[["Oros","griego"],["Vetta","italiano"]]},
+    {k:["estrella","star","stars","astro"], m:"estrella", e:["Cometa","Órbita","Lucero"], w:[["Hoshi","japonés"],["Aster","griego"]]},
+    {k:["fuego","fire","brasa","fogon"], m:"fuego", e:["Brasa","Chispa","Hoguera","Fulgor"], w:[["Ignis","latín"]]},
+    {k:["oro","gold","golden","dorado","dorada"], m:"oro", e:["Quilate","Ocre"], w:[["Aurum","latín"],["Ouro","portugués"]]},
+    {k:["camino","ruta","path","road","street","calle","via"], m:"camino", e:["Sendero","Huella","Rumbo","Andén"], w:[["Strada","italiano"],["Rua","portugués"]]},
+    {k:["casa","house","home","hogar"], m:"casa", e:["Umbral","Patio","Alero"], w:[["Domus","latín"],["Dimora","italiano"],["Lar","portugués"]]},
+    {k:["bella","bello","belleza","beauty","bonita","linda"], m:"belleza", e:["Gracia","Halo"], w:[["Kalos","griego"],["Bela","portugués"]]},
+    {k:["dulce","sweet","miel","honey"], m:"dulce", e:["Almíbar","Melao","Merengue"], w:[["Amai","japonés"],["Mel","latín"]]},
+    {k:["urban","urbano","urbana","ciudad","city"], m:"ciudad", e:["Esquina","Andén","Azotea","Zaguán"], w:[["Polis","griego"],["Urbe","latín"]]},
+    {k:["mujer","woman","women","lady","girl","femme"], m:"mujer", e:["Musa","Diosa"], w:[["Donna","italiano"]]},
+    {k:["reina","queen"], m:"reina", e:["Tiara","Diadema","Cetro"], w:[["Regina","latín"],["Rani","hindi"]]},
+    {k:["secreto","secreta","secret"], m:"secreto", e:["Susurro","Velo","Tesoro"], w:[["Segreto","italiano"],["Arcano","italiano"]]},
+    {k:["luz","light","glow","brillo","lux","radiante"], m:"luz", e:["Destello","Fulgor","Halo","Albor"], w:[["Hikari","japonés"],["Luce","italiano"]]},
+    {k:["cielo","sky"], m:"cielo", e:["Celaje","Firmamento","Vislumbre"], w:[["Sora","japonés"]]},
+    {k:["nube","cloud"], m:"nube", e:["Algodón","Copo","Rocío"], w:[["Nuvola","italiano"]]},
+    {k:["natural","naturaleza","nature","pure","pura"], m:"naturaleza", e:["Raíz","Musgo","Savia"], w:[["Viridis","latín"]]}
+  ];
+  const CONCEPT = {};
+  CONCEPT_GROUPS.forEach(g=>g.k.forEach(k=>CONCEPT[norm(k)] = g));
+  const VOW = "aeiouy";
+  const isV = c => VOW.includes(c);
+  const capW = w => w.charAt(0).toUpperCase()+w.slice(1);
+  const ENDS = ["ora","ina","eo","ara","ix","en","elo","ura","ani","é"];
+  const STOPW = new Set(["de","del","la","el","los","las","y","and","the","by","&","e","en","con","para","por","un","una","mi","my","tu","your"]);
+
+  const DARK = ["sombra","oscur","noche","nocturn","niebla","neblina","bruma","ceniza","tizon","carbon","plomo","eclipse","ocaso","delirio","embrujo","tormenta","huracan","ciclon","vortice","abismo","escarcha","hielo","cemento","asfalto","granito","basalto","onix","grafito","pizarra","ebano","luto","muert","morte","mort","tumba","dolor","triste","llanto","sangre","diablo","demon","infier","caos","ruina","vacio","nudo","duelo","herida","miedo","angust","oscuro","negro","noir","dark","shadow","night","black"];
+  function okName(w, sat, avoid){
+    const n = norm(w).replace(/\s/g,"");
+    if(DARK.some(d=>n.includes(d)) || DARK_ADD.some(d=>n.includes(d)) || DARK_EXACTAS.includes(n)) return false;
+    if(n.startsWith("lum") || REAL_ADD.includes(n) || esFemenino(w)) return false;
+    if(FAMOSAS_ADD.some(f=>lev(f,n)<=1)) return false;
+    if(n.length < 3 || n.length > 14) return false;
+    if(BAD.some(b=>n.includes(b))) return false;
+    if(sat.has(norm(w))) return false;
+    if(FAMOUS.some(f=>{const fc=norm(f).replace(/\s/g,""); return fc.length>=4 && lev(fc,n)<=1;})) return false;
+    if(avoid.some(a=>lev(a,n)<2)) return false;
+    return true;
+  }
+  function firstSyl(w){ const m = w.match(/^[^aeiouy]*[aeiouy]+[^aeiouy]?/); return m?m[0]:w; }
+  function twoSyl(w){ const m = w.match(/^[^aeiouy]*[aeiouy]+[^aeiouy]+[aeiouy]+/); return m?m[0]:w; }
+  function lastSyl(w){ const m = w.match(/[^aeiouy][aeiouy]+[^aeiouy]*$/); return m?m[0]:w; }
+
+
+
+  // ---------- Parecido de forma: vocales, sílabas, inicio y final ----------
+  const yi = w => norm(w).replace(/y(?=[aeiou])/g,"j").replace(/y/g,"i");
+  const vowSeq = w => yi(w).replace(/[^aeiou]/g,"");
+  const sylCount = w => (yi(w).match(/[aeiou]+/g)||[]).length;
+  function shapeMatch(w, ref){
+    if(!ref) return {score:0, why:""};
+    const a = norm(w).replace(/\s/g,""), r = norm(ref).replace(/\s/g,"");
+    const va = vowSeq(a), vr = vowSeq(r);
+    let score = 0; const feats = [];
+    if(va && va === vr){ score += 3; feats.push(`las mismas vocales (${vr.split("").join("-")})`); }
+    else if(va[0]===vr[0] && va.slice(-1)===vr.slice(-1)){ score += 1.5; feats.push("la misma vocal al inicio y al final"); }
+    if(a.slice(-2) === r.slice(-2)){ score += 1.5; feats.push("el mismo final"); }
+    if(a[0] === r[0]){ score += 1; feats.push("la misma letra inicial"); }
+    if(sylCount(a) === sylCount(r)){ score += 1; feats.push(sylCount(r)>1 ? `las mismas ${sylCount(r)} sílabas` : "una sola sílaba, como tu nombre"); }
+    return {score, why: feats.length ? `Se parece a "${capW(ref)}": tiene ${feats.slice(0,2).join(" y ")}.` : ""};
+  }
+  function byShape(list, ref){
+    return list.map(w=>({w, m:shapeMatch(w, ref), r:Math.random()})).sort((x,y)=>(y.m.score - x.m.score) || (x.r - y.r));
+  }
+  // ---------- El fondo del nombre: qué tono transmite ----------
+  const MOODS = {
+    tierno:{label:"tierno y delicado", k:["baby","bebe","mini","petit","little","cute","dulce","sweet","miel","honey","nube","cloud","osito","bear","conejo","bunny","pink","rosado","rosada","algodon","cotton","suave","soft","nina","nino","kids","peque","mimi","coco","burbuja","bubble","candy","caramelo","angel","angelito","cielo","pluma","petalo"],
+      e:["Gorrión","Panal","Cosquilla","Tul","Sonaja","Arrullo","Pompón","Copito","Abrazo","Rocío","Burbuja","Pétalo","Arrumaco","Ovillo","Retoño","Hoyuelo","Trino","Plumón","Meñique","Dedal"]},
+    romantico:{label:"romántico y sensual", k:["amor","love","kiss","beso","piel","skin","seda","silk","deseo","desire","secret","secreto","secreta","luna","rosa","rose","encanto","passion","pasion","corazon","heart","eros","venus","dolce","velvet","sensual","intima","intimo","intimate","lace","encaje","femme","belle","bella","cherie","mon","amour","diva","musa"],
+      e:["Pétalo","Rubor","Ensueño","Susurro","Latido","Anhelo","Suspiro","Velo","Alborada","Lazo","Destello","Abrazo","Arrebol","Rocío","Serenata","Embeleso","Soneto","Guiño","Idilio","Clavel"]},
+    sobrio:{label:"sobrio y moderno", k:["urban","urbano","urbana","black","negro","negra","noir","obsidian","obsidiana","onyx","onix","steel","acero","gris","grey","gray","stone","piedra","ice","hielo","minimal","concrete","concreto","dark","night","noche","metal","street","city","ciudad","mono","basic","code","codigo","nord","norte","north","shadow","sombra","raw","core","form","forma","line","linea","studio"],
+      e:["Vértice","Prisma","Meridiano","Eje","Trazo","Pilar","Rumbo","Ápice","Puente","Brújula","Índice","Cobalto","Umbral","Bisel","Compás","Dintel","Cifra","Pauta","Tramo","Acorde"]},
+    fuerte:{label:"fuerte y aventurero", k:["wolf","lobo","loba","lion","leon","leona","tigre","tiger","titan","force","fuerza","power","poder","wild","salvaje","warrior","guerrero","guerrera","fire","fuego","thunder","trueno","rayo","bold","brave","valiente","king","rey","fight","beast","bestia","iron","hierro","rock","roca","storm","tormenta","alpha","alfa","spartan","fenix","phoenix","dragon","aguila","eagle","halcon"],
+      e:["Cumbre","Ancla","Bravura","Coloso","Atalaya","Temple","Brío","Cresta","Ímpetu","Fragua","Rumbo","Cima","Arrojo","Halcón","Yunque","Baluarte","Timón","Bastión","Vigía","Tesón"]},
+    natural:{label:"natural y fresco", k:["mar","sea","sol","sun","verde","green","hoja","leaf","tierra","earth","raiz","root","bosque","forest","agua","water","brisa","breeze","tropical","fresh","fresco","fresca","vida","life","natural","nature","playa","beach","isla","island","eco","organic","organico","bio","flor","flower","jardin","garden","selva","jungle","rio","river","montana","mountain","campo","finca","cafe","coffee","coco","limon","menta","mint","salvia","lavanda"],
+      e:["Bambú","Arcilla","Laguna","Orilla","Pradera","Trigo","Savia","Brote","Musgo","Rocío","Follaje","Cauce","Helecho","Vereda","Espiga","Retama","Hierbabuena","Junco","Tomillo","Vergel"]},
+    alegre:{label:"alegre y divertido", k:["happy","feliz","fun","alegre","alegria","joy","color","colores","colors","pop","party","fiesta","smile","sonrisa","chispa","mango","tutti","frutti","fruit","fruta","sunny","yummy","loco","loca","crazy","funky","groovy","rainbow","arcoiris","confeti","play","juego","jugar","toy","rumba","salsa","carnaval","caribe"],
+      e:["Bombón","Tambor","Merengue","Chispa","Confeti","Verbena","Carrusel","Cometa","Piñata","Mandarina","Vaivén","Festín","Farol","Pandero","Pirueta","Jolgorio","Brinco","Trompo","Cabriola","Columpio"]},
+    elegante:{label:"elegante y exclusivo", k:["gold","oro","golden","dorado","dorada","luxe","lux","luxury","lujo","royal","real","queen","reina","diamond","diamante","pearl","perla","glam","chic","couture","maison","elite","prestige","crown","corona","premium","signature","ivory","marfil","silver","plata","velvet","satin","noble","imperial","grace","gracia","bijou","joya","jewel"],
+      e:["Perla","Encaje","Orfebre","Damasco","Ornato","Nácar","Quilate","Terciopelo","Satén","Linaje","Filigrana","Brocado","Broche","Blasón","Organza","Topacio","Ópalo","Alhaja","Dosel","Tocado"]},
+    trascendente:{label:"emotivo y trascendente", k:["legado","herencia","eterno","eterna","siempre","memoria","promesa","familia","raices","honor","homenaje"],
+      e:["Origen","Huella","Latido","Promesa","Travesía","Vínculo","Alborada","Aliento","Memoria","Abrazo","Lazo","Linaje","Arraigo","Cimiento","Estirpe","Simiente","Albor","Sendero","Relevo","Semblanza"]},
+    mistico:{label:"místico y espiritual", k:["alma","soul","aura","estrella","star","cosmos","cosmic","magia","magic","zen","espiritu","spirit","karma","mantra","sagrado","sacred","mistica","mistico","energia","energy","moon","luna","sol","universo","universe","astral","tarot","om","namaste","yoga","chakra","angel","divina","divino","eterno","eternal","infinito","infinity","oraculo"],
+      e:["Lucerna","Plenilunio","Astrolabio","Resplandor","Órbita","Solsticio","Alquimia","Halo","Equinoccio","Constelación","Lucero","Destello","Mantra","Talismán","Amuleto","Arcano","Éter","Cuarzo","Incienso","Fulgor"]}
+  };
+  const SECTOR_MOOD = {ropa:"sobrio", bano:"natural", lenceria:"romantico", cafe:"natural", belleza:"elegante", comida:"alegre", educacion:"fuerte", otro:"natural"};
+  const INTENT = ["hija","hijo","hijas","hijos","mama","madre","mami","abuela","abuelo","abuelita","familia","bebe","nieta","nieto","esposo","esposa","homenaje","honor","memoria","legado","herencia","hermana","hermano","padre"];
+  function personalIntent(){ const d = norm(state.desc||"").split(" "); return d.some(t=>INTENT.includes(t)); }
+  function detectMood(words, sectorKey){
+    const score = {};
+    words.forEach(t=>{
+      Object.entries(MOODS).forEach(([id,m])=>{
+        if(m.k.includes(t)) score[id]=(score[id]||0)+2;
+        else if(t.length>=5 && m.k.some(k=>k.length>=5 && lev(k,t)<=1)) score[id]=(score[id]||0)+1.5;
+      });
+    });
+    const ranked = Object.entries(score).sort((a,b)=>b[1]-a[1]).map(x=>x[0]).filter(x=>x!=="trascendente");
+    if(personalIntent()) return {id:"trascendente", second:ranked[0], from:"intencion"};
+    if(ranked.length) return {id:ranked[0], second:ranked[1], from:"palabra"};
+    // Sin palabra conocida: el sonido también transmite
+    const joined = words.join("");
+    if(joined.length >= 3){
+      const hard = (joined.match(/[kxztgdrqj]/g)||[]).length, soft = (joined.match(/[lmnbvfwh]/g)||[]).length;
+      if(hard - soft >= 2) return {id:"sobrio", from:"sonido"};
+      if(soft - hard >= 3 && (sectorKey==="lenceria" || sectorKey==="belleza")) return {id:"romantico", from:"sonido"};
+    }
+    return {id: (state.cat && state.cat.m) || SECTOR_MOOD[sectorKey] || "natural", from:"sector"};
+  }
+  function inspiredProposals(sectorKey){
+    const s = SECTORS[sectorKey];
+    const sat = NORM_SET(s.saturated.concat(COMMON, s.product));
+    const text = state.names.join(" ") + " " + state.desc;
+    const words = norm(text).split(" ").filter(t=>t && !STOPW.has(t));
+    const nameWords = norm(state.names.join(" ")).split(" ").filter(t=>t && !STOPW.has(t) && t.length>2);
+    const avoid = state.names.map(n=>norm(n).replace(/\s/g,"")).concat(nameWords);
+    const out = []; const seen = new Set();
+    const add = (nombre, ruta, porque, extra) => {
+      const key = norm(nombre).replace(/\s/g,"");
+      if(seen.has(key) || isShown(nombre) || !okName(nombre, sat, avoid)) return false;
+      seen.add(key); out.push(Object.assign({nombre, ruta, porque}, extra||{})); return true;
+    };
+
+    // 1. La misma idea en otra lengua
+    const groups = [];
+    words.forEach(t=>{ const g = CONCEPT[t]; if(g && !groups.includes(g)) groups.push(g); });
+    let nIdea = 0;
+    groups.forEach(g=>{
+      [...g.w].sort(()=>Math.random()-.5).forEach(([w,lang])=>{
+        if(nIdea >= 3) return;
+        if(add(w, "Tu idea, otra lengua", "Mantiene la idea de tu nombre con una palabra menos usada en tu sector.", {m:g.m, lang})) nIdea++;
+      });
+    });
+
+    // 2. Suena a tu nombre
+    const free = nameWords.filter(t=>!sat.has(t));
+    const core = free.sort((a,b)=>b.length-a.length)[0];
+    const satLong = [...sat].filter(x=>x.length>=4 && !x.includes(" "));
+    const sat3 = [...sat].filter(x=>x.length===3);
+    const clean = w => { const n = norm(w).replace(/\s/g,""); return !satLong.some(x=>n.includes(x)) && !sat3.some(x=>n.startsWith(x)||n.endsWith(x)); };
+    if(core){
+      const bases = [...new Set([twoSyl(core), core.replace(/[aeiouy]+$/,"")])].map(b=>b.replace(/[aeiouy]+$/,"")).filter(b=>b.length>=2 && b.length<=6);
+      let nSound = 0;
+      shufEnds().forEach(e=>{
+        if(nSound >= 2) return;
+        const b = pick(bases); if(!b) return;
+        const w = joinRoot(b, e);
+        if(!sounds(w, true) || !clean(w) || shapeMatch(w, core).score < 2) return;
+        if(add(w, "Suena a tu nombre", "Al cambiar el final, se aleja de las marcas que ya existen.")) nSound++;
+      });
+    }
+
+    // 3. Fusión de tus palabras
+    if(nameWords.length >= 2){
+      const a = nameWords[0], b = nameWords[1];
+      [capW(firstSyl(a) + lastSyl(b)), capW(firstSyl(b) + lastSyl(a))].some(w=>
+        w.length>=5 && sounds(w, true) && clean(w) && add(w, "Fusión de tus palabras", `Une "${capW(a)}" y "${capW(b)}" en una sola palabra nueva. Las palabras nuevas son las más fáciles de proteger.`));
+    }
+
+    // 4. Palabra nueva al frente
+    const idea = nameWords.find(t=>sat.has(t));
+    if(idea){
+      for(let i=0;i<10;i++){
+        const cw = coined(sat); if(!clean(cw)) continue;
+        if(add(`${cw} ${capW(idea)}`, "Palabra nueva al frente", `Conserva "${capW(idea)}", pero pone adelante una palabra que es solo tuya. La que va primero es la que más pesa.`)) break;
+      }
+    }
+    // 5. Opciones nuevas, pero conectadas con tu nombre o tu tema
+    // Si el nombre es de alguien querido (ej. el nombre de la hija), esa palabra es la raíz aunque sea común
+    const descW = norm(state.desc||"").split(" ");
+    const prodSet = NORM_SET(s.product.concat(state.cat ? state.cat.p : []));
+    const ownWords = nameWords.filter(t=>!prodSet.has(t));
+    let personal = personalIntent() ? (ownWords.find(t=>descW.includes(t)) || [...ownWords].sort((a,b)=>b.length-a.length)[0] || "") : "";
+    if(personal){ const pp = compoundParts(personal, sat); if(pp && pp[0].length>=3) personal = pp[0]; }  // ej. Almar -> alma
+    if(personal){
+      const roots = [...new Set([personal.replace(/[aeiouy]+$/,""), firstSyl(personal)])].filter(r=>r.length>=2);
+      const ENDP = shufEnds();
+      let nP = 0;
+      for(const e of ENDP){
+        if(nP>=3) break;
+        const w = joinRoot(pick(roots), e);
+        if(sounds(w, true) && clean(w) && add(w, "Nace de tu nombre", `Parte de "${capW(personal)}" y le da un giro propio. Conserva el corazón del nombre sin repetir la palabra común.`)) nP++;
+      }
+    }
+    const ref = core || "";  // solo si la palabra de la persona es distintiva
+    if(ref){
+      const ending = lastSyl(ref).replace(/^[^aeiouy]+/,"");   // ej. "ian", "ul"
+      const start = firstSyl(ref);                              // ej. "ob", "mar"
+      let nInv = 0;
+      meaningful(sat, 6, ref, w=>clean(w)).forEach(({w,meaning,origin,root})=>{
+        if(nInv>=3) return;
+        const sm = shapeMatch(w, ref);
+        if(add(w, "Con significado", `Palabra nueva, suave y fácil de recordar. Al no existir, es más fuerte para registrar.${sm.score>=2 && sm.why ? " " + sm.why : ""}`, {meaning, origin, root})) nInv++;
+      });
+      const arb = byShape(ARBITRARY, ref).filter(x=>x.m.score>0).slice(0,5).sort(()=>Math.random()-.5);
+      for(const {w,m} of arb){ if(add(w, "Arbitraria", `Una palabra real y bonita que no tiene que ver con ${s.label}. ${m.why} Ojo: las palabras reales suelen estar más usadas, verifícala.`)) break; }
+    }
+    if(!ref){
+      let nM = 0;
+      meaningful(sat, 5, "", w=>clean(w)).forEach(({w,meaning,origin,root})=>{
+        if(nM>=3) return;
+        if(add(w, "Con significado", "Palabra nueva, suave y fácil de recordar. Al no existir, es más fuerte para registrar.", {meaning, origin, root})) nM++;
+      });
+    }
+    // Evocadoras: el tono de fondo del nombre (tierno, romántico, sobrio...) + el tema
+    const shapeRef = core || [...nameWords].sort((a,b)=>b.length-a.length)[0] || "";
+    const mood = detectMood(words, sectorKey);
+    state.mood = mood;
+    const mm = MOODS[mood.id];
+    const why = mood.from==="intencion" ? "Tu marca nace de alguien que quieres." : mood.from==="palabra" ? `Tu nombre transmite algo ${mm.label}.` : mood.from==="sonido" ? `El sonido de tu nombre se siente ${mm.label}.` : `Para tu sector funciona un tono ${mm.label}.`;
+    let nEvo = 0;
+    const themeWords = new Set(groups.flatMap(g=>g.e||[]));
+    // primero las que son del tono Y del tema
+    // dentro del tono, primero las que más se parecen en forma (vocales, sílabas, inicio, final); entre las mejores, algo de variedad
+    const ranked = byShape(mm.e, shapeRef).map(x=>({...x, t: themeWords.has(x.w) ? 1 : 0}));
+    const top = ranked.slice(0, 6).sort((x,y)=>(y.t - x.t) || (y.m.score - x.m.score) || (Math.random()-.5));
+    top.concat(ranked.slice(6)).forEach(({w,m})=>{
+      if(nEvo<2 && add(w, "Evocadora", `${why} ${mood.from==="intencion" ? "Esta palabra le da ese sentido de algo que permanece." : "Esta palabra va en la misma línea."}${m.why ? " " + m.why : ""}`, {mood: mm.label})) nEvo++;
+    });
+    if(mood.second){
+      const m2 = MOODS[mood.second];
+      byShape(m2.e, shapeRef).some(({w,m})=> add(w, "Evocadora", `Tu nombre también tiene algo ${m2.label}. Esta palabra explora ese lado.${m.why ? " " + m.why : ""}`, {mood: m2.label}) && ++nEvo);
+    }
+    groups.forEach(g=>byShape(g.e||[], shapeRef).forEach(({w,m})=>{
+      if(nEvo<4 && add(w, "Evocadora", `Evoca ${g.m === "naturaleza" ? "la naturaleza" : `"${g.m}"`}, la idea de tu nombre.${m.why ? " " + m.why : ""}`)) nEvo++;
+    }));
+    return out;
+  }
+
+  // ---------- Rondas a partir de los favoritos ----------
+  function moodOf(word){ const n = norm(word); return Object.keys(MOODS).find(id=>MOODS[id].e.some(w=>norm(w)===n)); }
+  function favProposals(sectorKey){
+    const s = SECTORS[sectorKey];
+    const sat = NORM_SET(s.saturated.concat(COMMON, s.product));
+    const favs = state.favs.map(f=>f.nombre);
+    const core = f => norm(f).split(" ").filter(t=>t && !STOPW.has(t) && !sat.has(t)).sort((a,b)=>b.length-a.length)[0] || keyOf(f);
+    const fw = favs.map(core);
+    const avoid = state.names.map(n=>keyOf(n));
+    const satLong = [...sat].filter(x=>x.length>=4 && !x.includes(" "));
+    const sat3 = [...sat].filter(x=>x.length===3);
+    const clean = w => { const n = keyOf(w); return !satLong.some(x=>n.includes(x)) && !sat3.some(x=>n.startsWith(x)||n.endsWith(x)); };
+    const out = []; const seen = new Set();
+    const add = (nombre, ruta, porque, extra) => {
+      const key = keyOf(nombre);
+      if(seen.has(key) || isShown(nombre) || !okName(nombre, sat, avoid)) return false;
+      if(fw.some(f=>f===key || (f.length>=4 && key.length>=4 && lev(f,key)<=1))) return false;
+      seen.add(key); out.push(Object.assign({nombre, ruta, porque}, extra||{})); return true;
+    };
+    const bestRef = w => favs.map(f=>({f, m:shapeMatch(w, core(f))})).sort((a,b)=>b.m.score-a.m.score)[0];
+
+    // 0. Misma raíz con significado que el favorito
+    state.favs.forEach(fv=>{
+      if(!fv.root) return; let k = 0;
+      shufEnds().forEach(e=>{
+        if(k>=2) return;
+        const w = joinRoot(fv.root, e);
+        if(sounds(w) && clean(w) && add(w, "Misma familia", `Comparte la raíz de "${fv.nombre}" con otro final.`, {meaning:fv.meaning, origin:fv.origin, root:fv.root})) k++;
+      });
+    });
+    // 0b. Otras raíces con significado que suenan parecido a tus favoritos
+    meaningful(sat, 4, fw[0], w=>clean(w)).forEach(({w,meaning,origin,root})=>{
+      add(w, "Con significado", "Palabra nueva, en la línea de tus favoritos.", {meaning, origin, root});
+    });
+    // 1. Misma familia: el mismo tono o la misma idea del favorito
+    favs.forEach(f=>{
+      const n = norm(f); let k = 0;
+      const id = moodOf(f);
+      if(id){
+        byShape(MOODS[id].e, core(f)).forEach(({w,m})=>{ if(k<2 && add(w, "Misma familia", `Va en la línea de "${f}": algo ${MOODS[id].label}.${m.why ? " " + m.why : ""}`)) k++; });
+      }
+      CONCEPT_GROUPS.forEach(g=>{
+        const inE = (g.e||[]).some(w=>norm(w)===n), inW = g.w.some(([w])=>norm(w)===n);
+        if(!inE && !inW) return;
+        [...g.w].sort(()=>Math.random()-.5).forEach(([w,lang])=>{ if(k<3 && add(w, "Misma familia", `Como "${f}", habla de "${g.m}". Significa "${g.m}" en ${lang}.`)) k++; });
+        byShape(g.e||[], core(f)).forEach(({w,m})=>{ if(k<3 && add(w, "Misma familia", `Como "${f}", evoca "${g.m}".${m.why ? " " + m.why : ""}`)) k++; });
+      });
+    });
+
+    // 2. Suena a tu favorito: busca en todas las palabras de Lexa las de forma parecida
+    const pool = new Map();
+    Object.values(MOODS).forEach(m=>m.e.forEach(w=>pool.set(keyOf(w), {w, why:""})));
+    Object.values(EVOCA).forEach(l=>l.forEach(w=>pool.set(keyOf(w), {w, why:""})));
+    ARBITRARY.forEach(w=>pool.set(keyOf(w), {w, why:""}));
+    CONCEPT_GROUPS.forEach(g=>{ (g.e||[]).forEach(w=>pool.set(keyOf(w), {w, why:""})); });
+    const similar = [...pool.values()].map(x=>({...x, b:bestRef(x.w), r:Math.random()})).filter(x=>x.b && x.b.m.score>=3.5)
+      .sort((a,b)=>(b.b.m.score-a.b.m.score) || (a.r-b.r));
+    let nS = 0;
+    similar.forEach(x=>{ if(nS<3 && add(x.w, "Suena a tu favorito", (x.b.m.why.replace("Se parece a","Se parece a tu favorito") + x.why).trim())) nS++; });
+
+    // 3. Inventadas a partir del favorito: conservan su inicio o su final
+    let nI = 0;
+    fw.forEach((c,i)=>{
+      const f = favs[i]; const start = firstSyl(c); const root = c.replace(/[aeiouy]+$/,"");
+      const ending = lastSyl(c).replace(/^[^aeiouy]+/,"");
+      const ENDP = shufEnds();
+      let k = 0;
+      for(let t=0; t<60 && k<1; t++){
+        const w = joinRoot((Math.random()<.5 && root.length>=2 && root.length<=5 ? root : start), pick(ENDP));
+        if(sounds(w, true) && clean(w) && add(w, "Inventada", `Nace de "${f}" y le da un final distinto. Conserva lo que te gustó y, al ser nueva, es más fácil de proteger.`)) k++;
+      }
+      for(let t=0; t<0 && k<2 && ending.length>=2; t++){
+        const w = capW(pick(SYL_A) + ending);
+        if(w.length>=4 && w.length<=8 && !/(.)\1/.test(w.toLowerCase()) && clean(w) && add(w, "Inventada", `Termina como "${f}": el mismo ritmo, en una palabra que es solo tuya.`)) k++;
+      }
+      nI += k;
+    });
+
+    // 4. Fusión de dos favoritos
+    if(fw.length >= 2){
+      for(let i=0;i<fw.length;i++) for(let j=0;j<fw.length;j++){
+        if(i===j) continue;
+        const w = capW(firstSyl(fw[i]) + lastSyl(fw[j]));
+        if(sounds(w, true) && clean(w)) add(w, "Fusión de tus favoritos", `Une "${favs[i]}" y "${favs[j]}" en una sola palabra nueva.`);
+      }
+    }
+    return out;
+  }
+  const QUOTA_FAV = [["Misma familia",3],["Con significado",2],["Suena a tu favorito",1],["Inventada",1],["Fusión de tus favoritos",1]];
+  function pickBestFav(list){
+    const out = [];
+    QUOTA_FAV.forEach(([r,q])=>list.filter(p=>p.ruta===r).slice(0,q).forEach(p=>{ if(out.length<8) out.push(p); }));
+    list.forEach(p=>{ if(out.length<8 && !out.includes(p)) out.push(p); });
+    return out;
+  }
+
+  function fallbackProposals(sectorKey, counts){
+    counts = counts || {inv:4, arb:3, evo:3};
+    const s = SECTORS[sectorKey];
+    const sat = NORM_SET(s.saturated.concat(COMMON, s.product));
+    const out = []; const seen = new Set();
+    let guard=0;
+    meaningful(sat, counts.inv + 2, "", w=>!seen.has(w) && !isShown(w)).slice(0, counts.inv).forEach(({w,meaning,origin,root})=>{ seen.add(w); out.push({nombre:w, ruta:"Con significado", porque:"Palabra nueva, suave y fácil de recordar. Al no existir, es más fuerte para registrar.", meaning, origin, root}); });
+    ARBITRARY.filter(w=>!sat.has(norm(w))&&!seen.has(w)&&!isShown(w)).sort(()=>Math.random()-.5).slice(0,counts.arb).forEach(n=>{seen.add(n);out.push({nombre:n, ruta:"Arbitraria", porque:`Una palabra real y bonita que no tiene nada que ver con ${s.label}. Es distintiva y fácil de recordar. Ojo: las palabras reales suelen estar más usadas, verifícala.`});});
+    (EVOCA[sectorKey]||EVOCA.otro).filter(w=>!sat.has(norm(w))&&!seen.has(w)&&!isShown(w)).sort(()=>Math.random()-.5).slice(0,counts.evo).forEach(n=>{seen.add(n);out.push({nombre:n, ruta:"Evocadora", porque:"Sugiere una sensación de tu negocio sin describir el producto. Ojo: las palabras reales del español pueden estar más usadas, verifícala antes."});});
+    return out;
+  }
+
+  // ---------- Render ----------
+  let state = {sector:"ropa", desc:"", names:[], diags:[], proposals:[], shown:new Set(), favs:[], round:0};
+  // Nombres ya mostrados en cualquier ronda: nunca se repiten (ni casi iguales)
+  const keyOf = n => norm(n).replace(/\s/g,"");
+  function isShown(n){
+    const k = keyOf(n); if(state.shown.has(k)) return true;
+    for(const x of state.shown){ if(k.length>=5 && x.length>=5 && lev(k,x)<=1) return true; }
+    return false;
+  }
+
+  function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+  function baseLegal(d){
+    const t = (d.reasons||[]).join(" ");
+    if(/Ya existe una marca conocida/.test(t)) return {p:"Dos marcas con el mismo nombre en el mismo sector no pueden convivir, porque el cliente las confundiría.", b:"Artículo 136, literal a, de la Decisión 486 (riesgo de confusión). El Tribunal Andino, en su sentencia 145-IP-2022, explica cómo se comparan dos marcas."};
+    if(/muy conocida/.test(t)) return {p:"Una marca famosa tiene protección extra: puede oponerse a nombres parecidos aunque vendas otra cosa.", b:"Artículo 136, literal h, de la Decisión 486 (marca notoriamente conocida). Ver también la sentencia 153-IP-2022 del Tribunal Andino."};
+    if(/nombre gen/.test(t) || /nombra el producto/.test(t)) return {p:"El nombre común de un producto es de todos. Por eso la autoridad no lo deja registrar como marca.", b:"Artículo 135 de la Decisión 486 (no se registran los nombres genéricos, descriptivos o de uso común). Sentencia 344-IP-2022 del Tribunal Andino."};
+    if(/son de las m|son palabras muy usadas|lleva dentro|une /.test(t)) return {p:"Si tu nombre se arma con palabras que todos usan en tu sector, no se distingue y choca con muchas marcas. Lo que cuenta es la parte que más distingue.", b:"Artículos 135 y 136, literal a, de la Decisión 486. Sentencias 344-IP-2022 (palabras comunes) y 145-IP-2022 (se compara el conjunto) del Tribunal Andino."};
+    if(/muy usada como marca/.test(t)) return {p:"Cuando muchas marcas ya usan una palabra, las más antiguas suelen oponerse a las que se parecen.", b:"Artículo 136, literal a, de la Decisión 486 (riesgo de confusión por parecido). Sentencia 145-IP-2022 del Tribunal Andino."};
+    return {p:"Tu nombre se distingue por sí mismo, que es lo primero que pide la autoridad. Falta ver si alguien ya tiene uno parecido.", b:"Artículo 134 de la Decisión 486 (el signo debe poder distinguir). Que un nombre sea fuerte no significa que esté libre: eso lo revisa el artículo 136, literal a, y tu informe."};
+  }
+  function whyHtml(d){
+    const w = baseLegal(d);
+    return `<details class="why"><summary>¿En qué se basa esto?</summary><div class="wb"><p>${esc(w.p)}</p><p class="src">${esc(w.b)}</p></div></details>`;
+  }
+
+  function renderCards(){
+    const box = $("cards");
+    if(!state.diags.length){
+      box.innerHTML = `<div class="result a"><div class="top"><h3>Sin nombres todavía</h3><span class="badge"><span class="dot"></span>Empecemos de cero</span></div><p style="margin:10px 0 0;font-size:15px">No pasa nada. Empezar sin nombre es la mejor forma de llegar a uno fuerte. Abajo tienes propuestas pensadas para tu negocio.</p></div>`;
+      return;
+    }
+    const order = state.diags.map((d,i)=>[d,i]).sort((a,b)=>b[0].level-a[0].level || a[1]-b[1]);
+    box.innerHTML = order.map(([d,i])=>`
+      <div class="result ${d.color}">
+        <div class="top"><h3>${esc(d.name)}</h3></div>
+        <div class="half">Mitad 1 · Cómo está armado tu nombre</div>
+        <span class="badge"><span class="dot"></span>${d.label}</span>
+        <div class="meter">${[1,2,3,4,5].map(k=>`<span class="${k<=d.level?"on":""}"></span>`).join("")}</div>
+        <div class="lvl">Nivel ${d.level} de 5 en la escala de fuerza</div>
+        <ul>${d.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>
+        ${whyHtml(d)}
+        <div class="tip">${esc(d.tip).replace("Mi consejo:","<b>Mi consejo:</b>")}</div>
+        <div class="half2">
+          <div class="half" style="margin-top:0">Mitad 2 · Si alguien ya tiene uno parecido</div>
+          <span class="pend"><span class="dot"></span>Sin revisar todavía</span>
+          <p>Esta es la mitad que define si tu nombre está libre. La reviso yo en la base oficial de marcas y te entrego su probabilidad de registro en tu informe.</p>
+          <button class="btn half2btn" data-half2="${i}">Revisar la mitad 2 de ${esc(d.name)}</button>
+        </div>
+      </div>`).join("");
+  }
+
+  $("cards").addEventListener("click", e=>{
+    const b = e.target.closest("[data-half2]"); if(!b) return;
+    const d = state.diags[+b.dataset.half2]; if(!d) return;
+    state.informe = [d.name]; renderPick();
+    $("informe").scrollIntoView({behavior:"smooth", block:"start"});
+  });
+  const PROMESA = {"confianza":"inspira confianza desde el primer contacto","verdad":"habla claro y cumple lo que promete","justicia":"defiende lo que es justo","equilibrio":"busca que todos ganen","acuerdo y paz":"resuelve sin pelear","firmeza":"construye cosas que se sostienen","claridad":"hace que todo se entienda fácil","protección":"cuida lo que sus clientes construyen","conexión":"une personas e ideas","ingenio":"resuelve con creatividad","luz":"ilumina el camino de quien la elige","idea":"nace de una buena idea","rapidez":"llega rápido y bien","algo nuevo":"trae algo fresco","belleza":"cuida cada detalle","flor":"hace florecer a quien la elige","brillo de oro":"hace brillar a quien la elige","brillo":"brilla en cada detalle","rosa y frescura":"se siente fresca y delicada","esplendor":"saca lo mejor de cada persona","sabor":"se recuerda en cada bocado","gusto":"se disfruta de principio a fin","miel":"deja un buen sabor","dulzura":"endulza cada momento","fruto":"es fruto del trabajo bien hecho","celebración":"convierte cada encuentro en fiesta","calidez":"abriga en cada taza","amanecer":"acompaña el inicio de cada día","montaña":"viene de donde nace lo bueno","vestir":"viste a quien quiere sentirse bien","forma":"le da forma a tu estilo","línea":"cuida cada línea","tejido":"cuenta una historia en cada hilo","movimiento":"se mueve contigo","mar":"lleva el mar contigo","agua":"fluye como el agua","sal del mar":"sabe a vacaciones","navegar":"invita a ir más lejos","sol":"tiene la energía del sol","coral":"guarda la belleza del fondo del mar","amor":"nace del amor","rosa":"se siente delicada","calma":"transmite calma","velo":"guarda un poco de misterio","saber":"hace fácil aprender","mente":"despierta mentes","enseñar":"enseña con el corazón","crecer":"acompaña a crecer","vida":"celebra la vida","bienestar":"cuida tu bienestar","cuidado":"cuida a cada persona","vigor":"devuelve la energía","hogar":"te hace sentir en casa","bosque":"trae lo natural a casa","casa":"hace hogar","juego":"enseña jugando","alegría":"contagia alegría","felicidad":"hace felices a los niños","ternura":"abraza con ternura","mimo":"consiente a quien la elige","luna":"acompaña los sueños","visión":"mira lejos","oro":"vale oro","camino":"acompaña cada viaje","mundo":"te abre el mundo","viento":"viaja ligera","verdor":"está viva y verde","semilla":"crece desde lo pequeño","fuerza":"resiste lo que venga","solidez":"se construye sólida","oro y amanecer":"brilla como un amanecer","felicidad ":"hace feliz"};
+  function storyOf(p){
+    if(p.story) return p.story;
+    if(p.meaning && p.origin){
+      const [word, lang] = p.origin.split(", ");
+      return `"${p.nombre}" viene de ${word}, que ${lang.replace(/^en /,"en ")} significa ${p.meaning}. Una marca que ${PROMESA[p.meaning] || "nace con una historia que contar"}.`;
+    }
+    if(p.m && p.lang) return `"${p.nombre}" es "${p.m}" en ${p.lang}. Tu misma idea, con un sonido que nadie más tiene en tu sector.`;
+    if(p.ruta==="Evocadora" && p.mood) return `Transmite algo ${p.mood} desde la primera palabra.`;
+    if(p.ruta==="Suena a tu nombre") return `Guarda el sonido de tu nombre, con un final nuevo que lo hace solo tuyo.`;
+    if(p.ruta==="Suena a tu favorito") return "Una palabra real con un sonido parecido al de tu favorito.";
+    if(p.ruta==="Inventada") return "Nace de tu favorito, con un final nuevo que la hace más fácil de proteger.";
+    if(p.ruta==="Nace de tu nombre") return "Guarda a quien inspiró tu marca, con un giro que la hace más fácil de proteger.";
+    if(p.ruta==="Arbitraria") return "No describe lo que vendes: sorprende, y por eso se queda en la memoria.";
+    if(p.ruta==="Fusión de tus palabras" || p.ruta==="Fusión de tus favoritos") return "Dos ideas tuyas en una sola palabra que nadie más tiene.";
+    return "";
+  }
+  const ROUTE_WHY = {
+    "Con significado":"Buscamos raíces antiguas que ya traen una idea. Tu marca nace con una historia que contar.",
+    "Suena a tu nombre":"Partimos del sonido que ya te gusta, para que lo sientas tuyo.",
+    "Suena a tu favorito":"Seguimos el sonido de tus favoritos.",
+    "Nace de tu nombre":"Guardamos el corazón de tu idea y le dimos un giro propio.",
+    "Evocadora":"Palabras que despiertan una sensación sin decir qué vendes.",
+    "Tu idea, otra lengua":"Tu misma idea dicha en otro idioma: suena nueva y conserva su sentido.",
+    "Arbitraria":"Una palabra bonita fuera de tu sector: sorprende y se recuerda.",
+    "Fusión de tus palabras":"Unimos tus palabras en una sola, nueva.",
+    "Palabra nueva al frente":"Pusimos adelante una palabra solo tuya, porque la primera es la que más pesa.",
+    "Misma familia":"Palabras de la misma familia que tus favoritos.",
+    "Inventada":"Palabras nuevas a partir de tus favoritos.",
+    "Palabra con historia":"Una palabra de otro idioma, escogida a mano para el sentimiento que elegiste. Te mostramos qué significa.",
+    "Palabra nueva con raíz":"Una raíz antigua que ya trae una idea, con un final nuevo. Suena nueva y es más fácil de proteger."
+  };
+  const isFav = n => state.favs.some(f=>keyOf(f.nombre)===keyOf(n));
+  function renderFavBar(){
+    const box = $("favbar"); if(!box) return;
+    if(!state.favs.length){ box.innerHTML = `<div class="favbar">Toca <b>♡</b> en los nombres que más te gusten (hasta 3). En la siguiente ronda te propongo nombres parecidos a esos.</div>`; }
+    else box.innerHTML = `<div class="favbar"><b>Tus favoritos:</b><br>${state.favs.map((f,i)=>`<span class="chip">${esc(f.nombre)}<button data-unfav="${i}" aria-label="Quitar ${esc(f.nombre)}">&times;</button></span>`).join("")}</div>`;
+    $("more-fav").style.display = state.favs.length && state.proposals.length ? "inline-flex" : "none";
+    $("more").textContent = state.favs.length ? "Quiero otra ronda distinta" : "Quiero otra ronda de nombres";
+    if($("pick")) renderPick();
+  }
+  function renderProps(list, note){
+    const box = $("props");
+    const routes = [...new Set(list.map(p=>p.ruta))].filter(r=>ROUTE_WHY[r]);
+    const how = routes.length ? `<div class="howwe"><b>Así buscamos tus nombres</b><ul>${routes.map(r=>`<li><span>${esc(r)}:</span> ${esc(ROUTE_WHY[r])}</li>`).join("")}</ul></div>` : "";
+    box.innerHTML = how + `<div id="favbar"></div><div class="props">${list.map((p,i)=>{ const st = storyOf(p); return `
+      <div class="prop${isFav(p.nombre)?" fav":""}"><button class="heart${isFav(p.nombre)?" on":""}" data-fav="${i}" aria-label="Marcar ${esc(p.nombre)} como favorito">${isFav(p.nombre)?"♥":"♡"}</button><div class="nm">${esc(p.nombre)}</div><div class="tag">${esc(p.ruta||"")}</div>${st?`<p class="story">${esc(st)}</p>`:""}<p>${esc(p.porque||"")}</p></div>`; }).join("")}</div><p class="favmsg" id="favmsg"></p>` + (note?`<p class="muted" style="font-size:13px;margin:10px 0 0">${note}</p>`:"");
+    $("more").style.display = "inline-flex";
+    renderFavBar();
+  }
+  $("props").addEventListener("click", e=>{
+    const h = e.target.closest("[data-fav]"), u = e.target.closest("[data-unfav]");
+    if(h){
+      const p = state.proposals[+h.dataset.fav]; if(!p) return;
+      const i = state.favs.findIndex(f=>keyOf(f.nombre)===keyOf(p.nombre));
+      if(i>=0) state.favs.splice(i,1);
+      else if(state.favs.length>=3){ $("favmsg").textContent = "Puedes escoger hasta 3. Quita uno de tus favoritos para cambiarlo."; return; }
+      else state.favs.push(p);
+      $("favmsg").textContent = "";
+      const card = h.closest(".prop"), on = isFav(p.nombre);
+      card.classList.toggle("fav", on); h.classList.toggle("on", on); h.textContent = on ? "♥" : "♡";
+      renderFavBar(); updateWA();
+    }else if(u){
+      const f = state.favs[+u.dataset.unfav]; state.favs.splice(+u.dataset.unfav,1);
+      document.querySelectorAll("#props [data-fav]").forEach(b=>{ const p = state.proposals[+b.dataset.fav]; if(p && f && keyOf(p.nombre)===keyOf(f.nombre)){ b.classList.remove("on"); b.textContent="♡"; b.closest(".prop").classList.remove("fav"); } });
+      $("favmsg").textContent = ""; renderFavBar(); updateWA();
+    }
+  });
+
+  // Máximo 8 propuestas: primero las que nacen de la idea y del tono
+  const QUOTA = [["Nace de tu nombre",2],["Con significado",3],["Suena a tu nombre",2],["Evocadora",2],["Tu idea, otra lengua",1],["Fusión de tus palabras",1],["Palabra nueva al frente",1],["Arbitraria",1]];
+  function pickBest(list){
+    const out = [];
+    QUOTA.forEach(([r,q])=>list.filter(p=>p.ruta===r).slice(0,q).forEach(p=>{ if(out.length<8) out.push(p); }));
+    list.forEach(p=>{ if(out.length<8 && !out.includes(p)) out.push(p); });
+    return out;
+  }
+  async function loadProposals(mode){
+    const fromFavs = mode === "fav" && state.favs.length;
+    $("props").innerHTML = `<div class="loading"><div class="spin"></div>${fromFavs ? "Buscando nombres parecidos a tus favoritos..." : "Creando nombres para tu negocio..."}</div>`;
+    $("more").style.display = "none"; $("more-fav").style.display = "none";
+    state.proposals.forEach(p=>state.shown.add(keyOf(p.nombre)));
+    state.favs.forEach(p=>state.shown.add(keyOf(p.nombre)));
+    state.names.forEach(n=>state.shown.add(keyOf(n)));
+    await new Promise(r=>setTimeout(r,700));
+    let list = null;
+    let note = "Son ideas. No quedan reservadas para ti hasta que las registres, y aún no están verificadas. Marca tus favoritos y escoge tu finalista para el informe.";
+    const inspired = fromFavs ? [] : inspiredProposals(state.sector);
+    if(fromFavs){
+      const fl = favProposals(state.sector);
+      list = pickBestFav(fl.length >= 6 ? fl : fl.concat(fallbackProposals(state.sector, {inv:3, arb:1, evo:1}).filter(p=>!fl.some(q=>q.nombre===p.nombre)).slice(0, 8 - fl.length)));
+      const ids = [...new Set(state.favs.map(f=>moodOf(f.nombre)).filter(Boolean))];
+      const hilo = ids.length===1 ? ` Tus favoritos tienen algo ${MOODS[ids[0]].label}, así que seguí por ahí.` : "";
+      $("props-intro").textContent = `Partimos de tus favoritos: ${state.favs.map(f=>f.nombre).join(", ")}. Buscamos el mismo sonido, el mismo tono y la misma idea.${hilo}`;
+    }else if(inspired.length){
+      list = pickBest(inspired.length >= 6 ? inspired : inspired.concat(fallbackProposals(state.sector, {inv:2, arb:1, evo:1}).filter(p=>!inspired.some(q=>q.nombre===p.nombre)).slice(0, 8 - inspired.length)));
+      const ml = state.mood ? MOODS[state.mood.id].label : "";
+      $("props-intro").textContent = "Partimos de tu idea: el tema, el sonido y lo que transmite tu nombre" + (ml ? ` (algo ${ml})` : "") + ". Así llegamos a nombres que te gusten y sean más fáciles de proteger.";
+    }else{
+      list = fallbackProposals(state.sector);
+      $("props-intro").textContent = "Creados para tu sector, lejos de las palabras que todo el mundo usa.";
+    }
+    // Nunca repetir: lo que ya salió en rondas anteriores queda por fuera
+    list = list.filter(p=>!isShown(p.nombre));
+    if(list.length < 6){ const extra = fallbackProposals(state.sector, {inv:8 - list.length, arb:0, evo:0}).filter(p=>!list.some(q=>keyOf(q.nombre)===keyOf(p.nombre))); list = list.concat(extra).slice(0,8); }
+    state.round++;
+    state.proposals = list;
+    renderProps(list, note);
+    updateWA();
+  }
+
+
+  // ---------- Crea tu marca con sentido: banco por sentimiento e idioma ----------
+  const BANCO_RAW = {
+    confianza:{latin:"Fides|fe y confianza|r:fid;Verus|verdadero|r:ver;Certus|seguro|r:cert;Salvus|a salvo|r:salv;Pactum|acuerdo|r:pact;Custos|guardián|r:cust",griego:"Aletheia|verdad|r:alet;Axia|valor, mérito;Ethos|carácter;Egida|protección;Eirene|paz|r:iren;Temis|justicia",italiano:"Fede|fe;Certo|cierto, seguro;Sicuro|seguro;Parola|palabra dada;Onesto|honesto;Fidato|de confianza",frances:"Loyal|leal;Abri|refugio;Garde|el que guarda;Franc|sincero;Juste|justo;Ancre|ancla",portugues:"Verdade|verdad;Elo|vínculo;Porto|puerto;Fiel|fiel;Rocha|roca;Ancora|ancla",ingles:"True|verdadero;Haven|refugio;Bond|vínculo;Keep|guardar;Ally|aliado;Kin|los tuyos"},
+    calma:{latin:"Serenus|sereno|r:seren;Pax|paz;Lenis|suave|r:len;Otium|descanso;Mitis|apacible|r:mit;Aura|brisa suave",griego:"Galene|calma del mar;Eirene|paz|r:iren;Ataraxia|serenidad del ánimo;Alcion|días de calma en el mar;Eudia|buen tiempo, calma;Hemera|el día claro",italiano:"Pace|paz;Quiete|quietud;Lieve|ligero;Sosta|pausa;Adagio|despacio;Riposo|descanso",frances:"Calme|calma;Brise|brisa;Serein|sereno;Pause|pausa;Havre|refugio;Plume|pluma",portugues:"Luar|luz de luna;Ninar|arrullar;Alento|aliento;Sossego|sosiego;Brando|suave;Rede|hamaca",ingles:"Still|quieto;Ease|alivio;Hush|silencio suave;Mellow|suave;Serene|sereno;Drift|dejarse llevar"},
+    alegria:{latin:"Gaudium|gozo|r:gaud;Risus|risa|r:ris;Festum|fiesta|r:fest;Ludus|juego|r:lud;Beatus|dichoso|r:beat;Felix|feliz",griego:"Komos|fiesta;Olbia|dicha;Charis|gracia, encanto;Euforia|alegría que desborda;Talia|musa de la comedia;Eutimia|buen ánimo",italiano:"Festa|fiesta;Riso|risa;Sorriso|sonrisa;Lieto|alegre;Brio|brío;Baldoria|jolgorio",frances:"Rire|reír;Eclat|destello;Bisou|besito;Jolie|bonita;Coucou|hola juguetón;Ronde|ronda",portugues:"Folia|fiesta, jolgorio;Ciranda|ronda infantil;Cantiga|canción;Gosto|gusto;Brincar|jugar;Festa|fiesta",ingles:"Glee|júbilo;Cheer|ánimo;Sunny|soleado;Wink|guiño;Lark|alondra, travesura;Yay|¡viva!"},
+    elegancia:{latin:"Aurum|oro|r:aur;Gemma|joya;Regalis|digno de reyes;Ornatus|adornado|r:orn;Serica|de seda;Eximia|excepcional",griego:"Aglaia|esplendor;Aristos|el mejor;Kleos|gloria;Kalos|bello;Kosmos|orden y adorno;Chrysos|oro|r:cris",italiano:"Lusso|lujo;Raso|satén;Ricamo|bordado;Vanto|orgullo;Nobile|noble;Pregio|lo valioso",frances:"Chic|con estilo;Bijou|joya;Ruban|cinta;Parure|juego de joyas;Velours|terciopelo;Ecrin|estuche de joyas",portugues:"Ouro|oro;Joia|joya;Nobre|noble;Renda|encaje;Cetim|satén;Requinte|refinamiento",ingles:"Velvet|terciopelo;Gem|gema;Opal|ópalo;Plush|afelpado, fino;Lace|encaje;Posh|distinguido"},
+    ternura:{latin:"Tener|tierno|r:tern;Cura|cuidado|r:cur;Dulcis|dulce|r:dulc;Nidus|nido|r:nid;Lenis|suave|r:len;Amica|amiga",griego:"Zoe|vida;Agape|amor que cuida;Kalia|nido;Melissa|abeja;Soteria|protección;Eunoia|buena voluntad",italiano:"Tenero|tierno;Cuore|corazón;Piuma|pluma;Fiocco|lazo, copo;Ninna|de la canción de cuna;Dono|regalo",frances:"Calin|abrazo mimoso;Cheri|querido;Doudou|muñeco de apego;Amie|amiga;Aimer|amar;Caresse|caricia",portugues:"Afago|caricia;Ninho|nido;Meigo|tierno;Afeto|afecto;Chamego|cariño;Nenem|bebé",ingles:"Snug|abrigado;Dear|querido;Bunny|conejito;Fawn|cervatillo;Lullaby|canción de cuna;Tuck|arropar"},
+    fuerza:{latin:"Fortis|fuerte|r:fort;Robur|roble y fuerza;Virtus|valentía;Magnus|grande|r:magn;Tenax|tenaz;Impetus|impulso",griego:"Dinamis|fuerza;Tolma|audacia;Alke|fuerza y valor;Aetos|águila;Pelagos|mar abierto;Oros|montaña",italiano:"Vetta|cima;Rocca|fortaleza;Impeto|impulso;Lupo|lobo;Prua|proa;Ardito|atrevido",frances:"Elan|impulso;Envol|despegue;Essor|auge;Hardi|atrevido;Cap|rumbo;Cime|cima",portugues:"Rumo|rumbo;Leme|timón;Ousar|atreverse;Coragem|coraje;Fera|fiera;Viagem|viaje",ingles:"Peak|cima;Rise|levantarse;Roam|recorrer;Dare|atreverse;Forge|forjar;Helm|timón"},
+    frescura:{latin:"Ros|rocío|r:ros;Fons|fuente|r:font;Rivus|arroyo|r:riv;Vernus|de primavera|r:vern;Frons|follaje|r:frond;Viridis|verde",griego:"Drosos|rocío|r:dros;Anthos|flor|r:ant;Kima|ola;Krene|fuente;Hebe|juventud;Neos|nuevo",italiano:"Fonte|fuente;Rivo|arroyo;Neve|nieve;Bosco|bosque;Prato|prado;Pulito|limpio",frances:"Brise|brisa;Aube|alba;Vert|verde;Rive|orilla;Zeste|cáscara de cítrico;Lilas|lila",portugues:"Relva|césped;Seiva|savia;Broto|brote;Jardim|jardín;Alecrim|romero;Limpo|limpio",ingles:"Dew|rocío;Fern|helecho;Meadow|pradera;Grove|arboleda;Willow|sauce;Clover|trébol"},
+    cercania:{latin:"Cor|corazón|r:cor;Amicus|amigo;Lar|hogar|r:lar;Vicinia|vecindad;Gratus|grato|r:grat;Sodalis|compañero",griego:"Xenia|hospitalidad;Hestia|diosa del hogar;Kardia|corazón;Agora|plaza de encuentro;Eunoia|buena voluntad;Eudora|buen regalo",italiano:"Amico|amigo;Tavola|mesa;Borgo|aldea;Cortile|patio;Ritrovo|punto de encuentro;Insieme|juntos",frances:"Salut|hola;Convive|invitado a la mesa;Ensemble|juntos;Cocon|capullo, refugio;Proche|cercano;Cour|patio",portugues:"Perto|cerca;Roda|ronda de amigos;Varanda|terraza;Janela|ventana;Comigo|conmigo;Nosso|nuestro",ingles:"Warm|cálido;Nook|rincón acogedor;Porch|porche;Buddy|amigo;Folk|gente;Linger|quedarse un rato"},
+    creatividad:{latin:"Ingenium|ingenio|r:ingen;Ars|arte|r:art;Imago|imagen;Pictor|pintor;Faber|el que hace con sus manos|r:fabr;Fabula|relato",griego:"Poiesis|creación;Tecne|arte y oficio;Lira|la lira de los poetas;Caliope|musa de la poesía;Kairos|el momento justo;Ergon|obra",italiano:"Fiaba|cuento de hadas;Lampo|destello;Matita|lápiz;Tratto|trazo;Colore|color;Impronta|sello personal",frances:"Motif|motivo, estampado;Conte|cuento;Verve|chispa al crear;Flair|buen ojo;Encre|tinta;Muse|musa",portugues:"Jeito|maña propia;Lume|lumbre;Tecer|tejer;Conto|cuento;Sopro|soplo de inspiración;Criar|crear",ingles:"Ink|tinta;Draft|borrador;Wit|ingenio;Whim|ocurrencia;Tale|cuento;Maker|el que hace"},
+    sabor:{latin:"Sapor|sabor|r:sab;Gustus|gusto|r:gust;Mel|miel|r:mel;Pomum|fruto|r:pom;Fructus|fruto|r:fruct;Ambrosia|manjar de dioses",griego:"Geusis|gusto;Artos|pan;Elaia|olivo;Karpos|fruto;Opora|cosecha de frutos;Glika|dulces",italiano:"Morso|bocado;Sugo|salsa;Merenda|merienda;Mestolo|cucharón;Bonta|cosa rica;Forno|horno",frances:"Festin|festín;Miette|miguita;Tartine|tostada untada;Cerise|cereza;Fumet|aroma de un plato;Epice|especia",portugues:"Tempero|sazón;Petisco|pasabocas;Fatia|tajada;Horta|huerta;Brinde|brindis;Lanche|merienda",ingles:"Bite|bocado;Crumb|miguita;Feast|festín;Batch|hornada;Pinch|pizca;Pantry|despensa"}
+  };
+  const BANCO = {};
+  Object.keys(BANCO_RAW).forEach(f=>{ BANCO[f] = {}; Object.keys(BANCO_RAW[f]).forEach(l=>{ BANCO[f][l] = BANCO_RAW[f][l].split(";").map(x=>{ const [w,m,u] = x.split("|"); return {w, m, r: (u||"").indexOf("r:")===0 ? u.slice(2) : null}; }); }); });
+  const SENT = [["confianza","Confianza"],["calma","Calma"],["alegria","Alegría"],["elegancia","Elegancia"],["ternura","Ternura"],["fuerza","Fuerza"],["frescura","Frescura"],["cercania","Cercanía"],["creatividad","Creatividad"]];
+  const SONIDOS = [["clasico","Clásico y serio","latin"],["sabio","Sabio y distinto","griego"],["estilo","Con estilo y sabor","italiano"],["delicado","Delicado y fino","frances"],["calido","Cálido y cercano","portugues"],["moderno","Moderno y directo","ingles"],["idioma","En mi idioma","espanol"],["sorprende","Sorpréndeme","auto"]];
+  const LANG_NAME = {latin:"latín",griego:"griego",italiano:"italiano",frances:"francés",portugues:"portugués",ingles:"inglés",espanol:"español"};
+  const MAPA_TEMA_SECTOR = {general:"general",legal:"legal",tech:"tecnologia",belleza:"belleza",comida:"comida",cafe:"cafe",moda:"moda",mar:"moda",intimo:"intimo",educacion:"educacion",salud:"salud",hogar:"hogar",ninos:"ninos",negocios:"legal",viaje:"viaje",natural:"hogar",industria:"industria"};
+  const IDIOMA_POR_SECTOR = {moda:["italiano","frances"],belleza:["frances","latin"],comida:["italiano","espanol"],cafe:["espanol","latin"],legal:["latin","espanol"],tecnologia:["latin","griego"],salud:["latin","griego"],ninos:["espanol","italiano"],hogar:["espanol","italiano"],intimo:["frances","italiano"],educacion:["latin","griego"],viaje:["espanol","portugues"],industria:["latin","espanol"],general:["latin","espanol"]};
+  const MAPA_SENT_TONO = {confianza:["sobrio"],calma:["natural","tierno"],alegria:["alegre"],elegancia:["elegante"],ternura:["tierno"],fuerza:["fuerte"],frescura:["natural"],cercania:["tierno","trascendente"],creatividad:["sobrio","mistico"],sabor:["alegre","natural"]};
+  const FINAL_SENT = {ternura:"finos",calma:"finos",frescura:"finos",elegancia:"finos",alegria:"finos",creatividad:"finos",confianza:"fuertes",fuerza:"fuertes",cercania:"fuertes",sabor:"fuertes"};
+  const ENDS_FINOS = ["ia","ela","ea","is","ila","ina"], ENDS_FUERTES = ["ara","ana","ari","io"];
+  const PROMESA_SENT = {confianza:"inspira confianza desde el primer contacto",calma:"da tranquilidad cuando más se necesita",alegria:"contagia alegría",elegancia:"se distingue sin esfuerzo",ternura:"cuida con ternura lo más querido",fuerza:"aguanta y responde",frescura:"llega como aire nuevo",cercania:"se siente como de la familia",creatividad:"hace las cosas a su manera",sabor:"se recuerda en cada bocado"};
+  const PRON = {Charis:"caris",Jolie:"yolí",Bijou:"biyú",Proche:"prosh",Pregio:"preyo",Pace:"pache"};
+  const MUY_USADAS_BANCO = ["pax","aura","ethos","kosmos","agora","kairos","chic","muse","sunny","velvet","forno","adagio","felix","talia","melissa"];
+  const PLANT_RAIZ = [
+    (n,o,m,l,p)=>`${n} nace de ${o}, que significa ${m} en ${l}. Una marca que ${p}.`,
+    (n,o,m,l,p)=>`En ${l}, ${o} es ${m}. De ahí sale ${n}. Una marca que ${p}.`,
+    (n,o,m,l,p)=>`${n} lleva adentro la palabra ${o}: ${m}, en ${l}. Una marca que ${p}.`
+  ];
+  const shuf = a => a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+  const crTema = () => THEME_BY_KEY[(state.cat && state.cat.key) || "otro"] || "general";
+  function crLangOf(sound){
+    const s = SONIDOS.find(x=>x[0]===sound);
+    if(s && s[2] !== "auto") return s[2];
+    const sec = MAPA_TEMA_SECTOR[crTema()] || "general";
+    return (IDIOMA_POR_SECTOR[sec] || IDIOMA_POR_SECTOR.general)[0];
+  }
+  function crAvisos(w, lang, tema){
+    const a = [];
+    if(PRON[w]) a.push(`Se lee "${PRON[w]}".`);
+    if(MUY_USADAS_BANCO.includes(norm(w))) a.push("Es una palabra muy usada como marca: verifícala con cuidado.");
+    else if(lang==="ingles") a.push("Las palabras en inglés son las más usadas como marca: verifícala con cuidado.");
+    if(tema==="cafe" && lang!=="espanol" && lang!=="latin") a.push("Tu café es colombiano: un nombre de otro idioma puede confundir sobre su origen.");
+    return a.join(" ");
+  }
+  // Candidatos de un sentimiento en un idioma
+  function crPool(f, lang, tema, sat, usados){
+    const out = [];
+    const ok = w => okName(w, sat, []) && !isShown(w) && !usados.has(keyOf(w));
+    if(lang==="espanol"){
+      const tonos = MAPA_SENT_TONO[f].concat(tema==="intimo" ? ["romantico"] : []);
+      shuf(tonos).forEach(t=>{ shuf(MOODS[t].e).forEach(w=>{ if(!sat.has(norm(w)) && ok(w)) out.push({nombre:w, ruta:"Evocadora", story:`${w} no describe lo que vendes. Cuenta cómo se siente: ${MOODS[t].label}.`, porque:"Una palabra en español que ya emociona. Verifícala: las palabras reales pueden estar más usadas."}); }); });
+      return out;
+    }
+    const ends = shuf(FINAL_SENT[f]==="finos" ? ENDS_FINOS : ENDS_FUERTES);
+    shuf(BANCO[f][lang] || []).forEach(e=>{
+      if(e.w==="Temis" && (tema==="legal" || tema==="negocios")) return;
+      const av = crAvisos(e.w, lang, tema);
+      if(e.r){
+        for(const end of shuf(ends.concat(ends))){
+          const n = joinRoot(e.r, end);
+          if(sounds(n) && pasaSonido(e.r, end, n) && ok(n)){
+            const tpl = PLANT_RAIZ[Math.floor(Math.random()*PLANT_RAIZ.length)];
+            out.push({nombre:n, ruta:"Palabra nueva con raíz", story:tpl(n, e.w.toLowerCase(), e.m, LANG_NAME[lang], PROMESA_SENT[f]), porque:"Una raíz antigua con un final nuevo: suena nueva y es más fácil de proteger."});
+            break;
+          }
+        }
+      }else if(e.w.length<=9 && ok(e.w)){
+        out.push({nombre:e.w, ruta:"Palabra con historia", story:`${e.w} significa ${e.m} en ${LANG_NAME[lang]}. Corto y fácil de decir.`, porque:av || "Escogida a mano para este sentimiento."});
+      }
+      if(e.r && out.length && !out[out.length-1].porque.includes("Verifícala") && av) out[out.length-1].porque += " " + av;
+    });
+    return out;
+  }
+  function crGenerar(){
+    const cr = state.crear; if(!cr) return;
+    const tema = crTema();
+    const sat = NORM_SET(SECTORS[state.sector].saturated.concat(COMMON));
+    const usados = new Set();
+    const idiomas = [cr.lang].concat(["latin","italiano","frances","portugues","griego","ingles","espanol"].filter(l=>l!==cr.lang));
+    const total = cr.text ? 6 : 8;
+    const lista = [];
+    for(const lang of idiomas){
+      if(lista.length >= total) break;
+      const pools = cr.feelings.map(f=>crPool(f, lang, tema, sat, usados).map(p=>Object.assign(p,{fl:f, lang})));
+      let i = 0;
+      while(lista.length < total && pools.some(p=>p.length)){
+        const p = pools[i % pools.length].shift(); i++;
+        if(!p || usados.has(keyOf(p.nombre))) continue;
+        usados.add(keyOf(p.nombre));
+        const sl = SENT.concat([["sabor","Sabor"]]).find(x=>x[0]===p.fl)[1];
+        p.porque = `Para que tu cliente sienta ${sl.toLowerCase()}. ${p.porque||""}` + (lang!==cr.lang ? ` Viene de ${LANG_NAME[lang]}, porque ya mostramos todo lo de ${LANG_NAME[cr.lang]}.` : "");
+        lista.push(p);
+      }
+    }
+    // Si contó qué significa su nombre, sumamos hasta 2 nombres que nacen de esa idea
+    if(cr.text){
+      try{
+        inspiredProposals(state.sector).filter(p=>["Nace de tu nombre","Tu idea, otra lengua"].includes(p.ruta) && !isShown(p.nombre) && !usados.has(keyOf(p.nombre))).slice(0,2).forEach(p=>{ usados.add(keyOf(p.nombre)); lista.push(p); });
+      }catch(e){}
+    }
+    return lista.slice(0,8);
+  }
+  function crShow(step){
+    ["cr-s1","cr-s2","cr-s3"].forEach((id,i)=>{ $(id).style.display = (i+1===step) ? "block" : "none"; });
+    [...$("cr-dots").children].forEach((d,i)=>d.classList.toggle("on", i<step));
+  }
+  function crSentButtons(){
+    const t = crTema(), sab = (t==="comida" || t==="cafe");
+    const list = SENT.map(x=> (sab && x[0]==="fuerza") ? ["sabor","Sabor"] : x);
+    $("cr-feel").innerHTML = list.map(([id,l])=>`<button type="button" class="opt${(crSel.feel||[]).includes(id)?" on":""}" data-feel="${id}">${l}</button>`).join("");
+    $("cr-sound").innerHTML = SONIDOS.map(([id,l])=>`<button type="button" class="opt${crSel.sound===id?" on":""}" data-sound="${id}">${l}</button>`).join("");
+  }
+  let crSel = {feel:[], sound:""};
+  function crReset(){
+    state.crear = null; crSel = {feel:[], sound:""};
+    $("cr-start").style.display = "block"; $("cr-flow").style.display = "none"; $("cr-sum").style.display = "none"; $("cr-err").style.display = "none";
+  }
+  function crErr(t){ const e = $("cr-err"); e.textContent = t; e.style.display = t ? "block" : "none"; }
+  $("cr-go").addEventListener("click", ()=>{
+    crSentButtons(); crErr("");
+    $("cr-text").value = state.desc || "";
+    $("cr-start").style.display = "none"; $("cr-sum").style.display = "none"; $("cr-flow").style.display = "block"; crShow(1);
+  });
+  $("cr-skip").addEventListener("click", ()=>{ $("informe").scrollIntoView({behavior:"smooth", block:"start"}); });
+  $("cr-feel").addEventListener("click", e=>{
+    const b = e.target.closest("[data-feel]"); if(!b) return; const id = b.dataset.feel;
+    const i = crSel.feel.indexOf(id);
+    if(i>=0) crSel.feel.splice(i,1); else if(crSel.feel.length>=2){ crSel.feel.shift(); crSel.feel.push(id); } else crSel.feel.push(id);
+    crSentButtons(); crErr("");
+  });
+  $("cr-sound").addEventListener("click", e=>{
+    const b = e.target.closest("[data-sound]"); if(!b) return; crSel.sound = b.dataset.sound; crSentButtons(); crErr("");
+  });
+  $("cr-n1").addEventListener("click", ()=>{ if(!crSel.feel.length){ crErr("Escoge al menos un sentimiento para seguir."); return; } crErr(""); crShow(2); });
+  $("cr-b2").addEventListener("click", ()=>{ crErr(""); crShow(1); });
+  $("cr-n2").addEventListener("click", ()=>{ if(!crSel.sound){ crErr("Escoge cómo te gustaría que sonara."); return; } crErr(""); crShow(3); });
+  $("cr-b3").addEventListener("click", ()=>{ crErr(""); crShow(2); });
+  function crCrear(conTexto){
+    const sentL = Object.fromEntries(SENT.concat([["sabor","Sabor"]]));
+    const sd = SONIDOS.find(x=>x[0]===crSel.sound) || SONIDOS[0];
+    const text = conTexto ? $("cr-text").value.trim() : "";
+    if(conTexto && text) state.desc = text;
+    state.crear = {feelings:crSel.feel.slice(), sound:crSel.sound, lang:crLangOf(crSel.sound), text, labels:crSel.feel.map(f=>sentL[f]), soundLabel:sd[1]};
+    crRonda(true);
+    $("cr-flow").style.display = "none";
+    const l = LANG_NAME[state.crear.lang];
+    $("cr-sum").innerHTML = `<b>Tu universo:</b> ${state.crear.labels.join(" y ").toLowerCase()} · sonido ${sd[1].toLowerCase()}${crSel.sound==="sorprende" ? ` (te toca ${l})` : ""}. <button type="button" id="cr-redo">Cambiar mis respuestas</button>`;
+    $("cr-sum").style.display = "block";
+    $("cr-redo").addEventListener("click", ()=>{ crSentButtons(); $("cr-text").value = state.crear ? (state.crear.text||"") : ""; $("cr-sum").style.display = "none"; $("cr-flow").style.display = "block"; crShow(1); $("crear").scrollIntoView({behavior:"smooth", block:"start"}); });
+  }
+  function crRonda(primera){
+    state.proposals.forEach(p=>state.shown.add(keyOf(p.nombre)));
+    state.favs.forEach(p=>state.shown.add(keyOf(p.nombre)));
+    state.names.forEach(n=>state.shown.add(keyOf(n)));
+    const lista = crGenerar();
+    if(!lista || !lista.length){ crErr("No encontré más nombres con esas respuestas. Cambia el sentimiento o el sonido y lo intentamos de nuevo."); return; }
+    state.round++; state.proposals = lista;
+    $("props-intro").textContent = `Tu universo: ${state.crear.labels.join(" y ").toLowerCase()} · sonido ${state.crear.soundLabel.toLowerCase()}. Te propongo nombres cortos y fáciles de decir: los que se pronuncian sin esfuerzo gustan más y dan más confianza.`;
+    renderProps(lista, "Son ideas. No quedan reservadas para ti hasta que las registres, y aún no están verificadas. Marca tus favoritos y escoge tu finalista para el informe.");
+    const pr = document.querySelector("#props .props"); if(pr) pr.classList.add("reveal");
+    updateWA();
+    $("propsCard").style.display="block"; $("informe").style.display="block";
+    if(primera) $("props").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+  $("cr-make").addEventListener("click", ()=>crCrear(true));
+  $("cr-none").addEventListener("click", ()=>{ $("cr-text").value = ""; crCrear(false); });
+
+  // ---------- Presencia en internet e Instagram ----------
+  // Dirección del servidor de búsqueda (Cloudflare). Vacía = la sección no aparece.
+  const SEARCH_URL = "";
+  const BIG_FOLLOWERS = 5000;
+  function searchTerm(){
+    if(state.sector !== "otro") return SECTORS[state.sector].label;
+    const l = (state.cat && state.cat.c) ? state.cat.label.toLowerCase() : "";
+    return l.split(",")[0].split(" o ")[0].trim();
+  }
+  function fmtF(n){ if(n==null) return ""; if(n>=1e6) return (Math.round(n/1e5)/10).toString().replace(".",",")+" M seguidores"; if(n>=1e3) return (Math.round(n/100)/10).toString().replace(".",",").replace(",0","")+" mil seguidores"; return n+" seguidores"; }
+  function nameHit(name, text){
+    const n = norm(name).replace(/\s/g,""); if(n.length<3) return false;
+    const t = norm(text).replace(/[\s._-]/g,"");
+    if(t.includes(n)) return true;
+    const sat = NORM_SET(SECTORS[state.sector].saturated.concat(COMMON, SECTORS[state.sector].product||[]));
+    if(norm(name).split(" ").some(w=>w.length>=4 && !sat.has(w) && t.includes(w))) return true;
+    return norm(text).split(/[\s._-]+/).some(w=>w.length>=4 && n.length>=4 && lev(w,n)<=1);
+  }
+  function sectorHit(text){
+    const t = norm(text);
+    const words = (state.cat ? state.cat.p : []).concat(SECTORS[state.sector].product||[], searchTerm().split(" ").filter(w=>w.length>=4)).map(norm);
+    return words.some(w=>w && t.includes(w));
+  }
+  function evalMarket(name, data){
+    const ig = (data.ig||[]).filter(r=>nameHit(name, r.handle+" "+r.title));
+    const web = (data.web||[]).filter(r=>nameHit(name, r.domain+" "+r.title));
+    const all = ig.map(r=>({...r, kind:"ig", sec:sectorHit(r.title+" "+r.snippet)})).concat(web.map(r=>({...r, kind:"web", sec:sectorHit(r.title+" "+r.snippet)})));
+    const big = ig.filter(r=>(r.followers||0) >= BIG_FOLLOWERS);
+    const shop = web.filter(r=>sectorHit(r.title+" "+r.snippet) && nameHit(name, r.domain));
+    const inSector = all.filter(r=>r.sec).length;
+    let level = "v", label = "Sin señales en internet";
+    if(big.length || shop.length || inSector >= 3){ level = "r"; label = "Alerta fuerte"; }
+    else if(all.length){ level = "a"; label = "Atención"; }
+    all.sort((a,b)=>(b.sec-a.sec) || ((b.followers||0)-(a.followers||0)));
+    const nc = norm(name).replace(/\s/g,"");
+    const igExact = ig.filter(r=>r.handle.replace(/[._-]/g,"").includes(nc)).length;
+    return {level, label, items: all.slice(0,3), count: all.length, big, shop, inSector, igExact, igSimilar: ig.length - igExact, webN: web.length};
+  }
+  function countText(ev){
+    const parts = [];
+    if(ev.igExact) parts.push(`${ev.igExact} ${ev.igExact===1?"cuenta":"cuentas"} de Instagram con tu mismo nombre`);
+    if(ev.igSimilar) parts.push(`${ev.igSimilar} ${ev.igSimilar===1?"cuenta":"cuentas"} con un nombre muy parecido`);
+    if(ev.webN) parts.push(`${ev.webN} ${ev.webN===1?"página web":"páginas web"}`);
+    if(!parts.length) return "";
+    const last = parts.pop();
+    return "Ojo: encontramos " + (parts.length ? parts.join(", ") + " y " + last : last) + ". ";
+  }
+  function marketText(name, ev){
+    if(ev.level==="r"){
+      if(ev.big.length) return `Hay al menos una marca con muchos seguidores usando un nombre como "${name}". Una marca así de visible suele defender su nombre.`;
+      if(ev.shop.length) return `Encontramos una tienda en línea de tu mismo sector con un nombre como "${name}".`;
+      return `Varios son de tu mismo sector. Eso indica que el nombre está saturado.`;
+    }
+    if(ev.level==="a") return `No se ven como marcas grandes de tu sector, pero conviene tenerlas en cuenta.`;
+    return `No encontramos marcas visibles con este nombre. Buena señal, pero no definitiva: el resultado final te lo doy en el informe.`;
+  }
+  async function runMarket(){
+    const box = $("market");
+    state.market = {};
+    if(!SEARCH_URL || !state.names.length){ box.innerHTML = ""; return; }
+    const names = state.names.slice(0,3);
+    box.innerHTML = `<h3 class="sec-title" style="font-size:20px;margin-top:6px">Semáforo 2: tu nombre en internet e Instagram</h3><p class="muted" style="margin:0 0 12px">Buscamos si ya hay negocios usando tu nombre o uno muy parecido.</p>` +
+      names.map((n,i)=>`<div class="mk" id="mk${i}"><h4>${esc(n)}</h4><div class="loading"><div class="spin"></div>Buscando en internet e Instagram...</div></div>`).join("") +
+      `<p class="fine" style="margin:0 0 14px">Estar en internet o en redes no significa estar registrado. Esta revisión es una primera alerta; el informe te confirma si tu nombre tiene camino.</p>`;
+    await Promise.all(names.map(async (n,i)=>{
+      const el = $("mk"+i);
+      try{
+        const r = await fetch(SEARCH_URL, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({name:n, term:searchTerm()})});
+        if(r.status===429) throw new Error("limite");
+        if(!r.ok) throw new Error("error");
+        const ev = evalMarket(n, await r.json());
+        state.market[n] = ev;
+        el.innerHTML = `<h4>${esc(n)}</h4><span class="al ${ev.level}">${ev.label}</span><p>${esc(countText(ev) + marketText(n, ev))}</p>` +
+          (ev.items.length ? `<ul>${ev.items.map(it=>`<li><a href="${esc(it.link)}" target="_blank" rel="noopener">${it.kind==="ig" ? "@"+esc(it.handle) : esc(it.domain)}</a><span>${it.kind==="ig" ? (it.followers!=null ? fmtF(it.followers) : "Instagram") : "Página web"}</span></li>`).join("")}</ul>` : "");
+      }catch(e){
+        el.innerHTML = `<h4>${esc(n)}</h4><p>${e.message==="limite" ? "Llegamos al límite de revisiones de hoy." : "No pudimos revisar internet en este momento."} Igual lo reviso en el informe.</p>`;
+      }
+    }));
+    updateWA();
+  }
+  // Enlace por aliado: ...?aliado=suppra  -> "Vengo de parte de Suppra"
+  const ALIADO = (()=>{ try{ const a = new URLSearchParams(location.search).get("aliado") || ""; const c = a.replace(/[^\p{L}\p{N} ._-]/gu,"").slice(0,40).trim(); if(c){ try{localStorage.setItem("lexa_aliado", c);}catch(e){} return c.charAt(0).toUpperCase()+c.slice(1); } try{ const s = localStorage.getItem("lexa_aliado")||""; return s ? s.charAt(0).toUpperCase()+s.slice(1) : ""; }catch(e){ return ""; } }catch(e){ return ""; } })();
+  // ---------- Informe Nombre Libre: cupos de prueba y precio ----------
+  // PILOTO = true mientras haya pruebas gratis. Para empezar a cobrar, cambiar a false.
+  // PILOTO_HASTA: vacío = "por tiempo limitado". Si se escribe una fecha (ej. "30 de noviembre"), la app dice "hasta el 30 de noviembre".
+  // Escalera de precio acordada: pruebas gratis, luego $49.000, luego $69.000 según cómo vaya.
+  const PILOTO = true;
+  const PILOTO_HASTA = "";
+  const CUPOS_SEMANA = 2;
+  const PRECIO_INFORME = 49000;
+  const ENTREGA = "en las primeras 24 horas";   // tiempo de entrega del Nombre Libre
+  const peso = n => "$" + n.toLocaleString("es-CO").replace(/,/g,".");
+  const PLANES = {
+    gratis:{nombre:"Informe Preliminar (prueba gratis)", t:"Prueba gratis", sub:"2 cupos por semana", d:"Tu probabilidad de registro, la clase en la que va tu producto o servicio y las marcas similares ya registradas.", ent:"en las primeras 24 horas", btn:"Pedir mi cupo gratis por WhatsApp", msg:"Quiero uno de los cupos de prueba gratis."},
+    express:{nombre:"Informe Express", t:"Informe Express", sub:"$49.900", d:"Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido. Te digo qué probabilidad de registro tiene y qué hacer. Pídelo antes de las 2 p. m. para recibirlo hoy.", ent:"en 2 a 4 horas hábiles", btn:"Pedir mi Informe Express", msg:"Entiendo que el Informe Express vale $49.900."},
+    completo:{nombre:"Informe Completo", t:"Informe Completo", sub:"$89.900", d:"El informe para decidir con tranquilidad antes de invertir en tu marca. Todo lo del Express, más la búsqueda oficial de marcas registradas parecidas a tu nombre y a tu logo. Reviso la clase de tu producto y otras clases relacionadas, donde también podría aparecer una marca parecida. Si sale con riesgo, te propongo alternativas.", ent:"en 24 a 48 horas", btn:"Pedir mi Informe Completo", msg:"Entiendo que el Informe Completo vale $89.900."}
+  };
+  state.plan = state.plan || "gratis";
+  function renderOffer(){
+    const p = state.plan;
+    $("offer").innerHTML = '<div class="plans">' + Object.keys(PLANES).map(k=>{ const x = PLANES[k]; return `<label class="plan${k===p?" on":""}"><input type="radio" name="plan" data-plan="${k}" ${k===p?"checked":""}><span class="pt">${x.t}<small>${x.sub}</small></span><span class="pd">${x.d}</span><span class="pe">Entrega ${x.ent}</span></label>`; }).join("") + '</div>';
+    $("entrega-paso").textContent = PLANES[p].ent;
+    $("wa").textContent = PLANES[p].btn;
+  }
+  $("offer").addEventListener("change", e=>{ const b = e.target.closest("[data-plan]"); if(!b) return; state.plan = b.dataset.plan; renderOffer(); updateWA(); });
+  // Nombres candidatos para el informe: los de la persona y sus favoritos
+  state.informe = [];
+  function informeCands(){
+    const seen = new Set(); const out = [];
+    state.names.map(n=>({n, t:"tu nombre"})).concat(state.favs.map(f=>({n:f.nombre, t:"favorito"}))).forEach(x=>{ const k = keyOf(x.n); if(!seen.has(k)){ seen.add(k); out.push(x); } });
+    return out;
+  }
+  function renderPick(){
+    const c = informeCands();
+    state.informe = state.informe.filter(n=>c.some(x=>keyOf(x.n)===keyOf(n))).slice(0,1);
+    if(!c.length){ $("pick").innerHTML = `<div class="k">Tu nombre finalista</div><p style="margin:6px 0 0;font-size:14px">Marca con ♡ los nombres que más te gusten y aparecen aquí para que escojas uno.</p>`; updateWA(); return; }
+    $("pick").innerHTML = `<div class="k">Escoge tu nombre finalista</div><p style="margin:4px 0 0;font-size:13px;color:var(--crema)">El informe es de un solo nombre. Escoge el que más te gusta.</p>` +
+      c.map((x,i)=>`<label><input type="radio" name="finalista" data-inf="${i}" ${state.informe.some(n=>keyOf(n)===keyOf(x.n))?"checked":""}> ${esc(x.n)} <small>${x.t}</small></label>`).join("");
+    updateWA();
+  }
+  $("ver-acuerdo").addEventListener("click", ()=>{ const d = $("acuerdo"); d.open = true; d.scrollIntoView({behavior:"smooth", block:"center"}); });
+  $("pick").addEventListener("change", e=>{
+    const b = e.target.closest("[data-inf]"); if(!b) return;
+    const x = informeCands()[+b.dataset.inf]; if(!x) return;
+    state.informe = [x.n]; updateWA();
+  });
+
+  function summary(){
+    const lines = [];
+    lines.push("Hola Alejandra, revisé mi marca en la app Lexa Legal.");
+    if(ALIADO) lines.push(`Vengo de parte de ${ALIADO}.`);
+    lines.push(`Vendo: ${state.cat ? state.cat.label : SECTORS[state.sector].label}.`);
+    if(state.cat && state.cat.c) lines.push(`Clase preliminar: ${state.cat.c}.`);
+    if(state.desc) lines.push(`Mi negocio: ${state.desc}`);
+    if(state.diags.length){
+      lines.push("Mis nombres:");
+      state.diags.forEach(d=>{ const m = state.market && state.market[d.name]; lines.push(`• ${d.name}: mitad 1, ${d.label.toLowerCase()} (nivel ${d.level} de 5)${m ? `. En internet: ${m.level==="v" ? "sin señales" : m.label.toLowerCase()}` : ""}`); });
+    }else lines.push("Todavía no tengo nombre.");
+    if(state.favs.length) lines.push(`Mis favoritos de las propuestas: ${state.favs.map(p=>p.nombre).join(", ")}.`);
+    if(state.crear) lines.push(`Quiero que mi marca transmita: ${state.crear.labels.join(" y ").toLowerCase()}. Me gusta un sonido ${state.crear.soundLabel.toLowerCase()}.`);
+    const inf = (state.informe||[])[0];
+    const fp = inf && state.proposals.concat(state.favs).find(p=>p.nombre===inf && p.story);
+    const PL = PLANES[state.plan||"gratis"]; lines.push(inf ? `Quiero mi ${PL.nombre} para mi nombre finalista: ${inf}.` : `Quiero mi ${PL.nombre}. Todavía estoy escogiendo mi nombre finalista.`);
+    if(fp) lines.push("Su historia: " + fp.story);
+    lines.push(PL.msg);
+    return lines.join("\n");
+  }
+  function updateWA(){ $("wa").href = "https://wa.me/573016253440?text=" + encodeURIComponent(summary()); }
+
+  $("go").addEventListener("click", ()=>{
+    const cat = useCat($("sector").value);
+    state.cat = cat;
+    const sector = cat.s;
+    state.sector = sector;
+    state.desc = $("desc").value.trim();
+    state.names = ["n1","n2","n3"].map(id=>$(id).value.trim()).filter(Boolean);
+    if(cat.key==="otro" && !state.desc && !state.names.length){ $("err").style.display="block"; return; }
+    $("err").style.display="none";
+    state.diags = state.names.map(n=>diagnose(n, sector)).filter(Boolean);
+    state.proposals = []; state.favs = []; state.shown = new Set(); state.round = 0;
+    state.informe = []; crReset();
+    renderClase();
+    renderCards();
+    renderOffer(); renderPick();
+    $("results").style.display = "block"; $("form-sec").style.display = "none"; $("propsCard").style.display = (!state.diags.length || state.diags.some(d=>d.level<=3)) ? "block" : "none"; $("informe").style.display = "block";
+    updateWA();
+    $("results").scrollIntoView({behavior:"smooth", block:"start"});
+    loadProposals();
+    runMarket();
+  });
+  $("more").addEventListener("click", ()=>{ if(state.crear){ crErr(""); crRonda(false); } else loadProposals("new"); });
+  $("more-fav").addEventListener("click", ()=>loadProposals("fav"));
+  $("again").addEventListener("click", ()=>{ $("results").style.display="none"; $("form-sec").style.display="block"; $("a1").style.display="block"; $("a2").style.display="none"; window.scrollTo(0,0); });
+  $("copy").addEventListener("click", async ()=>{
+    try{ await navigator.clipboard.writeText(summary()); $("copied").textContent = "Copiado. Pégalo en WhatsApp o en un DM a @conlexalegal."; }
+    catch(e){ $("copied").textContent = "No se pudo copiar. Escríbeme al 301 625 3440."; }
+  });
+
+  // ---------- Guardar en pantalla de inicio ----------
+  (function(){
+    const box=$("install"); if(!box) return;
+    const standalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone===true;
+    let closed=false; try{ closed = localStorage.getItem("lexa_install_x")==="1"; }catch(e){}
+    if(standalone || closed) return;
+    const ua=navigator.userAgent||"";
+    const ios=/iPhone|iPad|iPod/i.test(ua) || (navigator.platform==="MacIntel" && navigator.maxTouchPoints>1);
+    const android=/Android/i.test(ua);
+    $(ios?"steps-ios":android?"steps-android":"steps-pc").style.display="";
+    box.style.display="block";
+    let deferred=null;
+    window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferred=e; $("install-go").style.display="inline-block"; });
+    $("install-go").addEventListener("click",async()=>{ if(!deferred) return; deferred.prompt(); try{ await deferred.userChoice; }catch(e){} deferred=null; $("install-go").style.display="none"; });
+    window.addEventListener("appinstalled",()=>{ box.style.display="none"; });
+    $("install-x").addEventListener("click",()=>{ box.style.display="none"; try{ localStorage.setItem("lexa_install_x","1"); }catch(e){} });
+  })();
+  
+  // ---------- Selector de colores (solo para la prueba) ----------
+  (function(){
+    let t = "2";
+    function setT(v){ document.documentElement.dataset.t = v; document.querySelectorAll("#tema button").forEach(b=>b.classList.toggle("on", b.dataset.t===v));  }
+    setT(t);
+    const box = $("tema"); if(box) box.addEventListener("click", e=>{ const b = e.target.closest("[data-t]"); if(b) setT(b.dataset.t); });
+  })();
+
+  // ---------- Navegación de la nueva Lexa ----------
+  const SCREENS = ["home","scrA","scrB","scrC","scrT"];
+  let prevScreen = "home";
+  function showScreen(id){
+    if(id==="scrT") prevScreen = SCREENS.find(s=>$(s).style.display==="block") || "home";
+    SCREENS.forEach(s=>{ $(s).style.display = s===id ? "block" : "none"; });
+    $("backbtn").style.display = id==="home" ? "none" : "inline-flex";
+    if(id==="scrA") { $("slotA-props").appendChild($("propsCard")); $("slotA-inf").appendChild($("informe")); }
+    if(id==="scrB") { $("slotB-props").appendChild($("propsCard")); $("slotB-inf").appendChild($("informe")); }
+    window.scrollTo(0,0);
+  }
+  document.addEventListener("click", e=>{
+    const g = e.target.closest("[data-go]"); if(!g) return;
+    const id = g.dataset.go;
+    if(id==="scrB"){ $("bstep1").style.display="block"; $("crear").style.display="none"; $("propsCard").style.display="none"; $("informe").style.display="none"; }
+    if(id==="scrA" && $("results").style.display!=="block"){ $("form-sec").style.display="block"; $("a1").style.display="block"; $("a2").style.display="none"; $("propsCard").style.display="none"; $("informe").style.display="none"; }
+    showScreen(id);
+  });
+  $("backbtn").addEventListener("click", ()=>{
+    const cur = SCREENS.find(s=>$(s).style.display==="block");
+    showScreen(cur==="scrT" ? prevScreen : "home");
+  });
+  // A: informe de registrabilidad
+  function updClase(){
+    const c = CATS[$("sector").value];
+    $("clase-pre").innerHTML = c && c.c ? `<span class="k">Tu clase sugerida</span><span class="big">${esc(CLASES[c.c].charAt(0).toUpperCase()+CLASES[c.c].slice(1))}</span><span>Es una guía. En el informe la confirmamos contigo.</span>` : `<span class="k">Tu clase sugerida</span><span>La definimos juntas en el informe.</span>`;
+  }
+  $("sector").addEventListener("change", updClase); updClase();
+  $("a-next").addEventListener("click", ()=>{
+    if(!["n1","n2","n3"].some(id=>$(id).value.trim())){ $("a-err").style.display="block"; return; }
+    $("a-err").style.display="none"; $("a1").style.display="none"; $("a2").style.display="block"; window.scrollTo(0,0);
+  });
+  $("a-back").addEventListener("click", ()=>{ $("a2").style.display="none"; $("a1").style.display="block"; window.scrollTo(0,0); });
+  // B: crear nombre
+  $("sector-b").innerHTML = $("sector").innerHTML; $("sector-b").value = "ropa";
+  $("b-go").addEventListener("click", ()=>{
+    const cat = useCat($("sector-b").value);
+    state.cat = cat; state.sector = cat.s; state.desc = ""; state.names = []; state.diags = [];
+    state.proposals = []; state.favs = []; state.shown = new Set(); state.round = 0; state.informe = [];
+    crReset(); renderOffer(); renderPick(); updateWA();
+    $("bstep1").style.display = "none"; $("crear").style.display = "block";
+    $("cr-go").click(); window.scrollTo(0,0);
+  });
+  // C: vigilancia
+  function vUpd(){ const n = $("v-name").value.trim(); $("v-wa").href = "https://wa.me/573016253440?text=" + encodeURIComponent("Hola Alejandra, quiero que vigiles mi marca" + (n ? ": " + n : "") + ". Lo vi en la app Lexa Legal."); }
+  $("v-name").addEventListener("input", vUpd); vUpd();
+
+  // ---------- Pantalla de espera de la busqueda ----------
+  (function(){
+    const go=$("go"), ovl=$("ovl"); let pass=false;
+    go.addEventListener("click", e=>{
+      if(pass){ pass=false; return; }
+      if(!ovl) return;
+      e.stopImmediatePropagation(); e.preventDefault();
+      const cat = useCat($("sector").value);
+      if(cat.key==="otro" && !$("desc").value.trim() && !["n1","n2","n3"].some(id=>$(id).value.trim())){ pass=true; go.click(); return; }
+      const lis=[...ovl.querySelectorAll("li")]; lis.forEach(l=>l.className="");
+      ovl.classList.add("on"); let i=0; lis[0].className="on";
+      const t=setInterval(()=>{ lis[i].className="ok"; i++; if(i<lis.length) lis[i].className="on"; else { clearInterval(t); setTimeout(()=>{ ovl.classList.remove("on"); pass=true; go.click(); },500); } },850);
+    }, true);
+  })();
+  if("serviceWorker" in navigator){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Lexa Legal · Protege tu marca",
+  "short_name": "Lexa Legal",
+  "description": "Revisa si tu nombre se puede registrar, crea uno nuevo o vigila tu marca.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#3A0A12",
+  "theme_color": "#4A0816",
+  "lang": "es",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
