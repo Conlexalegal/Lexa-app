@@ -1663,7 +1663,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   // ---------- Informe Nombre Libre: cupos de prueba y precio ----------
   // PILOTO = true mientras haya pruebas gratis. Para empezar a cobrar, cambiar a false.
   // PILOTO_HASTA: vacío = "por tiempo limitado". Si se escribe una fecha (ej. "30 de noviembre"), la app dice "hasta el 30 de noviembre".
-  // Escalera de precio acordada: pruebas gratis, luego $49.000, luego $69.000 según cómo vaya.
+  // Dos opciones (decisión del 15/11/2026): Informe Express gratis por lanzamiento (cupos limitados) e Informe Completo $89.900.
   const PILOTO = true;
   const PILOTO_HASTA = "";
   const CUPOS_SEMANA = 2;
@@ -1672,7 +1672,6 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   const peso = n => "$" + n.toLocaleString("es-CO").replace(/,/g,".");
   const PLANES = {
     gratis:{nombre:"Informe Express (gratis por lanzamiento)", t:"Gratis por lanzamiento", sub:"Cupos limitados cada semana", d:"Es el Informe Express, con valor de $49.900. Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido, y te digo qué probabilidad de registro tiene. Si esta semana ya se llenaron los cupos, te guardamos el tuyo para la próxima.", ent:"en las primeras 24 horas", btn:"Pedir mi cupo gratis por WhatsApp", msg:"Quiero uno de los cupos gratis de lanzamiento."},
-    express:{nombre:"Informe Express", t:"Informe Express", sub:"$49.900", d:"Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido. Te digo qué probabilidad de registro tiene y qué hacer. Sin esperar cupo. Pídelo antes de las 2 p. m. para recibirlo hoy.", ent:"en 2 a 4 horas hábiles", btn:"Pedir mi Informe Express", msg:"Entiendo que el Informe Express vale $49.900."},
     completo:{nombre:"Informe Completo", t:"Informe Completo", sub:"$89.900", d:"El informe para decidir con tranquilidad antes de invertir en tu marca. Todo lo del Express, más la búsqueda oficial de marcas registradas parecidas a tu nombre y a tu logo. Reviso la clase de tu producto y otras clases relacionadas, donde también podría aparecer una marca parecida. Si sale con riesgo, te propongo alternativas.", ent:"en 24 a 48 horas", btn:"Pedir mi Informe Completo", msg:"Entiendo que el Informe Completo vale $89.900."}
   };
   state.plan = state.plan || "gratis";
