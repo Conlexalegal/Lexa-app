@@ -1668,10 +1668,10 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   const PILOTO_HASTA = "";
   const CUPOS_SEMANA = 2;
   const PRECIO_INFORME = 49000;
-  const ENTREGA = "en las primeras 24 horas";   // tiempo de entrega del Nombre Libre
+  const ENTREGA = "en 2 a 4 horas hábiles";   // tiempo de entrega del Informe Express
   const peso = n => "$" + n.toLocaleString("es-CO").replace(/,/g,".");
   const PLANES = {
-    gratis:{nombre:"Informe Express (gratis por lanzamiento)", t:"Gratis por lanzamiento", sub:"Cupos limitados cada semana", d:"Es el Informe Express, con valor de $49.900. Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido, y te digo qué probabilidad de registro tiene. Si esta semana ya se llenaron los cupos, te guardamos el tuyo para la próxima.", ent:"en las primeras 24 horas", btn:"Pedir mi cupo gratis por WhatsApp", msg:"Quiero uno de los cupos gratis de lanzamiento."},
+    gratis:{nombre:"Informe Express (gratis por lanzamiento)", t:"Gratis por lanzamiento", sub:"Cupos limitados cada semana", d:"Un informe previo, rápido y sencillo, con valor de $49.900. Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido, y te digo qué probabilidad de registro tiene. Pídelo antes de las 2 p. m. para recibirlo hoy. Si esta semana ya se llenaron los cupos, te guardamos el tuyo para la próxima.", ent:"en 2 a 4 horas hábiles", btn:"Pedir mi cupo gratis por WhatsApp", msg:"Quiero uno de los cupos gratis de lanzamiento."},
     completo:{nombre:"Informe Completo", t:"Informe Completo", sub:"$89.900", d:"El informe para decidir con tranquilidad antes de invertir en tu marca. Todo lo del Express, más la búsqueda oficial de marcas registradas parecidas a tu nombre y a tu logo. Reviso la clase de tu producto y otras clases relacionadas, donde también podría aparecer una marca parecida. Si sale con riesgo, te propongo alternativas.", ent:"en 24 a 48 horas", btn:"Pedir mi Informe Completo", msg:"Entiendo que el Informe Completo vale $89.900."}
   };
   state.plan = state.plan || "gratis";
