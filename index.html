@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lexa Legal · Protege el nombre de tu marca</title>
-<meta name="description" content="Lexa Legal: revisa si tu nombre se puede registrar, crea uno nuevo o vigila tu marca.">
+<meta name="description" content="Lexa Legal: revisa si tu nombre se puede registrar, crea tu nombre y tu logo o vigila tu marca.">
 <meta name="theme-color" content="#4A0816">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-32.png">
@@ -14,7 +14,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,500;1,500&family=Poppins:wght@300;700&family=Inter:wght@500&family=Cormorant+Garamond:wght@600&family=Space+Grotesk:wght@500&family=Montserrat:wght@700&family=Fraunces:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{--terracota:#CEA88F;--vino:#F1E2D0;--vino2:#3A0A12;--crema:#F1E2D0;--piedra:rgba(241,226,208,.2);--tinta:#F1E2D0;--ocre:#C79A6B;--ocre2:#E0B07A;--gris:#D9BFA6;--verde:#3F7D4E;--verde-bg:#E5F0E7;--ambar:#C47A47;--ambar-bg:#FBF0DC;--rojo:#A33A2C;--rojo-bg:#F7E2DD;--ink:#3A0A12;--card:rgba(241,226,208,.07)}
 :root{--card:rgba(25,6,6,.3);--acc:#D9904F;--gold:#E0B07A;--bord:#B5694A;--bg1:#4A0D14;--bg2:#380B10;--bg3:#2A0C0A}
@@ -229,6 +229,22 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
 .steps3 b{margin-top:2px;font-family:'Playfair Display',Georgia,serif;font-size:18px;color:var(--crema);line-height:1.1}
 .steps3 span{font-size:13.5px;line-height:1.25;color:var(--gris)}
 .elige{margin:0 0 10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+
+.logosec{display:none}
+.logosec .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.logosec .chips button{border:1.5px solid var(--acc);background:transparent;color:var(--crema);border-radius:999px;padding:8px 16px;font:600 15px 'DM Sans',Arial,sans-serif;cursor:pointer}
+.logosec .chips button.on{background:var(--acc);color:#2A0A0A}
+.lgrid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+.lt{position:relative;border-radius:18px;overflow:hidden;background:#222}.lt .cw{position:relative}
+.lt canvas{display:block;width:100%;height:auto}
+.lt .tg{position:absolute;left:12px;top:10px;font-size:11px;letter-spacing:.18em;font-weight:700;text-transform:uppercase;opacity:.8}
+.lp .k{margin:14px 0 6px}.lp-text{margin-top:14px}
+.lpd{margin:12px 0 4px}.lpd summary{cursor:pointer;color:var(--acc);font-weight:700;font-size:16px;padding:6px 0}
+.lt .lw{position:absolute;left:12px;bottom:14px;max-width:58%;font-size:12px;line-height:1.25;opacity:.75}
+.lt .rf{padding:10px 12px 12px;background:rgba(0,0,0,.32);color:var(--crema);font-size:13px;line-height:1.3}.lt .rf b{color:var(--acc)}.lt .rf .r2{margin-top:5px;opacity:.85}.lt .rf .r3{margin-top:6px;font-size:12px;opacity:.75;font-style:italic}
+.lt .ac{position:absolute;right:10px;bottom:10px;display:flex;gap:8px}
+.lt .ac button{width:42px;height:42px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:19px;cursor:pointer}
+.lt .ac button.on{background:var(--acc);color:#2A0A0A}
 </style>
 </head>
 <body>
@@ -240,8 +256,8 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
 <section class="screen" id="home">
   <div class="fotowrap" id="fotowrap"><img src="foto-alejandra.jpg" alt="Alejandra Restrepo, abogada de marcas" onerror="document.getElementById('fotowrap').style.display='none'"><div class="fade"></div><div class="cap">Alejandra Restrepo · Abogada de marcas</div></div>
   <h1>¿Tu marca ya tiene <em>dueño</em>?</h1>
-  <p class="lead">Descubre en 2 minutos si el nombre de tu marca se puede registrar, o crea uno nuevo antes de gastar en logo y empaques.</p>
-  <div class="gratis-tag">Gratis por lanzamiento · cupos limitados cada semana</div>
+  <p class="lead">Descubre en 2 minutos si el nombre de tu marca se puede registrar. O crea tu nombre y tu logo aquí, antes de gastar en empaques.</p>
+  <div class="gratis-tag">Sin costo · cupos limitados cada semana</div>
   <div class="steps3">
     <div><b>Escribe</b><span>el nombre de tu marca</span></div>
     <div><b>Mira</b><span>su probabilidad de registro</span></div>
@@ -249,7 +265,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   </div>
   <p class="elige">Elige por dónde empezar</p>
   <button class="hc" data-go="scrA" type="button"><span class="n">1</span><span><b>Ya tengo el nombre</b><span class="d">Mira si el nombre de tu marca se puede registrar.</span></span><span class="arr">›</span></button>
-  <button class="hc" data-go="scrB" type="button"><span class="n">2</span><span><b>Quiero crear mi nombre</b><span class="d">Te ayudamos a encontrar uno que suene bien.</span></span><span class="arr">›</span></button>
+  <button class="hc" data-go="scrB" type="button"><span class="n">2</span><span><b>Quiero crear mi nombre y mi logo</b><span class="d">Te ayudamos a encontrar un nombre que suene bien y a ver cómo se vería su logo.</span></span><span class="arr">›</span></button>
   <button class="hc" data-go="scrC" type="button"><span class="n">3</span><span><b>Quiero vigilar mi marca</b><span class="d">Te avisamos si alguien pide un nombre parecido.</span></span><span class="arr">›</span></button>
   <section class="install" id="install" aria-label="Guardar Lexa Legal en tu pantalla" style="padding:0;margin-top:18px">
     <div class="box">
@@ -325,6 +341,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     <div id="cards"></div>
     <div id="market"></div>
     <div id="slotA-props"></div>
+    <div id="slotA-logo"></div>
     <div id="slotA-inf"></div>
     <button class="btn ghost" id="again" type="button">Revisar otros nombres</button>
     <p class="legal">Lexa Legal es una herramienta orientativa. Te da una probabilidad, no garantiza que un nombre se pueda registrar como marca. La decisión final es de la autoridad de marcas.</p>
@@ -334,8 +351,8 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
 <!-- B · CREAR NOMBRE -->
 <section class="screen" id="scrB">
   <div id="bstep1">
-    <h1>Vamos a crear tu <em>nombre</em></h1>
-    <p class="lead">Primero cuéntanos qué vendes. Así los nombres van con tu negocio.</p>
+    <h1>Vamos a crear tu <em>nombre</em> y tu logo</h1>
+    <p class="lead">Primero cuéntanos qué vendes. Así los nombres y los logos van con tu negocio.</p>
     <div class="card info"><div class="eyebrow">Por qué te lo preguntamos</div><p>Un nombre se protege por tipo de producto o servicio. A cada tipo le llamamos clase.</p></div>
     <label for="sector-b">Elige lo más parecido</label><select id="sector-b"></select>
     <button class="btn" id="b-go" type="button">Empezar</button>
@@ -345,7 +362,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     <div class="eyebrow">Tu nombre, paso a paso</div>
     <div id="cr-start"><button class="btn" id="cr-go" type="button">Empezar</button><button class="btn ghost" id="cr-skip" type="button">Ir directo a mi informe</button></div>
     <div id="cr-flow" style="display:none">
-      <div class="cr-dots" id="cr-dots"><span></span><span></span><span></span></div>
+      <div class="cr-dots" id="cr-dots"><span></span><span></span><span></span><span></span></div>
       <div class="cr-step" id="cr-s1">
         <h3>1 · La sensación</h3>
         <p class="q">¿Qué quieres que sienta tu cliente?</p>
@@ -368,15 +385,25 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
         <p class="sub">Tu nombre, un lugar, un recuerdo, el nombre de tu hija.</p>
         <textarea id="cr-text" maxlength="200" placeholder="Cuéntame en una frase"></textarea>
         <p class="why">Así nació <b>Adidas</b>, de Adi Dassler, y <b>Haribo</b>, de Hans Riegel Bonn.</p>
-        <div class="cr-nav"><button class="btn ghost" id="cr-b3" type="button">Atrás</button><button class="btn" id="cr-make" type="button">Ver mis nombres</button></div>
+        <div class="cr-nav"><button class="btn ghost" id="cr-b3" type="button">Atrás</button><button class="btn" id="cr-n3" type="button">Siguiente</button></div>
         <button class="btn ghost" id="cr-none" type="button" style="margin-top:10px">Todavía no tengo nada</button>
+      </div>
+      <div class="cr-step" id="cr-s4" style="display:none">
+        <h3>4 · Tu logo</h3>
+        <p class="q">¿Cómo imaginas tu logo? (opcional)</p>
+        <p class="sub">Escoge lo que quieras. Si no escoges nada, te sorprendemos.</p>
+        <div class="lp"></div>
+        <p class="why">Un buen logo se reconoce en un segundo. Por eso lleva pocos colores y una sola idea.</p>
+        <div class="cr-nav"><button class="btn ghost" id="cr-b4" type="button">Atrás</button><button class="btn" id="cr-make" type="button">Ver mis nombres</button></div>
+        <button class="btn ghost" id="cr-skip4" type="button" style="margin-top:10px">Prefiero que me sorprendan</button>
       </div>
     </div>
     <div class="cr-sum" id="cr-sum" style="display:none"></div>
     <p class="err" id="cr-err" style="display:none"></p>
-    <details class="origen"><summary>¿De dónde sacamos las palabras?</summary><p>De un banco que armamos a mano. Cruza 9 sentimientos con 6 idiomas: latín, griego, italiano, francés, portugués e inglés. Cada palabra trae su significado. Nada sale al azar.</p></details>
+    <details class="origen"><summary>¿De dónde sacamos las palabras?</summary><p>De un banco hecho a mano: latín, griego, italiano, francés, inglés, japonés, quechua, mitología, naturaleza y cielo. Cada palabra dice qué significa.</p></details>
   </div>
   <div id="slotB-props"></div>
+  <div id="slotB-logo"></div>
   <div id="slotB-inf"></div>
 </section>
 
@@ -405,10 +432,25 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   <div class="tp"><div class="row"><b>Que describe</b><span class="ex">Zapatos Cómodos</span></div><p>Muy difícil de registrar. Con una palabra tuya al inicio, cambia.</p></div>
   <div class="tp"><div class="row"><b>Lo que es</b><span class="ex">Zapatos, para una zapatería</span></div><p>No se registra: es el nombre del producto.</p></div>
   <p class="fine">Criterios del Tribunal de Justicia de la Comunidad Andina.</p>
-  <button class="btn" data-go="scrB" type="button">Crear un nombre inventado</button>
+  <button class="btn" data-go="scrB" type="button">Crear mi nombre y mi logo</button>
   <button class="btn ghost" data-go="scrA" type="button">Revisar mi nombre</button>
 </section>
 
+<div class="card logosec" id="logoSec">
+  <div id="logoCta" style="display:none"></div>
+  <div id="logoBody" style="display:none">
+  <div class="eyebrow">Tu logo</div>
+  <h2 class="sec-title" style="margin-top:8px">Mira cómo se vería tu marca</h2>
+  <div class="rule"></div>
+  <p class="muted" style="margin:0">Son 6 ideas de logo, cada una inspirada en marcas reconocidas de tu sector. Toca un nombre para ver el suyo, guarda con ♥ las que te gusten y descárgalas sin costo.</p>
+  <details class="lpd" id="lpd"><summary>Personaliza tu logo: colores, letra e ideas</summary><div class="lp"></div><button class="btn ghost" id="lp-go" type="button">Actualizar mis logos</button></details>
+  <div class="chips" id="logoNames"></div>
+  <div class="lgrid" id="logoGrid"></div>
+  <p class="fine" style="margin-top:12px">Son propuestas de diseño para que te imagines tu marca. No garantizan el registro del nombre. Usamos solo letras de licencia libre.</p>
+  <a class="btn wa" id="logoWa" href="#" target="_blank" rel="noopener">Quiero un logo hecho a mi medida</a>
+  <p class="fine" style="text-align:center;margin-top:8px">Si ya tienes logo y quieres rediseñarlo, escríbeme y lo vemos juntas.</p>
+  </div>
+</div>
 <!-- piezas compartidas, se mueven según la pantalla -->
 <div class="card" id="propsCard" style="display:none">
   <h2 class="sec-title" style="font-size:24px">Nombres con más camino</h2>
@@ -1275,34 +1317,36 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     return "";
   }
   const ROUTE_WHY = {
-    "Con significado":"Buscamos raíces antiguas que ya traen una idea. Tu marca nace con una historia que contar.",
-    "Suena a tu nombre":"Partimos del sonido que ya te gusta, para que lo sientas tuyo.",
-    "Suena a tu favorito":"Seguimos el sonido de tus favoritos.",
-    "Nace de tu nombre":"Guardamos el corazón de tu idea y le dimos un giro propio.",
-    "Nace de tu palabra":"Partimos de la palabra que escribiste y le dimos un final propio, para que suene a ti y sea tuya.",
-    "Evocadora":"Palabras que despiertan una sensación sin decir qué vendes.",
-    "Tu idea, otra lengua":"Tu misma idea dicha en otro idioma: suena nueva y conserva su sentido.",
-    "Arbitraria":"Una palabra bonita fuera de tu sector: sorprende y se recuerda.",
-    "Fusión de tus palabras":"Unimos tus palabras en una sola, nueva.",
-    "Palabra nueva al frente":"Pusimos adelante una palabra solo tuya, porque la primera es la que más pesa.",
-    "Misma familia":"Palabras de la misma familia que tus favoritos.",
-    "Inventada":"Palabras nuevas a partir de tus favoritos.",
-    "Palabra con historia":"Una palabra de otro idioma, escogida a mano para el sentimiento que elegiste. Te mostramos qué significa.",
-    "Palabra nueva con raíz":"Una raíz antigua que ya trae una idea, con un final nuevo. Suena nueva y es más fácil de proteger."
+    "Con significado":"Una raíz antigua con una idea dentro. Ej: Volvo, \"yo ruedo\" en latín.",
+    "Suena a tu nombre":"Parte del sonido que ya te gusta.",
+    "Suena a tu favorito":"Sigue el sonido de tus favoritos.",
+    "Nace de tu nombre":"Guarda el corazón de tu idea. Ej: Adidas, de Adi Dassler.",
+    "Nace de tu palabra":"Parte de tu palabra con un giro. Ej: Pepsi, de \"dyspepsia\".",
+    "Evocadora":"Despierta una sensación, no dice qué vendes. Ej: Amazon sugiere inmensidad.",
+    "Tu idea, otra lengua":"Tu idea en otro idioma. Ej: Lego, \"jugar bien\" en danés.",
+    "Arbitraria":"Una palabra común de otro sector. Ej: Apple para computadores.",
+    "Fusión de tus palabras":"Tus palabras unidas. Ej: Instagram, de instant + telegram.",
+    "Palabra nueva al frente":"Una palabra solo tuya al frente, que es la que más pesa.",
+    "Misma familia":"Parecida a tus favoritos.",
+    "Inventada":"Palabra nueva a partir de tus favoritos.",
+    "Palabra con historia":"Una palabra con significado que dice lo que sientes. Ej: Nike, la diosa griega de la victoria.",
+    "Palabra nueva con raíz":"Raíz antigua con final nuevo. Ej: Nivea, del latín \"nieve\"."
   };
+
   const isFav = n => state.favs.some(f=>keyOf(f.nombre)===keyOf(n));
   function renderFavBar(){
     const box = $("favbar"); if(!box) return;
-    if(!state.favs.length){ box.innerHTML = `<div class="favbar">Toca <b>♡</b> en los nombres que más te gusten (hasta 3). En la siguiente ronda te propongo nombres parecidos a esos.</div>`; }
+    if(!state.favs.length){ box.innerHTML = `<div class="favbar">Toca <b>♡</b> en el nombre que te guste: abajo te mostramos su logo y la próxima ronda sale parecida.</div>`; }
     else box.innerHTML = `<div class="favbar"><b>Tus favoritos:</b><br>${state.favs.map((f,i)=>`<span class="chip">${esc(f.nombre)}<button data-unfav="${i}" aria-label="Quitar ${esc(f.nombre)}">&times;</button></span>`).join("")}</div>`;
     $("more-fav").style.display = state.favs.length && state.proposals.length ? "inline-flex" : "none";
+    if(typeof renderLogos==="function") renderLogos();
     $("more").textContent = state.favs.length ? "Quiero otra ronda distinta" : "Quiero otra ronda de nombres";
     if($("pick")) renderPick();
   }
   function renderProps(list, note){
     const box = $("props");
     const routes = [...new Set(list.map(p=>p.ruta))].filter(r=>ROUTE_WHY[r]);
-    const how = routes.length ? `<div class="howwe"><b>Así buscamos tus nombres</b><ul>${routes.map(r=>`<li><span>${esc(r)}:</span> ${esc(ROUTE_WHY[r])}</li>`).join("")}</ul></div>` : "";
+    const how = routes.length ? `<div class="howwe"><b>Cómo los armamos</b><ul>${routes.map(r=>`<li><span>${esc(r)}:</span> ${esc(ROUTE_WHY[r])}</li>`).join("")}</ul></div>` : "";
     box.innerHTML = how + `<div id="favbar"></div><div class="props">${list.map((p,i)=>{ const st = storyOf(p); return `
       <div class="prop${isFav(p.nombre)?" fav":""}"><button class="heart${isFav(p.nombre)?" on":""}" data-fav="${i}" aria-label="Marcar ${esc(p.nombre)} como favorito">${isFav(p.nombre)?"♥":"♡"}</button><div class="nm">${esc(p.nombre)}</div><div class="tag">${esc(p.ruta||"")}</div>${st?`<p class="story">${esc(st)}</p>`:""}<p>${esc(p.porque||"")}</p></div>`; }).join("")}</div><p class="favmsg" id="favmsg"></p>` + (note?`<p class="muted" style="font-size:13px;margin:10px 0 0">${note}</p>`:"");
     $("more").style.display = "inline-flex";
@@ -1385,9 +1429,18 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   };
   const BANCO = {};
   Object.keys(BANCO_RAW).forEach(f=>{ BANCO[f] = {}; Object.keys(BANCO_RAW[f]).forEach(l=>{ BANCO[f][l] = BANCO_RAW[f][l].split(";").map(x=>{ const [w,m,u] = x.split("|"); return {w, m, r: (u||"").indexOf("r:")===0 ? u.slice(2) : null}; }); }); });
+  // Inspiración en la mitología: dioses, musas y héroes, por sentimiento
+  const MITOS_RAW = {"ternura": "Hestia|la diosa griega del hogar;Maia|una diosa madre, símbolo de cuidado;Hebe|la diosa griega de la juventud;Flora|la diosa romana de las flores;Vesta|la diosa romana del hogar", "calma": "Eirene|la diosa griega de la paz;Selene|la diosa griega de la luna;Galene|la ninfa griega de la calma del mar;Pax|la diosa romana de la paz;Aura|la ninfa griega de la brisa suave", "alegria": "Thalia|la musa griega de la comedia y la alegría;Hilaria|la diosa romana de la alegría;Charis|la diosa griega de la gracia;Iris|la diosa griega del arcoíris;Fortuna|la diosa romana de la suerte", "elegancia": "Aglaia|la diosa griega del esplendor;Eudora|la ninfa griega del buen regalo;Aura|la ninfa griega de la brisa suave;Hebe|la diosa griega de la juventud", "fuerza": "Kratos|el dios griego de la fuerza;Bia|la diosa griega de la fuerza;Thor|el dios nórdico del trueno;Tyr|el dios nórdico del coraje;Ajax|el héroe griego de gran fuerza;Aquiles|el héroe griego invencible", "confianza": "Fides|la diosa romana de la confianza;Dike|la diosa griega de la justicia;Veritas|la diosa romana de la verdad;Tyche|la diosa griega del destino", "frescura": "Flora|la diosa romana de las flores;Eos|la diosa griega del amanecer;Zefiro|el dios griego del viento suave de primavera;Iris|la diosa griega del arcoíris", "cercania": "Hestia|la diosa griega del hogar;Vesta|la diosa romana del hogar;Concordia|la diosa romana de la armonía;Lares|los dioses romanos del hogar", "creatividad": "Euterpe|la musa griega de la música;Clio|la musa griega de la historia;Erato|la musa griega de la poesía;Hefesto|el dios griego de los artesanos;Minerva|la diosa romana de la sabiduría y las artes", "sabor": "Pomona|la diosa romana de los frutos;Ceres|la diosa romana de las cosechas;Baco|el dios romano del vino y la fiesta;Dioniso|el dios griego del vino y la fiesta"};
+  Object.keys(MITOS_RAW).forEach(f=>{ if(BANCO[f]) BANCO[f].mitos = MITOS_RAW[f].split(";").map(x=>{ const [w,m] = x.split("|"); return {w, m, r:""}; }); });
+  // Más inspiraciones. El tercer dato son los sectores donde la palabra describiría el producto: ahí no se usa
+  const INSP_RAW = {"naturaleza": {"ternura": "Daisy|margarita|belleza,hogar,natural,intimo|inglés;Viola|violeta|belleza,hogar,natural,intimo|italiano;Lilas|lila|belleza,hogar,natural,intimo|francés;Willow|sauce|hogar,natural,industria|inglés;Alondra|ave de canto suave|natural|español", "calma": "Lotus|flor de loto|belleza,hogar,natural|inglés;Aspen|álamo temblón, un árbol de hojas que se mecen|hogar,natural,industria|inglés;Fern|helecho|hogar,natural|inglés;Willow|sauce|hogar,natural,industria|inglés", "alegria": "Poppy|amapola|belleza,hogar,natural|inglés;Clover|trébol|natural,hogar|inglés;Cherry|cereza|comida,cafe,belleza,salud,natural|inglés;Mimosa|flor amarilla de aroma dulce|belleza,hogar,natural|italiano;Colibrí|ave diminuta y veloz|natural|español", "elegancia": "Jasmine|jazmín|belleza,hogar,natural,intimo,comida|inglés;Magnolia|flor elegante|belleza,hogar,natural,intimo|español;Opal|ópalo|belleza,moda,hogar|inglés;Ebony|ébano, madera oscura y fina|hogar,industria,moda|inglés;Amber|ámbar|belleza,moda,hogar|inglés", "fuerza": "Falcon|halcón|natural|inglés;Raven|cuervo|natural|inglés;Lynx|lince|natural|inglés;Bison|bisonte|natural|inglés;Cóndor|ave de los Andes|natural|español", "confianza": "Cedar|cedro|hogar,natural,industria|inglés;Olive|oliva|comida,natural,hogar|inglés;Granite|granito|industria,hogar|inglés;Falcon|halcón|natural|inglés", "frescura": "Mint|menta|comida,cafe,belleza,salud,natural|inglés;Lime|lima, fruto cítrico|comida,cafe,belleza,salud,natural|inglés;Aloe|una planta fresca que calma la piel|belleza,salud,natural|inglés;Fern|helecho|hogar,natural|inglés;Willow|sauce|hogar,natural,industria|inglés", "cercania": "Maple|arce|hogar,natural,industria,comida|inglés;Hazel|avellano|comida,natural|inglés;Robin|petirrojo|natural|inglés", "creatividad": "Indigo|índigo, un azul profundo|moda,hogar|inglés;Amber|ámbar|belleza,moda,hogar|inglés;Cobalt|cobalto, un azul intenso|industria,hogar|inglés;Fox|zorro|natural,ninos|inglés;Colibrí|ave diminuta y veloz|natural|español"}, "cielo": {"calma": "Lyra|la constelación de la lira|;Capella|una de las estrellas más brillantes|", "elegancia": "Sirio|la estrella más brillante de la noche|;Capella|una de las estrellas más brillantes|;Lyra|la constelación de la lira|", "fuerza": "Antares|la gran estrella roja del cielo|;Altair|la estrella del águila|;Rigel|una estrella azul muy brillante|", "confianza": "Polaris|la estrella que guía hacia el norte|;Sirio|la estrella más brillante de la noche|", "cercania": "Alcor|la estrella compañera de Mizar|;Mizar|la estrella gemela de Alcor|", "creatividad": "Lyra|la constelación de la lira|;Albireo|la estrella doble azul y dorada|", "alegria": "Altair|la estrella del águila|;Sirio|la estrella más brillante de la noche|", "ternura": "Lyra|la constelación de la lira|;Alcor|la estrella compañera de Mizar|"}, "japones": {"ternura": "Kokoro|corazón|;Hana|flor|belleza,hogar,natural", "calma": "Sora|cielo|;Yume|sueño|;Kaze|viento|;Shizuka|tranquilo, en calma|", "alegria": "Hikari|luz|;Natsu|verano|;Haru|primavera|;Warai|risa|", "elegancia": "Miyabi|elegancia refinada|;Tsuki|luna|;Kirei|hermoso|", "fuerza": "Tora|tigre|natural;Tetsu|hierro|industria;Taka|halcón|natural;Ryu|dragón|", "confianza": "Makoto|sinceridad|;Kizuna|vínculo de confianza|", "frescura": "Kaze|viento|;Mizu|agua|mar,salud;Midori|verde|natural;Sora|cielo|", "cercania": "Kizuna|vínculo entre personas|;Nakama|compañero|;Nagomi|armonía cálida|", "creatividad": "Yume|sueño|;Irodori|lleno de color|;Sozo|imaginación y creación|;Ito|hilo|moda"}, "quechua": {"ternura": "Munay|amar, querer|;Kuyay|amar con ternura|", "calma": "Wayra|viento|;Mayu|río|mar;Killa|luna|", "alegria": "Kusi|alegría|;Sami|buena suerte y dicha|", "elegancia": "Sumaq|hermoso|;Qori|oro|belleza,moda;Chaska|estrella|", "fuerza": "Kallpa|fuerza|;Apu|montaña sagrada|;Amaru|serpiente sabia|natural", "confianza": "Ayni|ayuda mutua|;Allin|bueno|;Chaski|mensajero|", "frescura": "Wayra|viento|;Mayu|río|mar;Illari|amanecer|", "cercania": "Ayni|ayuda mutua|;Ayllu|comunidad y familia|;Wasi|casa|hogar", "creatividad": "Yachay|saber|educacion;Ruray|hacer, crear|;Illari|amanecer|"}};
+  Object.keys(INSP_RAW).forEach(l=>Object.keys(INSP_RAW[l]).forEach(f=>{ if(BANCO[f]) BANCO[f][l] = INSP_RAW[l][f].split(";").map(x=>{ const [w,m,d,lg] = x.split("|"); return {w, m, r:"", dom:(d||"").split(",").filter(Boolean), lg:lg||""}; }); }));
+  // Palabras que no suenan bien con su sentimiento en el español de Colombia (revisadas a mano)
+  const BANCO_NO = new Set(["Tenero","Fiocco","Doudou","Nenem","Chamego","Meigo","Tuck","Snug","Fawn","Aimer","Dear","Dono","Calin","Fiaba","Lampo","Matita","Tratto","Impronta","Motif","Draft","Whim","Wit","Ink","Jeito","Tecer","Sopro","Verve","Flair","Maker","Pictor","Ergon","Tecne","Encre","Conte","Loyal","Garde","Franc","Juste","Abri","Elo","Rocha","Keep","Kin","Bond","True","Parola","Pactum","Custos","Axia","Sosta","Still","Hush","Drift","Ease","Pause","Havre","Rede","Brando","Komos","Olbia","Baldoria","Coucou","Ronde","Eclat","Rire","Yay","Wink","Lark","Glee","Cheer","Brincar","Gosto","Eutimia","Raso","Vanto","Parure","Ecrin","Posh","Plush","Kleos","Kalos","Ricamo","Pelagos","Oros","Tolma","Alke","Dinamis","Impeto","Envol","Essor","Cap","Hardi","Cime","Ousar","Leme","Coragem","Fera","Viagem","Roam","Dare","Helm","Rise","Peak","Krene","Kima","Neos","Zeste","Lilas","Vert","Rive","Rivo","Pulito","Limpo","Relva","Seiva","Prato","Dew","Convive","Ensemble","Salut","Proche","Cour","Perto","Janela","Nosso","Comigo","Nook","Porch","Buddy","Folk","Linger","Warm","Borgo","Cortile","Ritrovo","Roda","Morso","Sugo","Mestolo","Forno","Bonta","Miette","Tartine","Fumet","Epice","Fatia","Horta","Brinde","Lanche","Batch","Pinch","Pantry","Bite","Crumb","Geusis","Opora","Criar","Cura","Tener","Faber","Ingenium"].map(w=>norm(w)));
+  Object.keys(BANCO).forEach(f=>Object.keys(BANCO[f]).forEach(l=>{ BANCO[f][l] = BANCO[f][l].filter(e=>!BANCO_NO.has(norm(e.w))); }));
   const SENT = [["confianza","Confianza"],["calma","Calma"],["alegria","Alegría"],["elegancia","Elegancia"],["ternura","Ternura"],["fuerza","Fuerza"],["frescura","Frescura"],["cercania","Cercanía"],["creatividad","Creatividad"]];
   const SONIDOS = [["clasico","Clásico y serio","latin"],["sabio","Sabio y distinto","griego"],["estilo","Con estilo y sabor","italiano"],["delicado","Delicado y fino","frances"],["calido","Cálido y cercano","portugues"],["moderno","Moderno y directo","ingles"],["idioma","En mi idioma","espanol"],["sorprende","Sorpréndeme","auto"]];
-  const LANG_NAME = {latin:"latín",griego:"griego",italiano:"italiano",frances:"francés",portugues:"portugués",ingles:"inglés",espanol:"español"};
+  const LANG_NAME = {naturaleza:"la naturaleza",cielo:"el cielo",japones:"japonés",quechua:"quechua",mitos:"la mitología",latin:"latín",griego:"griego",italiano:"italiano",frances:"francés",portugues:"portugués",ingles:"inglés",espanol:"español"};
   const MAPA_TEMA_SECTOR = {general:"general",legal:"legal",tech:"tecnologia",belleza:"belleza",comida:"comida",cafe:"cafe",moda:"moda",mar:"moda",intimo:"intimo",educacion:"educacion",salud:"salud",hogar:"hogar",ninos:"ninos",negocios:"legal",viaje:"viaje",natural:"hogar",industria:"industria"};
   const IDIOMA_POR_SECTOR = {moda:["italiano","frances"],belleza:["frances","latin"],comida:["italiano","espanol"],cafe:["espanol","latin"],legal:["latin","espanol"],tecnologia:["latin","griego"],salud:["latin","griego"],ninos:["espanol","italiano"],hogar:["espanol","italiano"],intimo:["frances","italiano"],educacion:["latin","griego"],viaje:["espanol","portugues"],industria:["latin","espanol"],general:["latin","espanol"]};
   const MAPA_SENT_TONO = {confianza:["sobrio"],calma:["natural","tierno"],alegria:["alegre"],elegancia:["elegante"],ternura:["tierno"],fuerza:["fuerte"],frescura:["natural"],cercania:["tierno","trascendente"],creatividad:["sobrio","mistico"],sabor:["alegre","natural"]};
@@ -1412,23 +1465,28 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   function crAvisos(w, lang, tema){
     const a = [];
     if(PRON[w]) a.push(`Se lee "${PRON[w]}".`);
-    if(MUY_USADAS_BANCO.includes(norm(w))) a.push("Es una palabra muy usada como marca: verifícala con cuidado.");
-    else if(lang==="ingles") a.push("Las palabras en inglés son las más usadas como marca: verifícala con cuidado.");
-    if(tema==="cafe" && lang!=="espanol" && lang!=="latin") a.push("Tu café es colombiano: un nombre de otro idioma puede confundir sobre su origen.");
+    if(MUY_USADAS_BANCO.includes(norm(w))) a.push("Muy usada: verifícala.");
+    else if(lang==="ingles") a.push("Verifícala: el inglés es muy usado.");
+    if(lang==="naturaleza"||lang==="cielo") a.push("No habla de lo que vendes. Verifícala.");
+    if(lang==="mitos") a.push("Muy usado: verifícalo.");
+    if(tema==="cafe" && lang!=="espanol" && lang!=="latin") a.push("Ojo: tu café es colombiano.");
     return a.join(" ");
   }
   // Candidatos de un sentimiento en un idioma
+  // Palabras en español que describirían el producto de ciertos sectores: ahí no se usan
+  const ESP_DOM = {comida:["trigo","espiga","tomillo","hierbabuena","mandarina","bombon","merengue","festin","brasa","hornilla","alacena","mantel"], cafe:["trigo","espiga","tomillo","hierbabuena","mandarina","bombon","merengue","festin","brasa","fogon","canta","madrugada"], belleza:["petalo","clavel","rocio","nacar","tocador"], intimo:["petalo","clavel","velo","encaje","satin","terciopelo"], moda:["trazo","pliegue","hilvan","bastilla","ojal","encaje","brocado","organza","satin","terciopelo","tocado"], mar:["caracola","atolon","arrecife","estela","alisio","rada","ensenada","cala","laguna","orilla"]};
   function crPool(f, lang, tema, sat, usados){
     const out = [];
     const ok = w => okName(w, sat, []) && !isShown(w) && !usados.has(keyOf(w));
     if(lang==="espanol"){
       const tonos = MAPA_SENT_TONO[f].concat(tema==="intimo" ? ["romantico"] : []);
-      shuf(tonos).forEach(t=>{ shuf(MOODS[t].e).forEach(w=>{ if(!sat.has(norm(w)) && ok(w)) out.push({nombre:w, ruta:"Evocadora", story:`${w} no describe lo que vendes. Cuenta cómo se siente: ${MOODS[t].label}.`, porque:"Una palabra en español que ya emociona. Verifícala: las palabras reales pueden estar más usadas."}); }); });
+      shuf(tonos).forEach(t=>{ shuf(MOODS[t].e).forEach(w=>{ if(!sat.has(norm(w)) && !((ESP_DOM[tema]||[]).includes(norm(w))) && ok(w)) out.push({nombre:w, ruta:"Evocadora", story:`${w} no describe lo que vendes. Cuenta cómo se siente: ${MOODS[t].label}.`, porque:"Verifícala: puede estar usada."}); }); });
       return out;
     }
-    const ends = shuf(FINAL_SENT[f]==="finos" ? ENDS_FINOS : ENDS_FUERTES);
+    const ends = shuf((crFirm() && (f==="confianza"||f==="fuerza")) ? ENDS_FIRM_POOL : (FINAL_SENT[f]==="finos" ? ENDS_FINOS : ENDS_FUERTES));
     shuf(BANCO[f][lang] || []).forEach(e=>{
       if(e.w==="Temis" && (tema==="legal" || tema==="negocios")) return;
+      if(e.dom && e.dom.includes(tema)) return;   // describiría tu producto: no se usa
       const av = crAvisos(e.w, lang, tema);
       if(e.r){
         for(const end of shuf(ends.concat(ends))){
@@ -1440,7 +1498,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
           }
         }
       }else if(e.w.length<=9 && ok(e.w)){
-        out.push({nombre:e.w, ruta:"Palabra con historia", story:`${e.w} significa ${e.m} en ${LANG_NAME[lang]}. Corto y fácil de decir.`, porque:av || "Escogida a mano para este sentimiento."});
+        out.push({nombre:e.w, ruta:"Palabra con historia", story: (lang==="naturaleza" && e.lg && e.lg!=="español") ? `${e.w} significa ${e.m} en ${e.lg}.` : (lang==="mitos"||lang==="naturaleza"||lang==="cielo") ? `${e.w} es ${e.m}.` : `${e.w} significa ${e.m} en ${LANG_NAME[lang]}.`, porque:av || ""});
       }
       if(e.r && out.length && !out[out.length-1].porque.includes("Verifícala") && av) out[out.length-1].porque += " " + av;
     });
@@ -1455,9 +1513,18 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     return lista.slice(0,2);
   }
   // Nombres que nacen de la palabra de la persona: suenan a ella, dicen lo mismo en otra lengua, o evocan la misma idea
+  // Carácter pedido: firme (serio, directo) o suave. Decide los finales y el largo de los nombres
+  const ENDS_FIRM = ["ax","ex","ix","or","ar","on","ik","ek"];
+  const ENDS_FIRM_POOL = ["on","um","an","ar","en"];
+  function crFirm(){
+    const cr = state.crear; if(!cr) return false;
+    const fi = cr.feelings.filter(x=>x==="confianza"||x==="fuerza").length, so = cr.feelings.length - fi;
+    return (fi>0 && fi>=so) || (so===0 && (cr.sound==="moderno" || cr.sound==="clasico") && cr.feelings.length>0 && fi>0);
+  }
   function crSemillaProps(sat, usados){
     const sem = crSemillas(); if(!sem.length) return [];
-    const okSeed = w => { const n = norm(w); return n.length>=4 && n.length<=8 && !/(.)\1/.test(n) && !/[^aeiou]{3}/.test(n) && !/[wkxq]/.test(n) && !REAL.includes(n) && !REAL_ADD.includes(n) && !DARK_EXACTAS.includes(n) && !DARK_ADD.some(d=>n.includes(d)); };
+    const firm = crFirm();
+    const okSeed = w => { const n = norm(w); return n.length>=4 && n.length<=(firm?6:8) && !/(.)\1/.test(n) && !/[^aeiou]{3}/.test(n) && (firm || !/[wkxq]/.test(n)) && !REAL.includes(n) && !REAL_ADD.includes(n) && !DARK_EXACTAS.includes(n) && !DARK_ADD.some(d=>n.includes(d)); };
     const vistos = new Set();
     const mk = (nombre, ruta, porque, extra) => {
       const k = keyOf(nombre);
@@ -1468,14 +1535,14 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     sem.forEach(t=>{
       const base = t.replace(/[aeiouy]+$/,"");
       const corta = t.length>=6 ? twoSyl(t).replace(/[aeiouy]+$/,"") : "";
-      const raices = [...new Set([base, t, corta])].filter(r=>r.length>=2);
-      const maxLen = Math.max(6, t.length);
-      const finales = shufEnds().concat(["ara","ia","eya","ina","io","ela","aya","ena","ira","ura"]);
+      const raices = firm ? [...new Set([t.slice(0,3), twoSyl(t).slice(0,4), base.slice(0,4)])].filter(r=>r.length>=3) : [...new Set([base, t, corta])].filter(r=>r.length>=2);
+      const maxLen = firm ? 6 : Math.max(6, t.length);
+      const finales = firm ? ENDS_FIRM : shufEnds().concat(["ara","ia","eya","ina","io","ela","aya","ena","ira","ura"]);
       shuf(finales).forEach(e=>{
         if(sonido.length>=3) return;
         const w = joinRoot(pick(raices), e);
         if(norm(w)===t || norm(w).length>maxLen || !okSeed(w)) return;
-        const p = mk(w, "Nace de tu palabra", `Parte de "${capW(t)}" y le da un final propio. Suena a lo que quieres, pero es una palabra nueva y más fácil de proteger.`);
+        const p = mk(w, "Nace de tu palabra", firm ? `Parte de "${capW(t)}" y le da un final firme. Corto y directo, y es una palabra nueva, más fácil de proteger.` : `Parte de "${capW(t)}" y le da un final propio. Suena a lo que quieres, pero es una palabra nueva y más fácil de proteger.`);
         if(p) sonido.push(p);
       });
       const g = CONCEPT[t];
@@ -1488,32 +1555,52 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     for(let i=0;i<3;i++){ [sonido[i], idea[i], i===0 ? evo[0] : null].forEach(p=>{ if(p) out.push(p); }); }
     return out.slice(0,5);
   }
-  function crGenerar(){
+  function crGenerar(fav){
     const cr = state.crear; if(!cr) return;
     const tema = crTema();
     const sat = NORM_SET(SECTORS[state.sector].saturated.concat(COMMON));
     const usados = new Set();
-    const idiomas = [cr.lang].concat(["latin","italiano","frances","portugues","griego","ingles","espanol"].filter(l=>l!==cr.lang));
     const total = 8;
-    const lista = cr.text ? crSemillaProps(sat, usados) : [];
+    const favs = fav ? state.favs.filter(x=>x.lang || x.fl) : [];
+    const favLangs = [...new Set(favs.map(x=>x.lang).filter(Boolean))], favFeels = [...new Set(favs.map(x=>x.fl).filter(Boolean))];
+    let feels = cr.feelings.filter(f=>!favFeels.length || favFeels.includes(f)); if(!feels.length) feels = cr.feelings;
+    // Orden de orígenes: primero el que pidió (o el de sus favoritos); el inglés al final, que es el más usado como marca
+    const resto = ["latin","griego","mitos","naturaleza","cielo","japones","quechua","italiano","frances","portugues","espanol"];
+    const insp = norm(logoPref.text||"").split(" "); const inspL = [];
+    if(insp.some(w=>["cielo","nube","nubes","aire","viento","estrella","estrellas","luna","sol","amanecer"].includes(w))) inspL.push("cielo","mitos");
+    if(insp.some(w=>["flor","flores","planta","jardin","hoja","bosque","naturaleza","arbol"].includes(w))) inspL.push("naturaleza");
+    if(insp.some(w=>["mar","olas","agua","rio","oceano"].includes(w))) inspL.push("latin");
+    const first = [...new Set((favLangs.length ? favLangs : [cr.lang]).concat(inspL))];
+    const rest = shuf(resto.filter(l=>!first.includes(l))); 
+    let order = first.concat(rest); if(!order.includes("ingles")) order.push("ingles");
+    const lista = cr.text ? crSemillaProps(sat, usados).slice(0,3) : [];
     lista.forEach(p=>usados.add(keyOf(p.nombre)));
-    for(const lang of idiomas){
-      if(lista.length >= total) break;
-      const pools = cr.feelings.map(f=>crPool(f, lang, tema, sat, usados).map(p=>Object.assign(p,{fl:f, lang})));
-      let i = 0;
-      while(lista.length < total && pools.some(p=>p.length)){
-        const p = pools[i % pools.length].shift(); i++;
-        if(!p || usados.has(keyOf(p.nombre))) continue;
-        usados.add(keyOf(p.nombre));
-        const sl = SENT.concat([["sabor","Sabor"]]).find(x=>x[0]===p.fl)[1];
-        p.porque = `Para que tu cliente sienta ${sl.toLowerCase()}. ${p.porque||""}` + (lang!==cr.lang ? ` Viene de ${LANG_NAME[lang]}, porque ya mostramos todo lo de ${LANG_NAME[cr.lang]}.` : "");
-        lista.push(p);
+    // En la línea de los favoritos: mismo arranque, mismo final, largo parecido
+    const fn = favs.map(f=>keyOf(f.nombre));
+    const sim = w => { const k = keyOf(w); return fn.reduce((m,f)=>Math.max(m, (k.slice(0,3)===f.slice(0,3)?3:0) + (k.slice(-2)===f.slice(-2)?2:0) + (k[0]===f[0]?1:0) + (Math.abs(k.length-f.length)<=1?1:0)),0); };
+    const pools = {};
+    order.forEach(l=>{ pools[l] = feels.map(f=>{ const arr = crPool(f, l, tema, sat, usados).map(p=>Object.assign(p,{fl:f, lang:l})); if(fn.length) arr.sort((x,y)=>sim(y.nombre)-sim(x.nombre)); return arr; }); });
+    const cnt = {}; order.forEach(l=>cnt[l]=0);
+    const take = l => { const n = feels.length; for(let k=0;k<n;k++){ const pool = pools[l][(cnt[l]+k)%n]; while(pool.length){ const p = pool.shift(); if(!usados.has(keyOf(p.nombre))) return p; } } return null; };
+    const push = p => {
+      usados.add(keyOf(p.nombre)); cnt[p.lang]++;
+      const sl = SENT.concat([["sabor","Sabor"]]).find(x=>x[0]===p.fl)[1];
+      const de = ["mitos","naturaleza","cielo"].includes(p.lang) ? `Viene de ${LANG_NAME[p.lang]}.` : `Viene del ${LANG_NAME[p.lang]}.`;
+      p.porque = `Sientes: ${sl.toLowerCase()} · ${de.replace("Viene del ","Del ").replace("Viene de la ","De la ").replace("Viene de ","De ").replace("De el ","Del ").replace(".","")}. ${p.porque||""}`.replace(/\s+/g," ").trim();
+      lista.push(p);
+    };
+    // Fase 1: varios orígenes, máximo 3 del principal y 2 de cada otro. Fase 2: completa sin tope.
+    for(const capFn of [l=>(l===order[0]?3:2), ()=>99]){
+      let moved = true;
+      while(lista.length<total && moved){
+        moved = false;
+        for(const l of order){ if(lista.length>=total) break; if(cnt[l]>=capFn(l)) continue; const p = take(l); if(p){ push(p); moved = true; } }
       }
     }
-    return lista.slice(0,8);
+    return lista.slice(0,total);
   }
   function crShow(step){
-    ["cr-s1","cr-s2","cr-s3"].forEach((id,i)=>{ $(id).style.display = (i+1===step) ? "block" : "none"; });
+    ["cr-s1","cr-s2","cr-s3","cr-s4"].forEach((id,i)=>{ $(id).style.display = (i+1===step) ? "block" : "none"; });
     [...$("cr-dots").children].forEach((d,i)=>d.classList.toggle("on", i<step));
   }
   function crSentButtons(){
@@ -1524,6 +1611,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   }
   let crSel = {feel:[], sound:""};
   function crReset(){
+    if(typeof logoPref!=="undefined" && logoPref){ logoPref.pal=""; logoPref.font=""; logoPref.text=""; lpRender(); }
     state.crear = null; crSel = {feel:[], sound:""};
     $("cr-start").style.display = "block"; $("cr-flow").style.display = "none"; $("cr-sum").style.display = "none"; $("cr-err").style.display = "none";
   }
@@ -1560,15 +1648,15 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     $("cr-sum").style.display = "block";
     $("cr-redo").addEventListener("click", ()=>{ crSentButtons(); $("cr-text").value = state.crear ? (state.crear.text||"") : ""; $("cr-sum").style.display = "none"; $("cr-flow").style.display = "block"; crShow(1); $("crear").scrollIntoView({behavior:"smooth", block:"start"}); });
   }
-  function crRonda(primera){
+  function crRonda(primera, fav){
     state.proposals.forEach(p=>state.shown.add(keyOf(p.nombre)));
     state.favs.forEach(p=>state.shown.add(keyOf(p.nombre)));
     state.names.forEach(n=>state.shown.add(keyOf(n)));
-    const lista = crGenerar();
+    const lista = crGenerar(fav);
     if(!lista || !lista.length){ crErr("No encontré más nombres con esas respuestas. Cambia el sentimiento o el sonido y lo intentamos de nuevo."); return; }
     state.round++; state.proposals = lista;
     const sems = state.crear.text ? crSemillas() : [];
-    $("props-intro").textContent = `Tu universo: ${state.crear.labels.join(" y ").toLowerCase()} · sonido ${state.crear.soundLabel.toLowerCase()}. ${sems.length ? `Los primeros nacen de tu palabra "${sems.join(" y ")}". ` : ""}Te propongo nombres cortos y fáciles de decir: los que se pronuncian sin esfuerzo gustan más y dan más confianza.`;
+    $("props-intro").textContent = (fav && state.favs.length) ? `Partimos de tus favoritos: ${state.favs.map(f=>f.nombre).join(", ")}. Buscamos el mismo tono, la misma sensación y un origen parecido.` : `Tu universo: ${state.crear.labels.join(" y ").toLowerCase()} · sonido ${state.crear.soundLabel.toLowerCase()}. ${sems.length ? `Los primeros nacen de tu palabra "${sems.join(" y ")}". ` : ""}Mira de dónde viene cada uno y elige tu camino.`;
     renderProps(lista, "Son ideas. No quedan reservadas para ti hasta que las registres, y aún no están verificadas. Marca tus favoritos y escoge tu finalista para el informe.");
     const pr = document.querySelector("#props .props"); if(pr) pr.classList.add("reveal");
     updateWA();
@@ -1576,7 +1664,10 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     if(primera) $("props").scrollIntoView({behavior:"smooth", block:"start"});
   }
   $("cr-make").addEventListener("click", ()=>crCrear(true));
-  $("cr-none").addEventListener("click", ()=>{ $("cr-text").value = ""; crCrear(false); });
+  $("cr-none").addEventListener("click", ()=>{ $("cr-text").value = ""; crErr(""); crShow(4); window.scrollTo(0,0); });
+  $("cr-n3").addEventListener("click", ()=>{ crErr(""); crShow(4); window.scrollTo(0,0); });
+  $("cr-b4").addEventListener("click", ()=>{ crErr(""); crShow(3); });
+  $("cr-skip4").addEventListener("click", ()=>{ logoPref.pal=""; logoPref.font=""; logoPref.text=""; lpRender(); crCrear(true); });
 
   // ---------- Presencia en internet e Instagram ----------
   // Dirección del servidor de búsqueda (Cloudflare). Vacía = la sección no aparece.
@@ -1663,7 +1754,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   // ---------- Informe Nombre Libre: cupos de prueba y precio ----------
   // PILOTO = true mientras haya pruebas gratis. Para empezar a cobrar, cambiar a false.
   // PILOTO_HASTA: vacío = "por tiempo limitado". Si se escribe una fecha (ej. "30 de noviembre"), la app dice "hasta el 30 de noviembre".
-  // Dos opciones (decisión del 15/11/2026): Informe Express gratis por lanzamiento (cupos limitados) e Informe Completo $89.900.
+  // Dos opciones (decisión del 15/11/2026): Informe Express sin costo (cupos limitados) e Informe Completo $89.900.
   const PILOTO = true;
   const PILOTO_HASTA = "";
   const CUPOS_SEMANA = 2;
@@ -1671,7 +1762,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
   const ENTREGA = "en 2 a 4 horas hábiles";   // tiempo de entrega del Informe Express
   const peso = n => "$" + n.toLocaleString("es-CO").replace(/,/g,".");
   const PLANES = {
-    gratis:{nombre:"Informe Express (gratis por lanzamiento)", t:"Gratis por lanzamiento", sub:"Cupos limitados cada semana", d:"Un informe previo, rápido y sencillo, con valor de $49.900. Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido, y te digo qué probabilidad de registro tiene. Pídelo antes de las 2 p. m. para recibirlo hoy. Si esta semana ya se llenaron los cupos, te guardamos el tuyo para la próxima.", ent:"en 2 a 4 horas hábiles", btn:"Pedir mi cupo gratis por WhatsApp", msg:"Quiero uno de los cupos gratis de lanzamiento."},
+    gratis:{nombre:"Informe Express", t:"Informe Express", sub:"Sin costo · cupos limitados cada semana", d:"Un informe previo, rápido y sencillo. Busco tu nombre entre las marcas ya registradas, incluso las que se escriben o suenan parecido, y te digo qué probabilidad de registro tiene. Pídelo antes de las 2 p. m. para recibirlo hoy. Si esta semana ya se llenaron los cupos, te guardamos el tuyo para la próxima.", ent:"en 2 a 4 horas hábiles", btn:"Pedir mi cupo sin costo por WhatsApp", msg:"Quiero uno de los cupos sin costo del Informe Express."},
     completo:{nombre:"Informe Completo", t:"Informe Completo", sub:"$89.900", d:"El informe para decidir con tranquilidad antes de invertir en tu marca. Todo lo del Express, más la búsqueda oficial de marcas registradas parecidas a tu nombre y a tu logo. Reviso la clase de tu producto y otras clases relacionadas, donde también podría aparecer una marca parecida. Si sale con riesgo, te propongo alternativas.", ent:"en 24 a 48 horas", btn:"Pedir mi Informe Completo", msg:"Entiendo que el Informe Completo vale $89.900."}
   };
   state.plan = state.plan || "gratis";
@@ -1740,6 +1831,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     state.informe = []; crReset();
     renderClase();
     renderCards();
+    logoName = ""; logoOn = false; renderLogos();
     renderOffer(); renderPick();
     $("results").style.display = "block"; $("form-sec").style.display = "none"; $("propsCard").style.display = (!state.diags.length || state.diags.some(d=>d.level<=3)) ? "block" : "none"; $("informe").style.display = "block";
     updateWA();
@@ -1748,7 +1840,7 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     runMarket();
   });
   $("more").addEventListener("click", ()=>{ if(state.crear){ crErr(""); crRonda(false); } else loadProposals("new"); });
-  $("more-fav").addEventListener("click", ()=>loadProposals("fav"));
+  $("more-fav").addEventListener("click", ()=>{ if(state.crear){ crErr(""); crRonda(false,true); } else loadProposals("fav"); });
   $("again").addEventListener("click", ()=>{ $("results").style.display="none"; $("form-sec").style.display="block"; $("a1").style.display="block"; $("a2").style.display="none"; window.scrollTo(0,0); });
   $("copy").addEventListener("click", async ()=>{
     try{ await navigator.clipboard.writeText(summary()); $("copied").textContent = "Copiado. Pégalo en WhatsApp o en un DM a @conlexalegal."; }
@@ -1788,8 +1880,8 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     if(id==="scrT") prevScreen = SCREENS.find(s=>$(s).style.display==="block") || "home";
     SCREENS.forEach(s=>{ $(s).style.display = s===id ? "block" : "none"; });
     $("backbtn").style.display = id==="home" ? "none" : "inline-flex";
-    if(id==="scrA") { $("slotA-props").appendChild($("propsCard")); $("slotA-inf").appendChild($("informe")); }
-    if(id==="scrB") { $("slotB-props").appendChild($("propsCard")); $("slotB-inf").appendChild($("informe")); }
+    if(id==="scrA") { $("slotA-props").appendChild($("propsCard")); $("slotA-inf").appendChild($("informe")); $("slotA-logo").appendChild($("logoSec")); logoScreen="scrA"; logoOn=false; renderLogos(); }
+    if(id==="scrB") { $("slotB-props").appendChild($("propsCard")); $("slotB-inf").appendChild($("informe")); $("slotB-logo").appendChild($("logoSec")); logoScreen="scrB"; logoOn=false; renderLogos(); }
     window.scrollTo(0,0);
   }
   document.addEventListener("click", e=>{
@@ -1799,9 +1891,23 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
     if(id==="scrA" && $("results").style.display!=="block"){ $("form-sec").style.display="block"; $("a1").style.display="block"; $("a2").style.display="none"; $("propsCard").style.display="none"; $("informe").style.display="none"; }
     showScreen(id);
   });
+  // Atrás: retrocede un paso a la vez dentro de cada flujo
   $("backbtn").addEventListener("click", ()=>{
     const cur = SCREENS.find(s=>$(s).style.display==="block");
-    showScreen(cur==="scrT" ? prevScreen : "home");
+    if(cur==="scrT"){ showScreen(prevScreen); return; }
+    if(cur==="scrA"){
+      if($("results").style.display==="block"){ $("results").style.display="none"; $("form-sec").style.display="block"; $("a1").style.display="none"; $("a2").style.display="block"; window.scrollTo(0,0); return; }
+      if($("a2").style.display==="block"){ $("a2").style.display="none"; $("a1").style.display="block"; window.scrollTo(0,0); return; }
+    }
+    if(cur==="scrB"){
+      if($("crear").style.display==="block"){
+        if($("cr-sum").style.display!=="none" && state.crear){ crSentButtons(); $("cr-text").value = state.crear.text||""; $("cr-sum").style.display="none"; $("cr-flow").style.display="block"; crShow(4); crErr(""); window.scrollTo(0,0); return; }
+        const step = ["cr-s1","cr-s2","cr-s3","cr-s4"].findIndex(id=>$(id).style.display==="block")+1;
+        if($("cr-flow").style.display==="block" && step>1){ crErr(""); crShow(step-1); window.scrollTo(0,0); return; }
+        $("crear").style.display="none"; $("propsCard").style.display="none"; $("informe").style.display="none"; $("logoSec").style.display="none"; $("bstep1").style.display="block"; window.scrollTo(0,0); return;
+      }
+    }
+    showScreen("home");
   });
   // A: informe de registrabilidad
   function updClase(){
@@ -1842,6 +1948,343 @@ button.lk,a.lk{color:var(--gold);text-decoration:underline;cursor:pointer;font-w
       const t=setInterval(()=>{ lis[i].className="ok"; i++; if(i<lis.length) lis[i].className="on"; else { clearInterval(t); setTimeout(()=>{ ovl.classList.remove("on"); pass=true; go.click(); },500); } },850);
     }, true);
   })();
+
+  // ---------- Logos: 6 propuestas distintas por nombre ----------
+  const LOGO_FAV = {}; let logoName = "", logoScreen = "scrA", logoCur = [], logoOn = false, logoFeelA = [];
+  const LFONTS = [
+    {f:"Lora",w:500,c:"cap",s:"serif"},{f:"Poppins",w:300,c:"low",s:"sans-serif"},{f:"Inter",w:500,c:"up",t:.16,s:"sans-serif"},
+    {f:"Playfair Display",w:600,c:"cap",s:"serif"},{f:"Cormorant Garamond",w:600,c:"cap",s:"serif"},{f:"Space Grotesk",w:500,c:"low",s:"sans-serif"},
+    {f:"Montserrat",w:700,c:"up",t:.04,s:"sans-serif"},{f:"Fraunces",w:600,c:"cap",s:"serif"},{f:"DM Sans",w:700,c:"low",s:"sans-serif"},{f:"Poppins",w:700,c:"up",t:0,s:"sans-serif"}
+  ];
+  const LFONT_MOOD = {sobrio:[2,5,6,8],elegante:[4,3,0,7],tierno:[1,7,8,0],natural:[7,1,0,8],alegre:[8,9,1,6],fuerte:[9,6,2,5],romantico:[3,4,0,7],mistico:[4,5,1,3],trascendente:[0,7,3,4]};
+  const LPAL = [
+    ["#F5EFE6","#2A1A14","#C0763E"],["#14213D","#F4F5F7","#7DD3C0"],["#F6E3DC","#8A3B3B","#D98A7A"],["#E8EFE6","#2F4A3A","#C77D4B"],
+    ["#2B1B2E","#F3DDE6","#E0A0B8"],["#111111","#FFFFFF","#FF5A1F"],["#EFE6D2","#2B2B22","#7A8450"],["#FBF6EC","#0F5257","#D6A63C"],
+    ["#26262B","#F1E6D3","#D4AF6A"],["#DDEBF7","#17284B","#F2B705"],["#EADFF3","#44256B","#E58AB8"],["#E9B949","#3B2314","#FFF4DC"],
+    ["#1F3D2E","#F5EBDD","#F2A488"],["#B5573B","#FBEFE2","#2B1410"],["#FFFFFF","#111111","#D7263D"],
+    ["#EFE7F7","#3B1F6B","#9B6BD6"],["#2A1250","#F1E8FF","#B58CFF"],["#E6F3FB","#1E4E79","#4FA3E0"],["#5BA7E0","#FFFFFF","#F5A524"]
+  ];
+  const LPAL_MOOD = {sobrio:[1,5,6,8,14],elegante:[0,7,8,4],tierno:[2,10,3,12],natural:[3,6,12,7],alegre:[9,11,13,2],fuerte:[5,14,1,11,13],romantico:[4,2,10],mistico:[4,10,1],trascendente:[0,7,3]};
+  function lhash(t){ let h=2166136261; for(const ch of t.toLowerCase()){ h^=ch.charCodeAt(0); h=Math.imul(h,16777619); } return h>>>0; }
+  function lrng(seed){ return ()=>{ seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+  function lshuf(a,r){ const x=a.slice(); for(let i=x.length-1;i>0;i--){ const j=Math.floor(r()*(i+1)); [x[i],x[j]]=[x[j],x[i]]; } return x; }
+  function lorder(pref, total, r){ const p = lshuf(pref||[], r), rest = lshuf([...Array(total).keys()].filter(i=>!p.includes(i)), r); return p.concat(rest); }
+  const LLAYOUTS = [["pal","Palabra"],["dos","En dos líneas"],["mono","Monograma"],["sello","Con sello"],["sub","Subrayado"],["marco","Con marco"],["ini","Inicial grande"],["sim","Con símbolo"]];
+  const LSYM = {sun:["sol","amanecer","oro","dorado","dorada","luz","brillo","dia","verano","energia","calor"],wave:["mar","agua","ola","olas","playa","coral","oceano","rio","bano","navegar","isla"],moon:["luna","noche","estrella","sueno","suenos","magia","mistica","calma"],peak:["montana","cumbre","lobo","fuerza","fuerte","cima","camino","aventura","construir","roca","acero"],leaf:["hoja","planta","flor","jardin","natural","bosque","verde","raiz","tierra","semilla","organico","cafe"],bird:["halcon","aguila","condor","ave","aves","pajaro","colibri","alondra","gaviota","vuelo","volar"],cloud:["nube","nubes","cielo","aire","viento","volar","vuelo","libertad","atmosfera"],helix:["adn","genoma","genetica","genes","gen","celula","ciencia","laboratorio","biologia","molecula","peptidos","salud"],star:["estrella","estrellas","brillar","destacar","premium","exito","lujo"],heart:["amor","corazon","mama","bebe","familia","ternura","hogar","casa","cuidado","abrazo","regalo"]};
+  const LSYM_MOOD = {natural:["leaf","sun","wave"],alegre:["sun","heart","wave"],fuerte:["peak","sun"],sobrio:["peak","sun"],elegante:["moon","sun"],romantico:["heart","moon"],tierno:["heart","moon","leaf"],mistico:["moon","sun"],trascendente:["sun","heart","leaf"]};
+  function logoIntent(name){
+    const ms = [], cr = state.crear || (logoFeelA.length ? {feelings:logoFeelA.slice(), labels:logoFeelA.map(f=>(SENT.find(x=>x[0]===f)||[f,f])[1]), text:""} : null);
+    if(cr) cr.feelings.forEach(f=>(MAPA_SENT_TONO[f]||[]).forEach(m=>{ if(MOODS[m] && !ms.includes(m)) ms.push(m); }));
+    const toks = norm([name, state.desc||"", cr&&cr.text||""].join(" ")).split(" ").filter(Boolean);
+    let dm = null; try{ dm = detectMood(toks, state.cat && state.cat.key); }catch(e){}
+    if(dm){ [dm.id, dm.second].forEach(m=>{ if(m && MOODS[m] && !ms.includes(m)) ms.push(m); }); }
+    if(!ms.length) ms.push("natural");
+    let sym = "", word = "";
+    const pt = norm(logoPref.text||"").split(" ").filter(Boolean);
+    for(const list of [pt, toks]){ for(const t of list){ for(const k in LSYM){ if(LSYM[k].includes(t)){ sym = k; word = t; break; } } if(sym) break; } if(sym) break; }
+    const ini = pt.some(t=>["inicial","iniciales","letra","monograma"].includes(t));
+    return {ms:ms.slice(0,3), sym, word, labels: cr ? cr.labels : [], feels: cr ? cr.feelings.slice() : [], ini};
+  }
+  // ---------- Logos por personalidad (como el ejemplo Lumio): cada estilo tiene su letra, su color y un detalle firma ----------
+  const PER = {
+    sobrio:["Sobrio"], moderno:["Moderno"], suave:["Suave"], monograma:["Monograma"], romantico:["Romántico"],
+    fuerte:["Fuerte"], elegante:["Elegante"], alegre:["Alegre"], natural:["Natural"], simbolo:["Con símbolo"]
+  };
+  const PER_BY_MOOD = {sobrio:["sobrio","moderno","monograma"], elegante:["elegante","sobrio","monograma"], tierno:["suave","romantico","alegre"], natural:["natural","suave","sobrio"], alegre:["alegre","suave","moderno"], fuerte:["fuerte","moderno","monograma"], romantico:["romantico","elegante","suave"], mistico:["elegante","romantico","moderno"], trascendente:["sobrio","elegante","natural"]};
+  // ---------- Reglas de diseño de marcas famosas: por sensación y por sector ----------
+  const FEEL_REF = {
+    confianza:["azul o colores serios, letra sencilla y ordenada, formas estables","IBM, Deloitte y Mastercard"], calma:["colores suaves, curvas y letra redonda y liviana","Dove y Headspace"],
+    alegria:["letra redonda y juguetona con colores vivos","Coca-Cola y Fanta"], elegancia:["letras finas con mucho espacio, un solo color y aire alrededor","Chanel, Cartier, Dior y Gucci"],
+    ternura:["letra redondeada y suave, con colores pastel","Pampers y Dove"], fuerza:["letra gruesa e inclinada, ángulos firmes y un solo símbolo que se repite","Nike, Adidas y Under Armour"],
+    frescura:["verdes y blancos, letra limpia y un poco inclinada","Sprite y Whole Foods"], cercania:["letra en minúsculas, formas suaves y colores cálidos","Airbnb y Nutella"],
+    creatividad:["colores propios, letra dibujada a mano y un toque inesperado","Mailchimp y Google"], sabor:["rojos, naranjas y amarillos con letra gruesa","McDonald's, KFC y Pizza Hut"]
+  };
+  const FEEL_STORY = {
+    elegancia:"Así lo hicieron: Chanel nació de dos C entrelazadas que creó Coco Chanel, y Cartier lleva más de un siglo con la misma letra cursiva.",
+    fuerza:"Así lo hicieron: el swoosh de Nike lo dibujó una estudiante en 1971 como el ala de la diosa de la victoria.",
+    ternura:"Así lo hicieron: Pampers fue suavizando su letra hasta hacerla redondeada y le sumó un corazón para sentirse cuidado.",
+    alegria:"Así lo hicieron: la cursiva de Coca-Cola casi no ha cambiado en más de un siglo, y Fanta rediseñó su logo para sentirse más divertida.",
+    confianza:"Así lo hicieron: IBM usa su azul y sus ocho barras desde 1972, y Deloitte eligió una letra sencilla que se lee estable.",
+    calma:"Así lo hicieron: Headspace resume la calma en un punto naranja y usa gris suave en lugar de negro.",
+    frescura:"Así lo hicieron: Sprite inclina su letra verde para dar movimiento, y Whole Foods usa un verde profundo con letra clásica.",
+    cercania:"Así lo hicieron: Airbnb creó un símbolo que cualquiera dibuja a mano, y Nutella escribe su nombre en minúscula con la n en negro y el resto en rojo.",
+    creatividad:"Así lo hicieron: Mailchimp conserva dibujos hechos a mano y humor propio, y Google pasó a una letra geométrica simple sin perder sus colores."
+  };
+  const PER_FEEL = {sobrio:["confianza"], moderno:["confianza","creatividad"], suave:["calma","ternura"], monograma:["elegancia","confianza"], romantico:["ternura","cercania"], fuerte:["fuerza","confianza"], elegante:["elegancia"], alegre:["alegria","sabor"], natural:["frescura","calma","cercania"], simbolo:["creatividad","frescura"]};
+  const SECT_LOGO = [
+    {k:["ropa","bolsos","cabello","hilos","fabricacion"], n:"moda", r:"letras muy limpias con mucho espacio entre ellas, casi siempre en negro, o un monograma", b:"Gucci, Chanel y Dior", push:["elegante","monograma","sobrio"], pal:[8,5,0,7]},
+    {k:["lenceria"], n:"lencería", r:"letra fina y romántica, rosados, negro y dorado", b:"Victoria's Secret y La Perla", push:["romantico","elegante","monograma"], pal:[4,2,8,10]},
+    {k:["bano"], n:"ropa de playa", r:"letras redondeadas o de brocha y colores de mar", b:"Billabong y Roxy", push:["alegre","natural","suave"], pal:[17,18,9,11]},
+    {k:["joyas"], n:"joyería", r:"serif fina o cursiva, con negro, dorado o azul turquesa", b:"Tiffany y Cartier", push:["elegante","romantico","monograma"], pal:[8,7,0,4]},
+    {k:["cosmeticos","spa"], n:"belleza", r:"letras finas en mayúsculas con mucho espacio, tonos neutros o negro", b:"Aesop y Dior", push:["elegante","suave","romantico"], pal:[2,4,8,10]},
+    {k:["suplementos","salud","medicos","veterinaria"], n:"salud", r:"azules y verdes con letra limpia y amable", b:"Pfizer, Bayer y Johnson & Johnson", push:["sobrio","moderno","natural"], pal:[17,1,3,9]},
+    {k:["gimnasio"], n:"deporte", r:"letra gruesa e inclinada, negro y rojo, un símbolo simple de movimiento", b:"Nike, Adidas y Under Armour", push:["fuerte","moderno"], pal:[5,14,1,13]},
+    {k:["juguetes"], n:"juguetes y deporte", r:"letra redonda y gruesa con colores primarios", b:"Lego, Fisher-Price y Nike", push:["alegre","fuerte","moderno"], pal:[11,18,9,14]},
+    {k:["cafe"], n:"café y chocolate", r:"sellos o círculos, café, verde o rojo y crema, letra clásica o escrita a mano", b:"Starbucks e Illy", push:["natural","sobrio","monograma"], pal:[3,12,13,0]},
+    {k:["panaderia","procesados"], n:"alimentos", r:"rojos, naranjas y marrones con letra redonda y cálida", b:"Nutella, Alpina y Nestlé", push:["alegre","natural","suave"], pal:[13,11,12,0]},
+    {k:["frutas","pet_food"], n:"productos frescos", r:"verdes, hojas y letra orgánica en minúsculas", b:"Whole Foods y Del Monte", push:["natural","alegre","suave"], pal:[3,12,6,11]},
+    {k:["bebidas"], n:"bebidas", r:"rojos, azules y amarillos con letra gruesa o cursiva", b:"Coca-Cola, Pepsi y Corona", push:["alegre","fuerte","moderno"], pal:[14,9,11,17]},
+    {k:["licores"], n:"licores", r:"sellos, serif clásica, negro y dorado", b:"Jack Daniel's y Johnnie Walker", push:["sobrio","elegante","monograma"], pal:[8,5,6,0]},
+    {k:["restaurante"], n:"restaurantes", r:"rojo y amarillo, letra gruesa y muy legible", b:"McDonald's, KFC y Pizza Hut", push:["alegre","fuerte","natural"], pal:[14,11,13,5]},
+    {k:["hotel"], n:"hoteles", r:"serif o sans sobria, azul profundo o dorado", b:"Hilton y Marriott", push:["sobrio","elegante","monograma"], pal:[1,7,8,0]},
+    {k:["muebles","cocina","tapetes","textil","velas"], n:"hogar", r:"letra clara y sólida con tonos cálidos y tierra", b:"IKEA, Zara Home y Jo Malone", push:["sobrio","natural","suave"], pal:[0,6,13,7]},
+    {k:["aseo","electro"], n:"hogar y limpieza", r:"azules y verdes vivos con letra gruesa", b:"Fabuloso, Clorox y Samsung", push:["moderno","alegre","fuerte"], pal:[17,9,3,18]},
+    {k:["pet_acc"], n:"mascotas", r:"colores fuertes y letra amigable", b:"Pedigree y Purina", push:["alegre","fuerte","natural"], pal:[14,11,9,13]},
+    {k:["gafas","app","plataforma","tecnologia"], n:"tecnología", r:"letra geométrica limpia, pocos colores y mucho espacio", b:"Apple y Google", push:["moderno","sobrio","simbolo"], pal:[1,5,17,9]},
+    {k:["educacion","eventos","musica","papeleria"], n:"educación y entretenimiento", r:"letra redonda y amable, colores vivos", b:"Duolingo, Netflix y Spotify", push:["alegre","moderno","suave"], pal:[18,16,11,15]},
+    {k:["agencia","tienda"], n:"marketing y tiendas", r:"formas simples y colores propios, letra sans clara", b:"Google, Mailchimp y Amazon", push:["moderno","alegre","simbolo"], pal:[5,18,9,14]},
+    {k:["finanzas","legal"], n:"finanzas y servicios", r:"azul marino, gris carbón o verde profundo con un toque dorado, letra ordenada y simétrica", b:"Deloitte, Mastercard y Chase", push:["sobrio","monograma","elegante"], pal:[1,7,8,0]},
+    {k:["construccion","materiales","ferreteria","maquinas","herramientas","vehiculos","pinturas","plasticos","quimicos","hamacas"], n:"construcción e industria", r:"letra sólida y gruesa en amarillo, naranja, azul o rojo", b:"Caterpillar, Home Depot y Bosch", push:["fuerte","moderno","sobrio"], pal:[5,14,9,13]},
+    {k:["transporte"], n:"transporte y envíos", r:"letra gruesa, colores fuertes y líneas de velocidad", b:"FedEx, DHL y Uber", push:["fuerte","moderno","simbolo"], pal:[16,14,5,9]}
+  ];
+  const SECT_BY_KEY = {}; SECT_LOGO.forEach(g=>g.k.forEach(k=>{ SECT_BY_KEY[k] = g; }));
+  const curSect = ()=> state.cat && SECT_BY_KEY[state.cat.key];
+  function perRefs(per, intent){
+    const feels = (intent && intent.feels) || [], cand = PER_FEEL[per] || [];
+    const f = cand.find(x=>feels.includes(x)) || cand[0], fr = FEEL_REF[f] || ["",""], g = curSect();
+    const l1 = fr[0] ? `${fr[0].charAt(0).toUpperCase()+fr[0].slice(1)}, como ${fr[1]}.` : "";
+    const l2 = (g && g.push.includes(per)) ? `En ${g.n}: ${g.r}, como ${g.b}.` : "";
+    return [l1,l2,FEEL_STORY[f]||""];
+  }
+  const PER_ORDER = ["sobrio","moderno","suave","monograma","romantico","fuerte","elegante","alegre","natural"];
+  const PER_PAL = {sobrio:[0,6,7], moderno:[1,9,16], suave:[2,10,17], monograma:[3,6,12], romantico:[4,10,16], fuerte:[5,14,13], elegante:[8,7,16], alegre:[11,9,13,18], natural:[3,12,6], simbolo:[1,7,12,5]};
+  const PER_FONT = {
+    sobrio:{f:"Lora",w:500,s:"serif",c:"cap",t:-.01}, moderno:{f:"Inter",w:500,s:"sans-serif",c:"up",t:.16}, suave:{f:"Poppins",w:300,s:"sans-serif",c:"low",t:0},
+    romantico:{f:"Lora",w:500,st:"italic",s:"serif",c:"cap",t:0}, fuerte:{f:"Poppins",w:700,s:"sans-serif",c:"up",t:-.02}, elegante:{f:"Cormorant Garamond",w:600,s:"serif",c:"up",t:.2},
+    alegre:{f:"DM Sans",w:700,s:"sans-serif",c:"low",t:-.02}, natural:{f:"Fraunces",w:600,s:"serif",c:"low",t:0}, simbolo:{f:"Montserrat",w:700,s:"sans-serif",c:"up",t:.06}
+  };
+  const pfont = (sp,z)=>`${sp.st||"normal"} ${sp.w} ${z}px "${sp.f}", ${sp.s||"serif"}`;
+  function pglyphs(c,sp,txt,z,tr,sub){ c.font = pfont(sp,z); const g=[...txt]; let x=0; const pos=g.map((ch,i)=>{ const gl=(sub&&sub[i])||ch, w=c.measureText(gl).width, o={ch:gl,x,w}; x+=w+(i<g.length-1?tr*z:0); return o; }); return {pos, tot:x}; }
+  function pfit(c,sp,txt,maxW,start,tr){ for(let z=start;z>16;z-=3){ if(pglyphs(c,sp,txt,z,tr).tot<=maxW) return z; } return 16; }
+  function pword(c,sp,txt,cx,y,z,tr,col,skip,sub){ const g = pglyphs(c,sp,txt,z,tr,sub), x0 = cx-g.tot/2; c.font = pfont(sp,z); c.fillStyle = col; g.pos.forEach((p,i)=>{ if(skip&&skip.includes(i)) return; c.fillText(p.ch, x0+p.x, y); }); return {x0, tot:g.tot, pos:g.pos}; }
+  function pcase(sp,t){ return sp.c==="up"?t.toUpperCase():sp.c==="low"?t.toLowerCase():t.charAt(0).toUpperCase()+t.slice(1).toLowerCase(); }
+  function psym(c,kind,P,cx,cy){
+    c.fillStyle = P.ac; c.strokeStyle = P.ac; c.lineCap = "round"; c.lineJoin = "round";
+    if(kind==="sun"){ c.beginPath(); c.arc(cx,cy+8,46,Math.PI,0); c.fill(); c.fillRect(cx-70,cy+12,140,5); }
+    else if(kind==="peak"){ c.beginPath(); c.moveTo(cx-42,cy+40); c.lineTo(cx-8,cy-32); c.lineTo(cx+18,cy+12); c.lineTo(cx+36,cy-16); c.lineTo(cx+66,cy+40); c.closePath(); c.fill(); }
+    else if(kind==="moon"){ c.beginPath(); c.arc(cx,cy,42,0,7); c.fill(); c.fillStyle = P.bg; c.beginPath(); c.arc(cx+18,cy-10,36,0,7); c.fill(); }
+    else if(kind==="wave"){ c.lineWidth = 8; for(let k=0;k<3;k++){ c.beginPath(); const y = cy-24+k*24; c.moveTo(cx-64,y); for(let i=0;i<=128;i+=4){ c.lineTo(cx-64+i, y+Math.sin(i/128*Math.PI*4)*8); } c.stroke(); } }
+    else if(kind==="leaf"){ c.save(); c.translate(cx,cy); c.rotate(-.6); c.beginPath(); c.ellipse(0,0,24,52,0,0,7); c.fill(); c.strokeStyle = P.bg; c.lineWidth = 4; c.beginPath(); c.moveTo(0,-44); c.lineTo(0,44); c.stroke(); c.restore(); }
+    else if(kind==="cloud"){ c.beginPath(); c.arc(cx-30,cy+22,26,0,7); c.arc(cx+6,cy,38,0,7); c.arc(cx+42,cy+22,28,0,7); c.fill(); c.fillRect(cx-30,cy+22,72,26); c.beginPath(); c.arc(cx-30,cy+35,13,0,7); c.arc(cx+42,cy+35,13,0,7); c.fill(); }
+    else if(kind==="helix"){ c.lineWidth = 8; for(let ph=0;ph<2;ph++){ c.beginPath(); for(let y=-46;y<=46;y+=3){ const x = cx+Math.sin((y+46)/92*Math.PI*2+ph*Math.PI)*34; if(y===-46) c.moveTo(x,cy+y); else c.lineTo(x,cy+y); } c.stroke(); } c.lineWidth = 4; for(let y=-34;y<=40;y+=18){ const x1 = cx+Math.sin((y+46)/92*Math.PI*2)*34; c.beginPath(); c.moveTo(x1,cy+y); c.lineTo(2*cx-x1,cy+y); c.stroke(); } }
+    else if(kind==="star"){ c.beginPath(); for(let i=0;i<8;i++){ const a = i*Math.PI/4-Math.PI/2, r = i%2===0?54:14; c.lineTo(cx+Math.cos(a)*r, cy+Math.sin(a)*r); } c.closePath(); c.fill(); }
+    else if(kind==="bird"){ c.beginPath(); c.moveTo(cx-66,cy+6); c.quadraticCurveTo(cx-36,cy-44,cx,cy-4); c.quadraticCurveTo(cx+36,cy-44,cx+66,cy+6); c.quadraticCurveTo(cx+34,cy-14,cx,cy+26); c.quadraticCurveTo(cx-34,cy-14,cx-66,cy+6); c.fill(); }
+    else{ c.beginPath(); c.moveTo(cx,cy+40); c.bezierCurveTo(cx-64,cy,cx-48,cy-50,cx,cy-20); c.bezierCurveTo(cx+48,cy-50,cx+64,cy,cx,cy+40); c.fill(); }
+  }
+  function drawPer(cv, cfg, raw, scale){
+    cv.width = 600*scale; cv.height = 400*scale; const c = cv.getContext("2d"); c.scale(scale,scale);
+    const P = cfg.pal, per = cfg.per, sp = PER_FONT[per] || PER_FONT.sobrio, name = raw.trim();
+    c.fillStyle = P.bg; c.fillRect(0,0,600,400); c.textBaseline = "alphabetic"; c.textAlign = "left";
+    const t = pcase(sp,name), tr = sp.t||0, lo = t.toLowerCase();
+    const asc = (z,ch)=>{ c.font = pfont(sp,z); return c.measureText(ch).actualBoundingBoxAscent || z*.7; };
+    if(per==="sobrio" || per==="romantico" || per==="natural"){
+      const z = pfit(c,sp,t,per==="romantico"?450:470,128,tr), y = 222, ii = lo.indexOf("i"), hasI = ii>0 && ii<lo.length;
+      const sub = hasI ? {[ii]:"ı"} : null, w = pword(c,sp,t,300,y,z,tr,P.fg,null,sub), xh = asc(z,"x");
+      if(hasI){ const p = w.pos[ii], cx = w.x0+p.x+p.w/2, cy = y-xh-z*.13;
+        if(per==="natural"){ c.save(); c.translate(cx,cy-z*.02); c.rotate(-.7); c.fillStyle = P.ac; c.beginPath(); c.ellipse(0,0,z*.075,z*.15,0,0,7); c.fill(); c.restore(); }
+        else{ c.fillStyle = P.ac; c.beginPath(); c.arc(cx,cy,z*.07,0,7); c.fill(); } }
+      if(per==="romantico" || (!hasI && per!=="natural")){ c.fillStyle = P.ac; if(per==="romantico"){ c.font = pfont(sp,z); c.fillText(".", w.x0+w.tot+z*.02, y); } else { c.beginPath(); c.arc(w.x0+w.tot+z*.1,y-z*.07,z*.065,0,7); c.fill(); } }
+      if(per==="natural" && !hasI){ c.save(); c.translate(w.x0+w.tot+z*.08,y-xh-z*.06); c.rotate(-.7); c.fillStyle = P.ac; c.beginPath(); c.ellipse(0,0,z*.075,z*.15,0,0,7); c.fill(); c.restore(); }
+    }else if(per==="moderno"){
+      const z = pfit(c,sp,t,470,112,tr), y = 226, oi = t.indexOf("O"), capH = asc(z,"H"), lw = z*.085;
+      const w = pword(c,sp,t,300,y,z,tr,P.fg,oi>=0?[oi]:null);
+      if(oi>=0){ const p = w.pos[oi], cx = w.x0+p.x+p.w/2, R = capH/2; c.strokeStyle = P.fg; c.lineWidth = lw; c.beginPath(); c.arc(cx,y-R,R-lw/2,0,7); c.stroke(); c.fillStyle = P.ac; c.beginPath(); c.arc(cx+R*.72,y-R-R*.72,z*.07,0,7); c.fill(); }
+      else{ c.fillStyle = P.ac; c.beginPath(); c.arc(w.x0+w.tot+z*.14,y-capH-z*.02,z*.07,0,7); c.fill(); }
+    }else if(per==="suave"){
+      const z = pfit(c,sp,t,460,140,tr), y = 205, w = pword(c,sp,t,300,y,z,tr,P.fg);
+      c.strokeStyle = P.ac; c.lineWidth = Math.max(5,z*.055); c.lineCap = "round"; c.beginPath(); c.moveTo(w.x0+w.tot*.1,y+z*.3); c.quadraticCurveTo(300,y+z*.46,w.x0+w.tot*.9,y+z*.3); c.stroke();
+    }else if(per==="fuerte"){
+      const z = pfit(c,sp,t,470,126,tr), y = 226, ii = t.indexOf("I"), capH = asc(z,"H");
+      const w = pword(c,sp,t,300,y,z,tr,P.fg,ii>=0?[ii]:null);
+      c.fillStyle = P.ac;
+      if(ii>=0){ const p = w.pos[ii], bw = Math.max(8,z*.16); c.fillRect(w.x0+p.x+p.w/2-bw/2, y-capH, bw, capH+z*.08); }
+      else c.fillRect(w.x0, y+z*.12, w.tot*.24, Math.max(7,z*.08));
+    }else if(per==="elegante"){
+      const z = pfit(c,sp,t,430,92,tr), y = 206, w = pword(c,sp,t,300,y,z,tr,P.fg), ly = y+34;
+      c.strokeStyle = P.fg; c.lineWidth = 2; c.beginPath(); c.moveTo(w.x0,ly); c.lineTo(300-18,ly); c.moveTo(300+18,ly); c.lineTo(w.x0+w.tot,ly); c.stroke();
+      c.fillStyle = P.ac; c.save(); c.translate(300,ly); c.rotate(Math.PI/4); c.fillRect(-6,-6,12,12); c.restore();
+    }else if(per==="alegre"){
+      const z = pfit(c,sp,t,440,132,tr), y = 226, xh = asc(z,"x"), first = [...t][0];
+      const w = pword(c,sp,t,300,y,z,tr,P.fg,[0]); c.font = pfont(sp,z); c.fillStyle = P.ac; c.fillText(first, w.x0, y);
+      const sx = w.x0+w.tot+z*.1, sy = y-xh-z*.08; c.strokeStyle = P.ac; c.lineWidth = Math.max(4,z*.05); c.lineCap = "round";
+      [-80,-45,-10].forEach(a=>{ const r = a*Math.PI/180; c.beginPath(); c.moveTo(sx+Math.cos(r)*z*.06, sy+Math.sin(r)*z*.06); c.lineTo(sx+Math.cos(r)*z*.2, sy+Math.sin(r)*z*.2); c.stroke(); });
+    }else if(per==="monograma"){
+      const ini = name.charAt(0).toUpperCase(), isq = cfg.mood==="fuerte"; c.fillStyle = P.fg;
+      if(isq){ c.beginPath(); c.roundRect(240,56,120,120,18); c.fill(); } else { c.beginPath(); c.arc(300,118,62,0,7); c.fill(); }
+      const isp = {f:"Lora",w:500,s:"serif"}; c.font = pfont(isp,80); c.fillStyle = P.bg; c.textAlign = "center"; const ca = c.measureText(ini).actualBoundingBoxAscent || 64; c.fillText(ini,300,(isq?116:118)+ca/2); c.textAlign = "left";
+      const nsp = {f:"Inter",w:500,s:"sans-serif"}, tt = name.toUpperCase(), z = pfit(c,nsp,tt,400,36,.36); pword(c,nsp,tt,300,258,z,.36,P.fg);
+    }else{
+      psym(c,cfg.sym||"leaf",P,300,112);
+      const z = pfit(c,sp,t,470,78,tr); pword(c,sp,t,300,262,z,tr,P.fg);
+    }
+  }
+  function logoSet(name, intent){
+    const nm = name.trim(), r = lrng(lhash(nm)), ms = intent.ms;
+    let list = []; ms.forEach(m=>(PER_BY_MOOD[m]||[]).forEach(p=>{ if(!list.includes(p)) list.push(p); }));
+    const sg = curSect(); if(sg) sg.push.forEach(p=>{ if(!list.includes(p)) list.push(p); });
+    const firm = ms.some(m=>["fuerte","sobrio"].includes(m)), soft = ms.some(m=>["tierno","romantico","alegre","natural","mistico"].includes(m));
+    (firm && !soft ? ["fuerte","moderno","sobrio","monograma","elegante","natural"] : PER_ORDER).forEach(p=>{ if(!list.includes(p)) list.push(p); });
+    if(intent.ini){ list = ["monograma"].concat(list.filter(p=>p!=="monograma")); }
+    list = list.slice(0,6);
+    if(!list.includes("monograma")) list[5] = "monograma";
+    if(intent.sym){ const at = list.indexOf("monograma")===5 ? 4 : 5; list[at] = "simbolo"; }
+    const fam = lpFamKey() && LPAL_FAM[lpFamKey()], used = new Set();
+    return list.map((per,k)=>{
+      let pi; const pool = fam ? fam[1] : ((sg && k<4) ? sg.pal : PER_PAL[per]);
+      for(let j=0;j<pool.length;j++){ const cand = pool[(lhash(nm+per)+j)%pool.length]; if(!used.has(cand)){ pi = cand; break; } }
+      if(pi==null) pi = pool[(lhash(nm+per))%pool.length]; used.add(pi);
+      const pal0 = LPAL[pi], swap = fam && k>=fam[1].length && Math.floor(k/fam[1].length)%2===1, pal = swap ? [pal0[1],pal0[0],pal0[2]] : pal0;
+      const mood = ms[k % ms.length], matched = k < ms.length*0 || (PER_BY_MOOD[ms[0]]||[]).includes(per) || (ms[1] && (PER_BY_MOOD[ms[1]]||[]).includes(per));
+      let why = matched && intent.labels.length ? `Para transmitir ${intent.labels[k % intent.labels.length].toLowerCase()}` : "Otra forma de verlo";
+      if(fam) why = `Con tus colores: ${fam[0].toLowerCase()}`;
+      if(per==="simbolo" && intent.word) why = `Con tu idea de "${intent.word}"`; else if(per==="monograma" && intent.ini) why = "Con tu inicial, como pediste";
+      return {id:per+k, per, ref:perRefs(per,intent), label:PER[per][0], pal:{bg:pal[0],fg:pal[1],ac:pal[2]}, seed:lhash(nm+k), mood, sym:per==="simbolo"?intent.sym:"", why};
+    });
+  }
+  const lfont = (f,z)=>`${f.w} ${z}px "${f.f}", ${f.s}`;
+  function lcase(f, t, force){ const m = force||f.c; return m==="up"?t.toUpperCase():m==="low"?t.toLowerCase():t.charAt(0).toUpperCase()+t.slice(1).toLowerCase(); }
+  function lshape(c,sh,x,y,r){ c.beginPath(); if(sh===1){ c.rect(x-r,y-r,r*2,r*2); } else if(sh===2){ c.moveTo(x,y-r*1.3); c.lineTo(x+r*1.3,y); c.lineTo(x,y+r*1.3); c.lineTo(x-r*1.3,y); c.closePath(); } else { c.arc(x,y,r,0,7); } c.fill(); }
+  function lwidth(c,f,txt,z,tr){ c.font = lfont(f,z); let w=0; for(const ch of txt) w+=c.measureText(ch).width; return w + tr*z*([...txt].length-1); }
+  function lfit(c,f,txt,maxW,start,tr){ for(let z=start;z>16;z-=3){ if(lwidth(c,f,txt,z,tr)<=maxW) return z; } return 16; }
+  function ldraw(c,f,txt,cx,y,z,tr,det,pal){
+    c.font = lfont(f,z); const g=[...txt], arr=[]; let tot=0;
+    g.forEach((ch,i)=>{ const gl = (det&&det.k==="dot"&&i===det.i)?"ı":ch; const w=c.measureText(gl).width; arr.push({gl,w}); tot+=w+(i<g.length-1?tr*z:0); });
+    let x = cx-tot/2; const x0 = x;
+    arr.forEach((a,i)=>{
+      if(det&&det.k==="bar"&&i===det.i){ const bw=Math.max(4,z*.16), bh=z*.72; c.fillStyle=pal.ac; c.fillRect(x+a.w/2-bw/2,y-bh,bw,bh+z*.02); }
+      else{ c.fillStyle = (det&&det.k==="acc"&&i===det.i)?pal.ac:pal.fg; c.fillText(a.gl,x,y);
+        if(det&&det.k==="dot"&&i===det.i){ c.fillStyle=pal.ac; lshape(c,det.sh,x+a.w/2,y-z*.67,z*.07); } }
+      x += a.w + tr*z;
+    });
+    if(det&&det.k==="end"){ c.fillStyle=pal.ac; lshape(c,det.sh,x0+tot+z*.13,y-z*.06,z*.07); }
+    return tot;
+  }
+  function ldet(txt, f, r){
+    const opts=[]; const up = txt===txt.toUpperCase();
+    if(up){ const i=txt.indexOf("I"); if(i>=0) opts.push({k:"bar",i}); }
+    else{ const i=txt.indexOf("i"); if(i>0 || (i===0 && f.c==="low")) opts.push({k:"dot",i}); }
+    opts.push({k:"acc",i:Math.floor(r()*[...txt].length)}); opts.push({k:"end"});
+    const d = opts[Math.floor(r()*opts.length)]; d.sh = Math.floor(r()*3); return d;
+  }
+  function drawLogo(cv, cfg, raw, scale){
+    if(cfg.per) return drawPer(cv, cfg, raw, scale);
+    cv.width = 600*scale; cv.height = 400*scale; const c = cv.getContext("2d"); c.scale(scale,scale);
+    const P = cfg.pal, f = cfg.font, r = lrng(cfg.seed), name = raw.trim(), n = [...name].length;
+    c.fillStyle = P.bg; c.fillRect(0,0,600,400); c.textBaseline = "alphabetic";
+    const tr0 = f.t!=null ? f.t : 0, L = cfg.lay;
+    const ini = name.charAt(0).toUpperCase();
+    if(L==="pal"){
+      const t = lcase(f,name), z = lfit(c,f,t,470,128,tr0); ldraw(c,f,t,300,225,z,tr0,ldet(t,f,r),P);
+    }else if(L==="dos"){
+      const V="aeiouáéíóúy", cands=[...Array(n).keys()].filter(i=>i>=2&&i<=n-2&&V.includes(name[i-1].toLowerCase())&&!V.includes(name[i].toLowerCase())), cut = cands.length ? cands.sort((x,y)=>Math.abs(x-n/2)-Math.abs(y-n/2))[0] : Math.max(2,Math.min(n-2,Math.round(n/2))), a = lcase(f,name.slice(0,cut)), b = lcase(f,name.slice(cut),f.c==="cap"?"low":null);
+      const z = Math.min(lfit(c,f,a,440,92,tr0), lfit(c,f,b,440,92,tr0));
+      ldraw(c,f,a,300,160,z,tr0,null,P); ldraw(c,f,b,300,160+z*.98,z,tr0,null,{fg:P.ac,ac:P.fg,bg:P.bg});
+    }else if(L==="mono"){
+      const sh = Math.floor(r()*3); c.fillStyle = P.fg;
+      if(sh===1){ c.beginPath(); c.roundRect(236,58,128,128,22); c.fill(); } else if(sh===2){ c.save(); c.translate(300,122); c.rotate(Math.PI/4); c.fillRect(-48,-48,96,96); c.restore(); } else { c.beginPath(); c.arc(300,122,68,0,7); c.fill(); }
+      c.fillStyle = P.bg; c.font = lfont({f:f.f,w:f.w,s:f.s},sh===2?64:84); c.textAlign="center"; c.fillText(ini,300,sh===2?144:152); c.textAlign="left";
+      const t = lcase(f,name,"up"), tr = .42, z = lfit(c,f,t,430,36,tr); ldraw(c,f,t,300,262,z,tr,null,P);
+    }else if(L==="sello"){
+      const t = lcase(f,name), z = lfit(c,f,t,330,84,tr0), tw = lwidth(c,f,t,z,tr0), S = 92, gap = 26, tot = S+gap+tw, x0 = 300-tot/2, sh = Math.floor(r()*3);
+      c.fillStyle = P.ac;
+      if(sh===1){ c.beginPath(); c.roundRect(x0,155,S,S,18); c.fill(); } else if(sh===2){ c.save(); c.translate(x0+S/2,201); c.rotate(Math.PI/4); c.fillRect(-S*.36,-S*.36,S*.72,S*.72); c.restore(); } else { c.beginPath(); c.arc(x0+S/2,201,S/2,0,7); c.fill(); }
+      c.fillStyle = P.bg; c.font = lfont({f:f.f,w:f.w,s:f.s},56); c.textAlign="center"; c.fillText(ini,x0+S/2,221); c.textAlign="left";
+      ldraw(c,f,t,x0+S+gap+tw/2,224,z,tr0,null,P);
+    }else if(L==="sub"){
+      const t = lcase(f,name), z = lfit(c,f,t,470,120,tr0), tw = ldraw(c,f,t,300,205,z,tr0,null,P); c.strokeStyle=P.ac; c.fillStyle=P.ac; c.lineCap="round";
+      const kind = Math.floor(r()*3);
+      if(kind===0){ c.lineWidth=7; c.beginPath(); c.moveTo(300-tw/2+8,252); c.quadraticCurveTo(300,282,300+tw/2-8,252); c.stroke(); }
+      else if(kind===1){ c.fillRect(300-tw*.18,246,tw*.36,9); }
+      else{ c.lineWidth=3; c.beginPath(); c.moveTo(300-tw/2,250); c.lineTo(300+tw/2,250); c.stroke(); c.beginPath(); c.arc(300,250,9,0,7); c.fillStyle=P.bg; c.fill(); c.stroke(); }
+    }else if(L==="marco"){
+      const t = lcase(f,name,"up"), tr = .2, z = lfit(c,f,t,360,52,tr), tw = lwidth(c,f,t,z,tr), pw = tw+78, ph = z*1.9, x = 300-pw/2, y = 200-ph/2;
+      c.strokeStyle = P.fg; c.lineWidth = 3; const rr = r()<.5?0:ph/2; c.beginPath(); if(rr) c.roundRect(x,y,pw,ph,rr); else c.rect(x,y,pw,ph); c.stroke();
+      ldraw(c,f,t,300,200+z*.35,z,tr,null,P);
+      c.fillStyle = P.bg; c.fillRect(300-14,y-3,28,6); c.fillStyle = P.ac; c.beginPath(); c.arc(300,y,6,0,7); c.fill();
+    }else if(L==="ini"){
+      c.fillStyle = P.ac; c.font = lfont({f:f.f,w:f.w,s:f.s},190); c.textAlign="center"; c.fillText(ini,300,205); c.textAlign="left";
+      const t = lcase(f,name,"up"), tr=.36, z = lfit(c,f,t,430,34,tr); ldraw(c,f,t,300,272,z,tr,null,P);
+      c.fillStyle = P.fg; c.fillRect(270,228,60,3);
+    }else{
+      const kind = cfg.sym || "sun"; c.fillStyle = P.ac; c.strokeStyle = P.ac; c.lineCap = "round"; c.lineJoin = "round";
+      if(kind==="sun"){ c.beginPath(); c.arc(300,160,56,Math.PI,0); c.fill(); c.fillRect(220,164,160,5); }
+      else if(kind==="peak"){ c.beginPath(); c.moveTo(258,168); c.lineTo(292,96); c.lineTo(318,140); c.lineTo(336,112); c.lineTo(366,168); c.closePath(); c.fill(); }
+      else if(kind==="moon"){ c.beginPath(); c.arc(300,128,42,0,7); c.fill(); c.fillStyle = P.bg; c.beginPath(); c.arc(318,118,36,0,7); c.fill(); }
+      else if(kind==="wave"){ c.lineWidth = 8; for(let k=0;k<3;k++){ c.beginPath(); const y = 112+k*24; c.moveTo(236,y); for(let i=0;i<=128;i+=4){ c.lineTo(236+i, y+Math.sin(i/128*Math.PI*4)*8); } c.stroke(); } }
+      else if(kind==="leaf"){ c.save(); c.translate(300,128); c.rotate(-.6); c.beginPath(); c.ellipse(0,0,24,52,0,0,7); c.fill(); c.strokeStyle = P.bg; c.lineWidth = 4; c.beginPath(); c.moveTo(0,-44); c.lineTo(0,44); c.stroke(); c.restore(); }
+      else if(kind==="cloud"){ c.beginPath(); c.arc(270,150,26,0,7); c.arc(306,128,38,0,7); c.arc(342,150,28,0,7); c.fill(); c.fillRect(270,150,72,26); c.beginPath(); c.arc(270,163,13,0,7); c.arc(342,163,13,0,7); c.fill(); }
+      else if(kind==="helix"){ c.lineWidth = 8; for(let ph=0;ph<2;ph++){ c.beginPath(); for(let y=84;y<=176;y+=3){ const x = 300+Math.sin((y-84)/92*Math.PI*2+ph*Math.PI)*34; if(y===84) c.moveTo(x,y); else c.lineTo(x,y); } c.stroke(); } c.lineWidth = 4; for(let y=96;y<=170;y+=18){ const x1 = 300+Math.sin((y-84)/92*Math.PI*2)*34; c.beginPath(); c.moveTo(x1,y); c.lineTo(600-x1,y); c.stroke(); } }
+      else if(kind==="star"){ c.beginPath(); for(let i=0;i<8;i++){ const a = i*Math.PI/4-Math.PI/2, r = i%2===0?54:14; c.lineTo(300+Math.cos(a)*r, 128+Math.sin(a)*r); } c.closePath(); c.fill(); }
+      else{ c.beginPath(); c.moveTo(300,168); c.bezierCurveTo(236,128,252,78,300,108); c.bezierCurveTo(348,78,364,128,300,168); c.fill(); }
+      const t = lcase(f,name), z = lfit(c,f,t,470,96,tr0); ldraw(c,f,t,300,270,z,tr0,null,P);
+    }
+  }
+
+  // ---------- Lo que la persona quiere en su logo ----------
+  var logoPref = {pal:"", font:"", text:""};
+  const LPAL_FAM = {tierra:["Tierra y calidez",[0,13,11,6]], rosa:["Rosados y suaves",[2,10,4]], azul:["Azules",[1,9]], verde:["Verdes naturales",[3,12,6]], dorado:["Negro y dorado",[8,7]], bn:["Negro y blanco",[5,14]], vivo:["Vivos y alegres",[9,11,14,10]], morado:["Morados",[10,15,16,4]], cielo:["Cielo y celestes",[17,18,1]]};
+  const COLOR_WORDS = {morado:["morado","morada","violeta","lila","purpura"], cielo:["celeste","cielo","nube","nubes"], azul:["azul","marino"], rosa:["rosa","rosado","rosada","fucsia"], verde:["verde","esmeralda"], dorado:["dorado","oro","negro"], bn:["blanco","gris"], tierra:["terracota","tierra","cafe","marron","beige"], vivo:["rojo","naranja","amarillo","colorido"]};
+  function lpFamKey(){ if(logoPref.pal) return logoPref.pal; const t = norm(logoPref.text||"").split(" "); for(const k in COLOR_WORDS){ if(COLOR_WORDS[k].some(w=>t.includes(w))) return k; } return ""; }
+  const LFONT_STYLE = {clasica:["Clásica",[0,3,4,7]], moderna:["Moderna",[2,5,6,8]], suave:["Suave y redondeada",[1,8,0]], fuerte:["Fuerte",[9,6,2]]};
+  function lpRender(){
+    const html = `<p class="k">Colores</p><div class="opts">${Object.keys(LPAL_FAM).map(k=>`<button type="button" class="opt${logoPref.pal===k?" on":""}" data-lpc="${k}">${LPAL_FAM[k][0]}</button>`).join("")}</div>
+      <p class="k">Tipo de letra</p><div class="opts">${Object.keys(LFONT_STYLE).map(k=>`<button type="button" class="opt${logoPref.font===k?" on":""}" data-lpf="${k}">${LFONT_STYLE[k][0]}</button>`).join("")}</div>
+      <p class="k">¿Qué quieres que inspire tu logo?</p><input class="lp-text" maxlength="120" placeholder="Ej: el cielo y las nubes, el genoma en morado, una flor, mi inicial" value="${esc(logoPref.text)}">`;
+    document.querySelectorAll(".lp").forEach(b=>{ b.innerHTML = html; });
+  }
+  function lpRefresh(){ if($("logoSec").style.display==="block") renderLogos(); }
+  document.addEventListener("click", e=>{
+    const c = e.target.closest("[data-lpc]"); if(c){ logoPref.pal = logoPref.pal===c.dataset.lpc ? "" : c.dataset.lpc; lpRender(); lpRefresh(); return; }
+    const f = e.target.closest("[data-lpf]"); if(f){ logoPref.font = logoPref.font===f.dataset.lpf ? "" : f.dataset.lpf; lpRender(); lpRefresh(); }
+  });
+  document.addEventListener("input", e=>{ if(e.target.classList && e.target.classList.contains("lp-text")){ logoPref.text = e.target.value; document.querySelectorAll(".lp-text").forEach(x=>{ if(x!==e.target) x.value = logoPref.text; }); } });
+  document.addEventListener("change", e=>{ if(e.target.classList && e.target.classList.contains("lp-text")) lpRefresh(); });
+  lpRender();
+  $("lp-go").addEventListener("click", ()=>renderLogos());
+  function logoCandidates(){
+    if(logoScreen==="scrB") return state.favs.map(f=>f.nombre);
+    return state.diags.map(d=>d.name);
+  }
+  function logoWaUpdate(){
+    $("logoWa").href = "https://wa.me/573016253440?text=" + encodeURIComponent("Hola Alejandra, me gustó la idea de logo para mi marca" + (logoName?": "+logoName:"") + ". Quiero un logo a mi medida. Lo vi en la app Lexa Legal.");
+  }
+  async function renderLogos(){
+    const sec = $("logoSec"), names = logoCandidates(), cta = $("logoCta"), body = $("logoBody");
+    if(!names.length){
+      if(logoScreen==="scrB" && state.proposals && state.proposals.length){
+        sec.style.display = "block"; body.style.display = "none"; cta.style.display = "block";
+        cta.innerHTML = `<div class="eyebrow">Tu logo</div><h2 class="sec-title" style="margin-top:8px">Genera el logo de tu nombre favorito</h2><div class="rule"></div><p class="muted" style="margin:0">Toca el <b>♡</b> en el nombre que más te guste y aquí podrás generar su logo.</p>`;
+      } else sec.style.display = "none";
+      return;
+    }
+    sec.style.display = "block";
+    if(!names.includes(logoName)) logoName = names[0];
+    if(!logoOn){
+      body.style.display = "none"; cta.style.display = "block";
+      const sentBtns = (logoScreen==="scrA" && !state.crear) ? `<p class="k" style="margin:12px 0 4px">¿Qué quieres que transmita tu marca? (opcional, hasta 2)</p><div class="chips" id="logoFeelsA">${SENT.map(([id,l])=>`<button type="button" data-lfeel="${id}" class="${logoFeelA.includes(id)?"on":""}">${l}</button>`).join("")}</div>` : "";
+      cta.innerHTML = `<div class="eyebrow">Tu logo</div><h2 class="sec-title" style="margin-top:8px">¿Quieres ver cómo se vería tu logo?</h2><div class="rule"></div><p class="muted" style="margin:0">Te mostramos 6 ideas de logo, pensadas para lo que quieres transmitir y para tu sector. Sin costo.</p>${names.length>1?`<p class="k" style="margin:12px 0 4px">Escoge el nombre</p><div class="chips">${names.map(n=>`<button type="button" data-ln="${esc(n)}" class="${n===logoName?"on":""}">${esc(n)}</button>`).join("")}</div>`:""}${sentBtns}<button class="btn" id="logoGo" type="button" style="margin-top:14px">Generar el logo de ${esc(logoName)}</button>`;
+      return;
+    }
+    cta.style.display = "none"; body.style.display = "block";
+    $("logoNames").innerHTML = names.length>1 ? names.map(n=>`<button type="button" data-ln="${esc(n)}" class="${n===logoName?"on":""}">${esc(n)}</button>`).join("") : "";
+    const mid = (state.mood && state.mood.id) || (moodOf(logoName)) || "";
+    logoCur = logoSet(logoName, logoIntent(logoName)); const order = logoCur;
+    try{ await Promise.all(LFONTS.map(f=>document.fonts.load(`${f.w} 40px "${f.f}"`)).concat([document.fonts.load(`italic 500 40px "Lora"`)])); }catch(e){}
+    $("logoGrid").innerHTML = order.map(st=>{ const k = st.id+"|"+logoName.toLowerCase(); return `<div class="lt"><div class="cw"><canvas data-st="${st.id}"></canvas><span class="tg" style="color:${st.pal.fg}">${st.label}</span><span class="lw" style="color:${st.pal.fg}">${esc(st.why)}</span><div class="ac"><button type="button" data-lfav="${st.id}" class="${LOGO_FAV[k]?"on":""}" aria-label="Guardar ${st.label}">${LOGO_FAV[k]?"♥":"♡"}</button><button type="button" data-ldl="${st.id}" aria-label="Descargar ${st.label}">⬇</button></div></div><div class="rf"><div><b>${st.label}.</b> ${esc(st.ref[0])}</div>${st.ref[1]?`<div class="r2">${esc(st.ref[1])}</div>`:""}${st.ref[2]?`<div class="r3">${esc(st.ref[2])}</div>`:""}</div></div>`; }).join("");
+    $("logoGrid").querySelectorAll("canvas").forEach(cv=>{ drawLogo(cv, logoCur.find(x=>x.id===cv.dataset.st), logoName, 1); });
+    logoWaUpdate();
+  }
+  $("logoSec").addEventListener("click", e=>{
+    if(e.target.closest("#logoGo")){ logoOn = true; renderLogos(); return; }
+    const lf = e.target.closest("[data-lfeel]"); if(lf){ const id = lf.dataset.lfeel, i = logoFeelA.indexOf(id); if(i>=0) logoFeelA.splice(i,1); else { if(logoFeelA.length>=2) logoFeelA.shift(); logoFeelA.push(id); } renderLogos(); return; }
+    const n = e.target.closest("[data-ln]"); if(n){ logoName = n.dataset.ln; renderLogos(); return; }
+    const f = e.target.closest("[data-lfav]"); if(f){ const k = f.dataset.lfav+"|"+logoName.toLowerCase(); LOGO_FAV[k] = !LOGO_FAV[k]; f.classList.toggle("on", LOGO_FAV[k]); f.textContent = LOGO_FAV[k]?"♥":"♡"; return; }
+    const d = e.target.closest("[data-ldl]"); if(d){
+      const st = logoCur.find(x=>x.id===d.dataset.ldl), cv = document.createElement("canvas");
+      drawLogo(cv, st, logoName, 2);
+      cv.toBlob(b=>{ const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "logo-"+logoName.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"-"+st.id+".png"; document.body.appendChild(a); a.click(); a.remove(); }, "image/png");
+    }
+  });
   if("serviceWorker" in navigator){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
 })();
 </script>
